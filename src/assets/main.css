@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "tailwindcss-motion";
+
+@theme {
+  
+
+  /* Kolory firmowe */
+  --font-poppins: Poppins , sans-serif;
+  --color-blue1: #334257;
+  --color-blue2: #3A435E;
+  --color-blue3: #134074;
+  --color-blue4: #486474;
+  --color-blue5: #0077b6;
+  --color-blue6: #2364AA;
+  --color-white: #FFFFFF;
+  
+  /* Opcjonalnie możesz również zdefiniować odcienie */
+  --color-blue1-light: #4A5C75;
+  --color-blue1-dark: #243043;
+}
+
+@layer utilities {
+  /* Ukrycie scrollbara dla Chrome, Safari i Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Ukrycie scrollbara dla IE, Edge i Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE i Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+ 
+}
+
+@layer components {
+  .ofertacard {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:scale-105 transition duration-300
+  }
+   
+}
+
