@@ -22,19 +22,20 @@ jobs:
       - name: Build project
         run: npm run build
 
-      # Przesyłamy zbudowane pliki na serwer
-      - name: Upload built files
+      - name: Archive build folder
+        run: tar -czf dist.tar.gz dist
+
+      - name: Upload archive via SCP
         uses: appleboy/scp-action@v0.1.6
         with:
           host: ${{ secrets.AZURE_HOST }}
           username: ${{ secrets.AZURE_USER }}
           key: ${{ secrets.AZURE_SSH_KEY }}
           port: 22
-          source: "dist/*"
-          target: "/var/www/dist/"
+          source: "dist.tar.gz"
+          target: "/home/${{ secrets.AZURE_USER }}/"
 
-      # Opcjonalnie restartujemy nginx
-      - name: Restart nginx via SSH
+      - name: Extract archive on remote server and deploy files
         uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.AZURE_HOST }}
@@ -42,4 +43,8 @@ jobs:
           key: ${{ secrets.AZURE_SSH_KEY }}
           port: 22
           script: |
+            # Opcjonalnie można usunąć wcześniejszą zawartość folderu docelowego
+            sudo rm -rf /var/www/dist/*
+            # Rozpakowujemy archiwum z pominięciem pierwszego poziomu katalogów
+            sudo tar -xzf /home/${{ secrets.AZURE_USER }}/dist.tar.gz --strip-components=1 -C /var/www/dist/
             sudo systemctl restart nginx
