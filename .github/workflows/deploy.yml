@@ -22,7 +22,19 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy via SSH
+      # Przesyłamy zbudowane pliki na serwer
+      - name: Upload built files
+        uses: appleboy/scp-action@v0.1.6
+        with:
+          host: ${{ secrets.AZURE_HOST }}
+          username: ${{ secrets.AZURE_USER }}
+          key: ${{ secrets.AZURE_SSH_KEY }}
+          port: 22
+          source: "dist/*"
+          target: "/var/www/dist/"
+
+      # Opcjonalnie restartujemy nginx
+      - name: Restart nginx via SSH
         uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.AZURE_HOST }}
@@ -30,6 +42,4 @@ jobs:
           key: ${{ secrets.AZURE_SSH_KEY }}
           port: 22
           script: |
-            rm -rf /var/www/dist/*
-            cp -r dist/* /var/www/dist/
             sudo systemctl restart nginx
