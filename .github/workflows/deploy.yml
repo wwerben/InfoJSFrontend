@@ -29,7 +29,7 @@ jobs:
           host: ${{ secrets.AZURE_HOST }}
           username: ${{ secrets.AZURE_USER }}
           key: ${{ secrets.AZURE_SSH_KEY }}
-          port: ${{ secrets.AZURE_SSH_PORT }}
+          port: 22
           script: |
             # Przykładowe komendy - dostosuj ścieżki i komendy wg swoich potrzeb
             # Usuwamy stare pliki (upewnij się, że nie usuwasz przypadkowych danych!)
