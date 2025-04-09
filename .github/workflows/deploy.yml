@@ -33,8 +33,8 @@ jobs:
           script: |
             # Przykładowe komendy - dostosuj ścieżki i komendy wg swoich potrzeb
             # Usuwamy stare pliki (upewnij się, że nie usuwasz przypadkowych danych!)
-            rm -rf /var/www/mysite/*
+            rm -rf /var/www/dist/*
             # Przenosimy nowe pliki (folder 'dist' to domyślny wynik budowania aplikacji Vite)
-            cp -r dist/* /var/www/mysite/
+            cp -r dist/* /var/www/dist/
             # Opcjonalnie – restart serwera WWW lub usługi, np. Nginx
             sudo systemctl restart nginx
