@@ -425,19 +425,31 @@
 <script setup>
 import { ref } from "vue";
 
+import Cenniki from '@/assets/img/pulsarss/Cenniki.jpg'
+import KartyPracy from '@/assets/img/pulsarss/KartyPracy.jpg'
+import PlanowanieZaopatrzenia from '@/assets/img/pulsarss/PlanowanieZaopatrzenia.jpg'
+import ProdukcjaKooperacja from '@/assets/img/pulsarss/ProdukcjaKooperacja.jpg'
+import RejestrFaktur from '@/assets/img/pulsarss/RejestrFaktur.jpg'
+import Slownik from '@/assets/img/pulsarss/Slownik.jpg'
+import StanyMagazynowe from '@/assets/img/pulsarss/StanyMagazynowe.jpg'
+import Trasy from '@/assets/img/pulsarss/Trasy.jpg'
+import WizualizacjaMagazyn from '@/assets/img/pulsarss/WizualizacjaMagazyn.jpg'
+import Wysylka from '@/assets/img/pulsarss/Wysylka.jpg'
+
+
 import ImageCarousel from '@/components/ImageCarousel.vue'
 
 const slides = ref([
-  { src: 'src/assets/img/pulsarss/Cenniki.jpg', caption: 'Cenniki' },
-  { src: 'src/assets/img/pulsarss/KartyPracy.jpg', caption: 'Karty Pracy' },
-  { src: 'src/assets/img/pulsarss/PlanowanieZaopatrzenia.jpg', caption: 'Planowanie Zaopatrzenia' },
-  { src: 'src/assets/img/pulsarss/ProdukcjaKooperacja.jpg', caption: 'Produkcja Kooperacja' },
-  { src: 'src/assets/img/pulsarss/RejestrFaktur.jpg', caption: 'Rejestr Faktur' },
-  { src: 'src/assets/img/pulsarss/Slownik.jpg', caption: 'Słowniki' },
-  { src: 'src/assets/img/pulsarss/StanyMagazynowe.jpg', caption: 'Stany Magazynowe' },
-  { src: 'src/assets/img/pulsarss/Trasy.jpg', caption: 'Trasy' },
-  { src: 'src/assets/img/pulsarss/WizualizacjaMagazyn.jpg', caption: 'Wizualizacja Magazynu' },
-  { src: 'src/assets/img/pulsarss/Wysylka.jpg', caption: 'Wysyłka' }
+  { src: Cenniki, caption: 'Cenniki' },
+  { src: KartyPracy, caption: 'Karty Pracy' },
+  { src: PlanowanieZaopatrzenia, caption: 'Planowanie Zaopatrzenia' },
+  { src: ProdukcjaKooperacja, caption: 'Produkcja Kooperacja' },
+  { src: RejestrFaktur, caption: 'Rejestr Faktur' },
+  { src: Slownik, caption: 'Słowniki' },
+  { src: StanyMagazynowe, caption: 'Stany Magazynowe' },
+  { src: Trasy, caption: 'Trasy' },
+  { src: WizualizacjaMagazyn, caption: 'Wizualizacja Magazynu' },
+  { src: Wysylka, caption: 'Wysyłka' }
 ])
 
 const youtubeUrl = ref("https://www.youtube.com/embed/OutFYTNpC6Y"); // Wklej ID filmu

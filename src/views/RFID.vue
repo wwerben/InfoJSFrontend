@@ -187,6 +187,11 @@
 </template>
 
 <script>
+import rfidTagImage from '@/assets/img/rfidtag.jpg';
+import antena from '@/assets/img/siemensantena.png';
+import czytnik from '@/assets/img/czytnik.jpg';
+import systemit from '@/assets/img/server.png';
+
 export default {
   data() {
     return {
@@ -194,22 +199,22 @@ export default {
         {
           title: 'Tagi RFID',
           description: 'Inteligentne transpondery z mikrochipami zawierające unikalne dane identyfikacyjne produktów lub palet.',
-          image: 'src/assets/img/rfidtag.jpg'
+          image: rfidTagImage
         },
         {
           title: 'Anteny',
           description: 'Elementy wysyłające i odbierające sygnały radiowe, umożliwiające komunikację między tagami a czytnikami.',
-          image: 'src/assets/img/siemensantena.png'
+          image: antena
         },
         {
           title: 'Czytniki',
           description: 'Urządzenia emitujące fale radiowe do tagów i odbierające zwrotne informacje zawierające żądane dane.',
-          image: 'src/assets/img/czytnik.jpg'
+          image: czytnik
         },
         {
           title: 'System IT',
           description: 'Centralne oprogramowanie do gromadzenia, przetwarzania i analizowania danych z systemu RFID.',
-          image: 'src/assets/img/server.png'
+          image: systemit
         }
       ],
       rfidSteps: [
