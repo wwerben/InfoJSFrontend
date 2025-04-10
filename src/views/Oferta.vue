@@ -200,7 +200,7 @@
   </div>
 </section>
 
-<section class="flex justify-center flex-col items-center py-10 relative bg-[url(src/assets/img/warehouse.jpg)] bg-cover bg-fixed bg-center lg:min-h-screen">
+<section class="flex justify-center flex-col items-center py-10 relative bg-[url('/src/assets/img/warehouse.jpg')] bg-cover bg-fixed bg-center lg:min-h-screen">
   <div class="container  xl:px-34 p-2">
     <div class="md:border-[15px] md:border-b-[30px] border-4 border-gray-900 rounded-md max-w-6xl mx-auto overflow-hidden">
       <ImageCarousel 
