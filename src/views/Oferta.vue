@@ -83,7 +83,7 @@
 </section>
 
 <section
-  class="relative w-full hidden md:flex  h-[600px] bg-[url('/src/assets/img/Oferta-magazyn.jpg')] bg-cover bg-center bg-no-repeat"
+  class="relative w-full hidden md:flex  h-[600px] bg-[url('/src/assets/img/warehouse.jpg')] bg-cover bg-center bg-no-repeat"
 >
   <!-- Overlay przyciemniający (opcjonalny) -->
   <div class="absolute inset-0 bg-blue2/30 "></div>
