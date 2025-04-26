@@ -83,7 +83,7 @@
 </section>
 
 <section
-  class="relative w-full hidden md:flex  h-[600px] bg-[url('/src/assets/img/warehouse.jpg')] bg-cover bg-center bg-no-repeat"
+  class="relative w-full hidden md:flex  h-[600px] bg-[url('/src/assets/img/Oferta-magazyn.jpg')] bg-cover bg-center bg-no-repeat"
 >
   <!-- Overlay przyciemniający (opcjonalny) -->
   <div class="absolute inset-0 bg-blue2/30 "></div>
@@ -200,7 +200,7 @@
   </div>
 </section>
 
-<section class="flex justify-center flex-col items-center py-10 relative bg-[url(src/assets/img/warehouse.jpg)] bg-cover bg-fixed bg-center lg:min-h-screen">
+<section class="flex justify-center flex-col items-center py-10 relative bg-[url('/src/assets/img/warehouse.jpg')] bg-cover bg-fixed bg-center lg:min-h-screen">
   <div class="container  xl:px-34 p-2">
     <div class="md:border-[15px] md:border-b-[30px] border-4 border-gray-900 rounded-md max-w-6xl mx-auto overflow-hidden">
       <ImageCarousel 
