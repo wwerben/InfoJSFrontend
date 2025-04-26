@@ -27,10 +27,6 @@
           class="text-gray-50 hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
         >Oferta</router-link>
         <router-link
-          to="/rfid"
-          class="text-gray-50 hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
-        >RFID</router-link>
-        <router-link
           to="/blog"
           class="text-gray-50 hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
         >Aktualności</router-link>
@@ -92,11 +88,6 @@
             class="text-gray-200"
             @click="closeMobileMenu"
           >Oferta</router-link>
-          <router-link
-            to="/rfid"
-            class="text-gray-200"
-            @click="closeMobileMenu"
-          >RFID</router-link>
           <router-link
             to="#"
             class="text-gray-200"
