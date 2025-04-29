@@ -95,7 +95,7 @@
         </h1>
        
         <h2 class="font-base text-base xl:text-medium text-pretty text-center md:text-left text-gray-100 mt-3 lg:mt-4 mb-1 tracking-wide">
-          System Pulsar doskonale sprawdza się w branży meblowej: zarządza produkcją, logistyką, sprzedażą i kontrolą jakości, wspierając realizację indywidualnych zamówień oraz efektywne wykorzystanie zasobów.
+           Zarządzanie produkcją, logistyką, sprzedażą i kontrolą jakości, wspierając realizację indywidualnych zamówień oraz efektywne wykorzystanie zasobów.
         </h2>
 
         <ul class="font-base text-base xl:text-medium text-pretty text-gray-100 space-y-5 lg:mt-4 mb-1 tracking-wide list-none">
