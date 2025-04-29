@@ -11,7 +11,7 @@
             </video>
             <div class="absolute inset-0 bg-blue2/75 z-10 = object-cover "></div>
           
-            <div id="carousel" class="absolute inset-0 z-20">
+            <div id="carousel" class="absolute flex justify-center inset-0 z-20">
               <Counter />
             </div>
           </div>
@@ -31,7 +31,7 @@
             <!-- Tekst -->
            <div class="flex justify-center">
             <div class="max-w-lg lg:max-w-xl flex flex-col justify-center h-full">
-              <h1  v-typewriter="{ speed: 25, threshold: 0.7 }" class="font-bold text-5xl xl:text-6xl text-center md:text-left font-poppins text-gray-800">
+              <h1  v-typewriter="{ speed: 25, threshold: 0.7 }" class="max-md:mb-4 font-bold text-5xl xl:text-6xl text-center md:text-left font-poppins text-gray-800">
                 Nowoczesne rozwiązania IT dla przemysłu
               </h1>
               <h2 class="font-medium text-base xl:text-xl text-center md:text-left text-gray-600 mt-1 lg:mt-8 mb-3 tracking-wide">
@@ -50,7 +50,7 @@
         <!-- Sekcja Aktualności -->
        
         <section>
-        <div class="flex mb-24 font-poppins justify-center md:my-5 mt-6 w-full bg-gray-100">
+        <div class="flex  font-poppins justify-center mt-6 w-full bg-gray-100">
           <div class="justify-center mx-3 lg:mx-16 gap-8 md:gap-12 lg:gap-20 xl:gap-40 grid grid-cols-1 md:grid-cols-2 my-8 md:flex md:flex-row-reverse">
             
             <!-- Kontener obrazu - PRIORYTET WYSOKOŚCI + WYŚRODKOWANIE -->
@@ -63,8 +63,8 @@
               <h1 v-typewriter="{ speed: 70, threshold: 0.7 }" class="font-bold text-4xl xl:text-5xl text-center md:text-left  text-gray-800">
                 System PULSAR
               </h1>
-              <h2 class="font-medium text-base xl:text-lg text-center md:text-left text-gray-600 mt-2 lg:mt-4 mb-3 tracking-wide">
-                <span class="font-bold text-lg lg:text-xl text-blue3">Pulsar</span> to nowoczesny, zintegrowany system IT wspierający wszystkie procesy firmy, który systematycznie się rozwija, odpowiadając na potrzeby klientów i zmieniające się warunki rynkowe. Jego rozwój skupia się na automatyzacji procesów oraz elektronicznej wymianie danych, a wdrożenie technologii RFID wprowadza nowe standardy w produkcji i logistyce magazynowej.
+              <h2 class="font-medium text-base xl:text-lg text-center  text-balance md:text-left text-gray-600 mt-2 lg:mt-4 mb-3 tracking-wide">
+                 Poznaj system <span class="font-bold text-lg lg:text-xl text-blue3">PULSAR</span> – zintegrowany system informatyczny, który obejmuje wszystkie kluczowe obszary przedsiębiorstwa: sprzedaż, produkcję, zaopatrzenie i magazyn. Dzięki automatyzacji procesów z wykorzystaniem technologii RFID oraz wymianie danych EDI, system Pulsar przyspiesza pracę i optymalizuję procesy, eliminuje błędy i podnosi efektywność Twojej firmy.
               </h2>
               
               <!-- Poprawiona sekcja przycisku -->
@@ -80,20 +80,70 @@
       </section>
 
       <section>
-  <div class="flex font-poppins justify-center md:my-5 mt-2 w-full bg-white">
-    <div class="justify-center mx-3 lg:mx-16 gap-8 md:gap-16 lg:gap-32 xl:gap-28 grid grid-cols-1 md:grid-cols-2 my-8">
+  <div class="flex font-poppins justify-center   w-full bg-gradient-to-bl from-blue3 to-blue-900 relative">
+    <div class="justify-center mx-3 lg:mx-16 gap-8 md:gap-16 lg:gap-32 xl:gap-28 grid grid-cols-1 md:grid-cols-2 my-15">
       
       <!-- Kontener obrazu - PRIORYTET WYSOKOŚCI + WYŚRODKOWANIE -->
-      <div class="flex items-center justify-self-center  max-w-xl overflow-hidden h-auto">
-        <img src="@/assets/img/SiemensOracle.png" alt="O nas zdjęcie" class="object-cover w-full h-auto">
+      
+      <div class="flex items-center rounded-sm justify-self-center  max-w-xl overflow-hidden h-auto">
+        <img src="@/assets/img/magazynfoto.jpg" alt="O nas zdjęcie" class="object-cover w-full h-auto">
       </div>
+      <!-- Kontener tekstu - DOPASOWUJE SIĘ DO OBRAZU -->
+      <div class="max-w-lg max-md:gap-3 lg:max-w-2xl flex flex-col justify-center h-full ">
+        <h1 v-typewriter="{ speed: 40, threshold: 0.7 }" class="font-bold text-4xl  xl:text-5xl/14 text-center md:text-left text-gray-100">
+        System Pulsar w branży meblarskiej
+        </h1>
+       
+        <h2 class="font-base text-base xl:text-medium text-pretty text-center md:text-left text-gray-100 mt-3 lg:mt-4 mb-1 tracking-wide">
+          System Pulsar doskonale sprawdza się w branży meblowej: zarządza produkcją, logistyką, sprzedażą i kontrolą jakości, wspierając realizację indywidualnych zamówień oraz efektywne wykorzystanie zasobów.
+        </h2>
+
+        <ul class="font-base text-base xl:text-medium text-pretty text-gray-100 space-y-5 lg:mt-4 mb-1 tracking-wide list-none">
+          <li class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+              <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+            </svg>
+            <span>Pełna konfiguracja pod potrzeby zakładu</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+              <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+            </svg>
+            <span>Automatyzacja produkcji i logistyki</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+              <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+            </svg>
+            <span>Zwiększenie wydajności i konkurencyjności</span>
+          </li>
+        </ul>
+
+        <!-- Poprawiona sekcja przycisku -->
+        <div class="mt-6 flex justify-center md:justify-start">
+          <a href="#" class="bg-gray-100 text-center text-blue3 w-full text-lg hover:ring-2 ring-gray-100 font-semibold py-4 px-6 rounded-sm shadow-md hover:bg-blue-900 hover:text-gray-100 duration-300 transition">
+            Więcej o systemie Pulsar dla branży meblarskiej
+          </a>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</section>
+      
+      <section>
+  <div class="flex font-poppins justify-center md:my-5 mt-2 w-full bg-white">
+    <div class="justify-center mx-3 lg:mx-16 gap-4 md:gap-16 lg:gap-32 xl:gap-28 grid grid-cols-1 md:grid-cols-2 my-8">
+      
+      <!-- Kontener obrazu - PRIORYTET WYSOKOŚCI + WYŚRODKOWANIE -->
+     
 
       <!-- Kontener tekstu - DOPASOWUJE SIĘ DO OBRAZU -->
       <div class="max-w-lg lg:max-w-2xl flex flex-col justify-center h-full">
         <h1 v-typewriter="{ speed: 40, threshold: 0.7 }" class="font-bold text-4xl  xl:text-5xl text-center md:text-left text-gray-800">
         Partnerstwo z Technologicznymi Liderami
         </h1>
-        <h2 class="font-medium text-base xl:text-medium text-center md:text-left text-gray-600 mt-3 lg:mt-4 mb-1 tracking-wide">
+        <h2 class="font-medium text-base text-balance xl:text-medium text-center md:text-left text-gray-600 mt-4 md:mt-3 lg:mt-4 mb-1 tracking-wide">
         Jesteśmy dumni z partnerstwa z Siemens w obszarze technologii <span class="font-semibold text-lg lg:text-2xl text-gray-900">RFID</span>, co potwierdza kierunek rozwoju naszego systemu PULSAR. Jako druga firma w Polsce z tym statusem, rozwijamy nowoczesne rozwiązania oparte na automatyzacji i identyfikacji danych.
           <br></br>
         Status Silver Partner Oracle umacnia naszą pozycję w zakresie zaawansowanych systemów zarządzania danymi. Współpraca z globalnymi liderami motywuje nas do dalszych innowacji i podnoszenia jakości naszych usług. 
@@ -105,6 +155,9 @@
             Dowiedz się więcej
           </a>
         </div>
+      </div>
+      <div class="flex items-center max-md:order-first justify-self-center  max-w-xl overflow-hidden h-auto">
+        <img src="@/assets/img/SiemensOracle.png" alt="O nas zdjęcie" class="object-cover w-full h-auto">
       </div>
 
     </div>

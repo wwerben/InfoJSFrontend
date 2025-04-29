@@ -1,78 +1,79 @@
-<!-- src/components/CountingSlider.vue -->
+
 <template>
-    <div class="relative text-gray-50  w-full h-[70vh] bg-transparent">
-      <!-- centralny kontener, tu można zmienić pozycję -->
-      <div class="absolute top-3/5 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <transition
-          mode="out-in"
-          enter-active-class="transition-opacity duration-1000"
-          leave-active-class="transition-opacity duration-500"
-          enter-from-class="opacity-0"
-          enter-to-class="opacity-100"
-          leave-from-class="opacity-100"
-          leave-to-class="opacity-0"
-        >
-          <!-- klucz wymusza podmianę elementu przy zmianie currentIndex -->
-          <div :key="currentIndex" class="flex flex-col  items-center">
-            <div class="text-9xl font-bold leading-none">
-              {{ displayCount }}+
-            </div>
-            <div class="text-2xl -mt-2">
-              {{ items[currentIndex].label }}
-            </div>
+  <div class="relative text-gray-50 w-full h-[85vh] bg-transparent">
+    <div class="absolute bottom-0 inset-x-0 px-4 pb-8">
+
+      <div
+        class="grid
+               grid-cols-2 grid-rows-2 gap-x-4 gap-y-2
+               md:grid-cols-3 md:grid-rows-1 md:gap-x-2 md:gap-y-0
+               justify-items-center justify-center items-center">
+        <div
+          v-for="(item, index) in items"
+          :key="index"
+          class="flex flex-col justify-center items-center"
+          :class="[
+            index === 1
+              ? 'max-md:col-span-2 max-md:row-start-1'       
+              : index === 0
+                ? 'max-md:col-start-1 max-md:row-start-2'     
+                : 'max-md:col-start-2 max-md:row-start-2',    
+            index === 0
+              ? 'md:col-start-1 md:row-start-auto'
+              : index === 1
+                ? 'md:col-start-2 md:row-start-auto'
+                : 'md:col-start-3 md:row-start-auto'
+          ]">
+          <div class="text-4xl lg:text-5xl font-bold leading-none">
+            {{ displayCounts[index] }}+
           </div>
-        </transition>
+          <div class="text-sm text-center lg:text-md font-medium">
+            {{ item.label }}
+          </div>
+        </div>
       </div>
     </div>
-  </template>
-  
-  <script setup>
-  import { ref, onMounted, nextTick } from 'vue'
-  
-  const items = [
-    { target: 30,    label: 'lat doświadczenia'                  },
-    { target: 1000,  label: 'użytkowników systemu dziennie'          },
-    { target: 10000, label: 'dokumentów sprzedaży każdego dnia'   },
-  ]
-  
-  const currentIndex = ref(0)
-  const displayCount  = ref(0)
-  
+  </div>
+</template>
 
-  function animateCount(target, duration = 1500) {
-    return new Promise(resolve => {
-      const start = performance.now()
-      function tick(now) {
-        const t = Math.min((now - start) / duration, 1)
-        displayCount.value = Math.floor(t * target)
-        if (t < 1) {
-          requestAnimationFrame(tick)
-        } else {
-          displayCount.value = target
+<script setup>
+import { ref, onMounted } from 'vue'
 
-          setTimeout(resolve, 3500)
-        }
-      }
+const items = [
+  { target: 10000, label: 'dokumentów sprzedaży każdego dnia' },
+  { target: 30,    label: 'lat doświadczenia' },
+  { target: 1000,  label: 'użytkowników systemu dziennie' }
+]
+
+const displayCounts = ref(items.map(() => 0))
+
+function animateCount(index, target, duration = 2000) {
+  const step = target >= 10000
+    ? 100
+    : target >= 1000
+      ? 10
+      : 1
+
+  const start = performance.now()
+
+  function tick(now) {
+    const t = Math.min((now - start) / duration, 1)
+    const value = Math.floor((t * target) / step) * step
+    displayCounts.value[index] = Math.min(value, target)
+
+    if (t < 1) {
       requestAnimationFrame(tick)
-    })
-  }
-  
-  onMounted(() => {
-
-  const cycle = async () => {
-    
-    displayCount.value = 0
-    await nextTick()                
-    await animateCount(items[currentIndex.value].target)
-
-    
-    currentIndex.value = (currentIndex.value + 1) % items.length
-
-    
-    cycle()
+    } else {
+      displayCounts.value[index] = target
+    }
   }
 
-  cycle()  
+  requestAnimationFrame(tick)
+}
+
+onMounted(() => {
+  items.forEach((item, i) => {
+    animateCount(i, item.target)
+  })
 })
-  </script>
-  
+</script>
