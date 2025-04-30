@@ -36,12 +36,12 @@
   
   <script setup>
   const tiles = [
-    { image: '../src/assets/img/o9.webp', title: 'Logistyka Sprzedaży', button: 'Czytaj więcej' },
-    { image: '../src/assets/img/o3.webp', title: 'Produkcja', button: 'Czytaj więcej' },
-    { image: '../src/assets/img/o12.webp', title: 'Logistyka Zaopatrzenia', button: 'Czytaj więcej' },
-    { image: '../src/assets/img/o2.webp', title: 'Technologia', button: 'Czytaj więcej' },
-    { image: '../src/assets/img/o6.webp', title: 'EDI', button: 'Czytaj więcej' },
-    { image: '../src/assets/img/o7.webp', title: 'Magazyn', button: 'Czytaj więcej' },
+    { image: 'src/assets/img/o9.webp', title: 'Logistyka Sprzedaży', button: 'Czytaj więcej' },
+    { image: 'src/assets/img/o3.webp', title: 'Produkcja', button: 'Czytaj więcej' },
+    { image: 'src/assets/img/o12.webp', title: 'Logistyka Zaopatrzenia', button: 'Czytaj więcej' },
+    { image: 'src/assets/img/o2.webp', title: 'Technologia', button: 'Czytaj więcej' },
+    { image: 'src/assets/img/o6.webp', title: 'EDI', button: 'Czytaj więcej' },
+    { image: 'src/assets/img/o7.webp', title: 'Magazyn', button: 'Czytaj więcej' },
   ]
   </script>
   
