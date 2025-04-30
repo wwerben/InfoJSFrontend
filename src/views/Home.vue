@@ -163,187 +163,16 @@
     </div>
   </div>
 </section>
-<section id="box4" class="w-full ">
-        
-        <div class=" bg-blue1">
-    
-          <div class=" transition-all duration-1000 w-full flex flex-row flex-wrap lg:flex-row ">
-  
-            <div class="lg:w-1/4 w-1/2 relative group ">
-              <img src="@/assets/img/o2.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">E-commerce</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
-              <div class="absolute inset-0 bg-transparent md:flex items-center z-20 justify-center opacity-0 hidden group-hover:opacity-70 transition-opacity duration-300">
-                  <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end lg:mb-3 md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button>
-              </div>
-          </div>
-      
-            <div class=" lg:w-1/4 w-1/2 relative group">
-              <img src="@/assets/img/o1.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">WMS RFID</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-              </div>
-              <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-               <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-             hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-             dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-              </div>
-            </div> 
-  
-            
-            <div class=" lg:w-1/4 w-1/2 relative group">
-              <img src="@/assets/img/o3.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-              </div>
-              <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-               <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-            hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-             dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-              </div>
-            </div> 
-  
-            
-            <div class=" lg:w-1/4 w-1/2 relative group">
-              <img src="@/assets/img/o4.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Transport</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-              </div>
-              <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-               <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-            hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-             dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-              </div>
-            </div> 
-  
-            
-            <div class=" lg:w-1/4 w-1/2 relative group">
-              <img src="@/assets/img/o5.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">EDI</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-              </div>
-              <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-               <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-            hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-             dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-              </div>
-            </div> 
-            
-            
-            <div class=" lg:w-1/4 w-1/2 relative group">
-              <img src="@/assets/img/o6.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">PTP</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-              </div>
-              <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-               <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-            hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-             dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-              </div>
-            </div>
-            
-            
-            <div class=" lg:w-1/4 w-1/2 relative group">
-              <img src="@/assets/img/o7.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Magazyn</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-              </div>
-              <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-               <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-            hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-             dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-              </div>
-            </div> 
-  
-            
-            <div class=" lg:w-1/4 w-1/2 relative group">
-              <img src="@/assets/img/o8.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">API</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-              </div>
-              <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-               <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-            hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-             dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-              </div>
-            </div> 
-            
-            <div class=" lg:w-1/4 w-1/2 relative group">
-              <img src="@/assets/img/o9.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Logistyka 
-                Sprzedaży</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-              </div>
-              <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-               <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-            hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-             dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-              </div>
-            </div> 
-            
-            
-            <div class=" lg:w-1/4 w-1/2 relative group">
-              <img src="@/assets/img/o10.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Edytor etykiet</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-              </div>
-              <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-               <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-            hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-             dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-              </div>
-            </div>
-            
-          
-            <div class=" lg:w-1/4 w-1/2 relative group">
-              <img src="@/assets/img/o11.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Informator24</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-              </div>
-              <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-               <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-            hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-             dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-              </div>
-            </div> 
-  
-            <div class=" lg:w-1/4 w-1/2 relative group">
-              <img src="@/assets/img/o12.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Logistyka 
-                Zaopatrzenia</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-              </div>
-              <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-               <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-            hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-             dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-              </div>
-            </div> 
-           
-          </div>
-          
-          
-      </div>
-      </section>  
-   
+ 
+      <section>
+        <Card />
+      </section>
 
        
   
       </main>
   
-      <!-- Stopka -->
+     
       
    
   
@@ -352,8 +181,8 @@
   <script setup>
   import { ref, onMounted } from 'vue'
   import LogoSlider from '../components/LogoSlider.vue';
-  import Counter from '../components/Counter.vue'
-
+  import Counter from '../components/Counter.vue';
+  import Card from '../components/CardsSix.vue';
 
 
 
