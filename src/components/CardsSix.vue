@@ -35,13 +35,22 @@
   </template>
   
   <script setup>
+
+
+  import o9Image from '@/assets/img/o9.webp';
+  import o3Image from '@/assets/img/o3.webp';
+  import o12Image from '@/assets/img/o12.webp';
+  import o2Image from '@/assets/img/o2.webp';
+  import o6Image from '@/assets/img/o6.webp';
+  import o7Image from '@/assets/img/o7.webp';
+
   const tiles = [
-    { image: 'src/assets/img/o9.webp', title: 'Logistyka Sprzedaży', button: 'Czytaj więcej' },
-    { image: 'src/assets/img/o3.webp', title: 'Produkcja', button: 'Czytaj więcej' },
-    { image: 'src/assets/img/o12.webp', title: 'Logistyka Zaopatrzenia', button: 'Czytaj więcej' },
-    { image: 'src/assets/img/o2.webp', title: 'Technologia', button: 'Czytaj więcej' },
-    { image: 'src/assets/img/o6.webp', title: 'EDI', button: 'Czytaj więcej' },
-    { image: 'src/assets/img/o7.webp', title: 'Magazyn', button: 'Czytaj więcej' },
+    { image: o9Image, title: 'Logistyka Sprzedaży', button: 'Czytaj więcej' },
+    { image: o3Image, title: 'Produkcja', button: 'Czytaj więcej' },
+    { image: o12Image, title: 'Logistyka Zaopatrzenia', button: 'Czytaj więcej' },
+    { image: o2Image, title: 'Technologia', button: 'Czytaj więcej' },
+    { image: o6Image, title: 'EDI', button: 'Czytaj więcej' },
+    { image: o7Image, title: 'Magazyn', button: 'Czytaj więcej' },
   ]
   </script>
   
