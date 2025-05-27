@@ -1,6 +1,6 @@
 <!-- components/LogoSlider.vue -->
 <template>
-    <div class="max-w-6xl mx-auto px-4 ">
+    <div class="max-w-7xl mx-auto px-4 ">
       <div
         class="relative w-full max-w-6xl mx-auto h-[15vh] overflow-hidden group"
         @mouseenter="onHover(true)"
@@ -75,38 +75,48 @@
   import chodziezImg from '@/assets/img/chodziez.jpg'
   import wistilImg from '@/assets/img/wistil.jpg'
   import cmielowImg from '@/assets/img/cmielow.jpg'
+  import pgpImg from '@/assets/img/PGP.jpg'
   
   
   // Tablica logotypów
   const logos = [
     
-    { id: 1, src: dolmarImg,   alt: 'Dolmar Meble',   link: 'https://dolmar.pl/' },
-    { id: 2, src: mirjanImg,   alt: 'Mirjan 24',      link: 'https://mirjan24.pl' },
-    { id: 3, src: wersalImg,   alt: 'Wersal',         link: 'https://wersal.pl/' },
+    { id: 1, src: wersalImg,   alt: 'Wersal',         link: 'https://wersal.pl/' },
+    { id: 2, src: benixImg,    alt: 'Benix',          link: 'https://benix.pl' },
+    { id: 3, src: piaskiImg,   alt: 'Piaski',         link: 'https://piaski.com.pl/' },
 
-    { id: 4, src: benixImg,    alt: 'Benix',          link: 'https://benix.pl' },
-    { id: 5, src: piaskiImg,   alt: 'Piaski',         link: 'https://piaski.com.pl/' },
+    
+    { id: 4, src: mirjanImg,   alt: 'Mirjan 24',      link: 'https://mirjan24.pl' },
+    { id: 5, src: dolmarImg,   alt: 'Dolmar Meble',   link: 'https://dolmar.pl/' },
     { id: 6, src: matexImg,     alt: 'Matex',           link: 'https://matex-polstermoebel.com.pl/' },
 
-    { id: 7, src: beliniImg,     alt: 'Belini',           link: 'https://belini.pl/' },
-    { id: 8, src: polakImg,    alt: 'Polak Meble',    link: 'https://polakmeble.pl/' },
-    { id: 9, src: victoriaImg, alt: 'Victoria Meble', link: 'https://victoriameble.pl/' },
+    { id: 7, src: koloImg,     alt: 'Kolo',           link: 'https://www.kolo-materace.pl/' },
+    { id: 8, src: victoriaImg, alt: 'Victoria Meble', link: 'https://victoriameble.pl/' },
+    { id: 9, src: polakImg,    alt: 'Polak Meble',    link: 'https://polakmeble.pl/' },
 
-    { id: 10, src: domelImg,     alt: 'Domel',           link: 'https://domelmeble.pl/' },
-    { id: 11, src: koloImg,     alt: 'Kolo',           link: 'https://www.kolo-materace.pl/' },
+    { id: 10, src: beliniImg,     alt: 'Belini',           link: 'https://belini.pl/' },
+    { id: 11, src: gortexImg,  alt: 'Gortex',        link: 'https://gortex.com.pl/' },
     { id: 12, src: gortexImg,  alt: 'Gortex',        link: 'https://gortex.com.pl/' },
 
     { id: 13, src: ariadnaImg,     alt: 'Ariadna',           link: 'https://ariadna.com.pl/' },
-    { id: 14, src: agnellaImg,  alt: 'Agnella',        link: 'https://www.agnella.pl/' },
-    { id: 15, src: haftImg,  alt: 'Haft',        link: 'https://haft.com.pl/' },
+    { id: 14, src: wistilImg,  alt: 'Wisil',        link: 'https://wistil.pl/' },
+    { id: 15, src: pgpImg,     alt: 'PGP',           link: 'http://www.porcelana-cmielow.pl/grupaporcelanowa.php' },
 
-    { id: 16, src: kablonexImg,     alt: 'Kablonex',           link: 'https://kablonex.pl/' },
-    { id: 17, src: pollenaImg,  alt: 'Pollena',        link: 'https://pollena.com.pl/' },
-    { id: 18, src: elektrokabelImg,  alt: 'Elektrokabel',        link: 'https://elektrokabel.pl/' },
+    { id: 16, src: agnellaImg,  alt: 'Agnella',        link: 'https://www.agnella.pl/' },
+    { id: 17, src: haftImg,  alt: 'Haft',        link: 'https://haft.com.pl/' },
+    { id: 18, src: haftImg,  alt: 'Haft',        link: 'https://haft.com.pl/' },
 
-    { id: 19, src: cmielowImg,     alt: 'Cmielow',           link: 'https://porcelana.pl/marki/cmielow' },
-    { id: 20, src: wistilImg,  alt: 'Wisil',        link: 'https://wistil.pl/' },
-    { id: 21, src: chodziezImg,  alt: 'Chodziez',        link: 'https://porcelana.pl/marki/chodziez' },
+    { id: 19, src: kablonexImg,     alt: 'Kablonex',           link: 'https://kablonex.pl/' },
+    { id: 20, src: pollenaImg,  alt: 'Pollena',        link: 'https://pollena.com.pl/' },
+    { id: 21, src: elektrokabelImg,  alt: 'Elektrokabel',        link: 'https://elektrokabel.pl/' },
+   
+   
+
+    
+
+
+
+    
     
 
     

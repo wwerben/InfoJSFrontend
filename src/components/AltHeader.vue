@@ -1,14 +1,14 @@
 <template>
   <header
     class="fixed top-0 left-0 w-full z-50 transition-colors bg-blue2 duration-300">
-    <div class="flex justify-between items-center px-6 py-3">
+    <div class="flex justify-between items-center px-2 md:px-6 py-3">
       <!-- Logo -->
       <router-link to="/">
         <img
-          :src="isScrolled ? scrollLogoSrc : defaultLogoSrc"
+          :src="isScrolled ? scrollLogoSrc : scrollLogoSrc"
           alt="Logo"
-          class=" ml-0 md:ml-6 transition-all duration-300" 
-          :class="isScrolled ? 'h-8 md:h-12' : 'h-10 md:h-16'"
+          class=" ml-0 md:ml-3 transition-all duration-300" 
+          :class="isScrolled ? 'h-8 md:h-9' : 'h-8 md:h-11'"
         />
       </router-link>
 
@@ -54,7 +54,7 @@
           <div class="h-10 w-12"> </div>
             <router-link to="/">
           <img
-            :src="isScrolled ? scrollLogoSrc : defaultLogoSrc"
+            :src="isScrolled ? scrollLogoSrc : scrollLogoSrc"
             alt="Logo"
             class="  transition-all flex justify-center duration-300" 
             :class="isScrolled ? 'h-10' : 'h-10'"

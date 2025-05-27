@@ -39,18 +39,18 @@
 
   import o9Image from '@/assets/img/o9.webp';
   import o3Image from '@/assets/img/o3.webp';
-  import o12Image from '@/assets/img/o12.webp';
+  import o12Image from '@/assets/img/anl.jpg';
   import o2Image from '@/assets/img/o2.webp';
   import o6Image from '@/assets/img/o6.webp';
   import o7Image from '@/assets/img/o7.webp';
 
   const tiles = [
-    { image: o9Image, title: 'Logistyka Sprzedaży', button: 'Czytaj więcej' },
     { image: o3Image, title: 'Produkcja', button: 'Czytaj więcej' },
-    { image: o12Image, title: 'Logistyka Zaopatrzenia', button: 'Czytaj więcej' },
-    { image: o2Image, title: 'Technologia', button: 'Czytaj więcej' },
+    { image: o9Image, title: 'Logistyka Sprzedaży', button: 'Czytaj więcej' },
+    { image: o2Image, title: 'Magazyn RFID', button: 'Czytaj więcej' },
+    { image: o7Image, title: 'Logistyka Zaopatrzenia', button: 'Czytaj więcej' },
     { image: o6Image, title: 'EDI', button: 'Czytaj więcej' },
-    { image: o7Image, title: 'Magazyn', button: 'Czytaj więcej' },
+    { image: o12Image, title: 'Informator24', button: 'Czytaj więcej' },
   ]
   </script>
   

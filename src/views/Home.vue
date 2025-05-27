@@ -47,7 +47,7 @@
           </div>
         </section>
   
-        <!-- Sekcja Aktualności -->
+    
        
         <section>
         <div class="flex  font-poppins justify-center mt-6 w-full bg-gray-100">
@@ -80,10 +80,10 @@
       </section>
 
       <section>
-  <div class="flex font-poppins justify-center   w-full bg-gradient-to-bl from-blue3 to-blue-900 relative">
+  <div class="flex font-poppins justify-center flex-col  w-full bg-gradient-to-bl from-blue3 to-blue-900 relative">
     <div class="justify-center mx-3 lg:mx-16 gap-8 md:gap-16 lg:gap-32 xl:gap-28 grid grid-cols-1 md:grid-cols-2 my-15">
       
-      <!-- Kontener obrazu - PRIORYTET WYSOKOŚCI + WYŚRODKOWANIE -->
+  
       
       <div class="flex items-center rounded-sm justify-self-center  max-w-xl overflow-hidden h-auto">
         <img src="@/assets/img/magazynfoto.jpg" alt="O nas zdjęcie" class="object-cover w-full h-auto">
@@ -128,6 +128,9 @@
       </div>
      
     </div>
+    
+      
+ 
   </div>
 </section>
       
@@ -135,7 +138,6 @@
   <div class="flex font-poppins justify-center md:my-5 mt-2 w-full bg-white">
     <div class="justify-center mx-3 lg:mx-16 gap-4 md:gap-16 lg:gap-32 xl:gap-28 grid grid-cols-1 md:grid-cols-2 my-8">
       
-      <!-- Kontener obrazu - PRIORYTET WYSOKOŚCI + WYŚRODKOWANIE -->
      
 
       <!-- Kontener tekstu - DOPASOWUJE SIĘ DO OBRAZU -->
@@ -144,9 +146,9 @@
         Partnerstwo z Technologicznymi Liderami
         </h1>
         <h2 class="font-medium text-base text-balance xl:text-medium text-center md:text-left text-gray-600 mt-4 md:mt-3 lg:mt-4 mb-1 tracking-wide">
-        Jesteśmy dumni z partnerstwa z Siemens w obszarze technologii <span class="font-semibold text-lg lg:text-2xl text-gray-900">RFID</span>, co potwierdza kierunek rozwoju naszego systemu PULSAR. Jako druga firma w Polsce z tym statusem, rozwijamy nowoczesne rozwiązania oparte na automatyzacji i identyfikacji danych.
+        Jesteśmy dumni z partnerstwa z Siemens w obszarze technologii <span class="font-semibold text-md lg:text-xl text-gray-900">RFID</span>, co potwierdza kierunek rozwoju naszego systemu PULSAR. Jako druga firma w Polsce z tym statusem, rozwijamy nowoczesne rozwiązania oparte na automatyzacji i identyfikacji danych.
           <br></br>
-        Status Silver Partner Oracle umacnia naszą pozycję w zakresie zaawansowanych systemów zarządzania danymi. Współpraca z globalnymi liderami motywuje nas do dalszych innowacji i podnoszenia jakości naszych usług. 
+        Status Partner Oracle umacnia naszą pozycję w zakresie zaawansowanych systemów zarządzania danymi. Współpraca z globalnymi liderami motywuje nas do dalszych innowacji i podnoszenia jakości naszych usług. 
         </h2>
         
         <!-- Poprawiona sekcja przycisku -->
@@ -167,7 +169,10 @@
       <section>
         <Card />
       </section>
-
+      <div>
+  
+        <PostMain />
+      </div>
        
   
       </main>
@@ -183,6 +188,8 @@
   import LogoSlider from '../components/LogoSlider.vue';
   import Counter from '../components/Counter.vue';
   import Card from '../components/CardsSix.vue';
+  import PostMain from '../components/PostMain.vue';
+
 
 
 
@@ -201,7 +208,10 @@
   
     
   })
+  
+
   </script>
+
   
   <style>
   @keyframes fade {

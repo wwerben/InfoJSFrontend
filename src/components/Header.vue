@@ -2,7 +2,7 @@
   <header
     class="fixed top-0 left-0 w-full z-50 transition-colors duration-300" 
     :class="isScrolled ? 'bg-blue2 shadow-md ' : 'bg-transparent pt-1'">
-    <div class="flex justify-between items-center px-6 py-3">
+    <div class="flex justify-between items-center pl-3 sm:pl-6 px-6 py-3">
       <!-- Logo -->
       <router-link to="/">
         <img
@@ -26,6 +26,10 @@
           to="/oferta"
           class="text-gray-50 hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
         >Oferta</router-link>
+        <router-link
+          to="/rfid"
+          class="text-gray-50 hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
+        >RFID</router-link>
         <router-link
           to="/blog"
           class="text-gray-50 hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"

@@ -194,22 +194,22 @@ export default {
         {
           title: 'Tagi RFID',
           description: 'Inteligentne transpondery z mikrochipami zawierające unikalne dane identyfikacyjne produktów lub palet.',
-          image: 'src/assets/img/rfidtag.jpg'
+          image: '@/assets/img/rfidtag.jpg'
         },
         {
           title: 'Anteny',
           description: 'Elementy wysyłające i odbierające sygnały radiowe, umożliwiające komunikację między tagami a czytnikami.',
-          image: 'src/assets/img/siemensantena.png'
+          image: '@/assets/img/siemensantena.png'
         },
         {
           title: 'Czytniki',
           description: 'Urządzenia emitujące fale radiowe do tagów i odbierające zwrotne informacje zawierające żądane dane.',
-          image: 'src/assets/img/czytnik.jpg'
+          image: '@/assets/img/czytnik.jpg'
         },
         {
           title: 'System IT',
           description: 'Centralne oprogramowanie do gromadzenia, przetwarzania i analizowania danych z systemu RFID.',
-          image: 'src/assets/img/server.png'
+          image: '@/assets/img/server.png'
         }
       ],
       rfidSteps: [

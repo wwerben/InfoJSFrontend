@@ -1,42 +1,49 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import Header from '@/components/Header.vue'
-import Footter from '@/components/Footter.vue'
-import { RouterView } from 'vue-router'
-import Loading from '@/components/Loading.vue'
+import { ref, onMounted, computed } from 'vue'
+import { useRoute } from 'vue-router'
 
-const isLoaded = ref(false)
+import DefaultHeader from '@/components/Header.vue'
+import AltHeader     from '@/components/AltHeader.vue'
+import Footer        from '@/components/Footter.vue'
+import Loading       from '@/components/Loading.vue'
+
+const isLoaded       = ref(false)
 const isFooterLoaded = ref(false)
 
-onMounted(() => {
-  // Ustawienie głównej zawartości jako załadowanej
-  isLoaded.value = true
+// hook vue-router
+const route = useRoute()
 
-  // Opóźnione ładowanie stopki (np. 2000 ms)
-  setTimeout(() => {
-    isFooterLoaded.value = true
-  }, 3000)
+
+const headerComponent = computed(() => {
+  if (route.path.startsWith('/post/')) {
+    return AltHeader
+  }
+  if (route.path === '/blog') {
+    return AltHeader
+  }
+  return DefaultHeader
+})
+
+onMounted(() => {
+  isLoaded.value = true
+  setTimeout(() => { isFooterLoaded.value = true }, 3000)
 })
 </script>
 
+
 <template>
   <div id="app">
-    <!-- Jeśli aplikacja jeszcze się nie załadowała, pokazujemy loader -->
-    <template v-if="!isLoaded">
-      <Loading />
-    </template>
-    <!-- Główna zawartość aplikacji -->
+    <!-- loader na start -->
+    <Loading v-if="!isLoaded" />
+
+    <!-- cała zawartość po załadowaniu -->
     <template v-else>
-      <Header />
-      <router-view></router-view>
-      <!-- Stopka pojawi się z opóźnieniem -->
-      <template v-if="isFooterLoaded">
-        <Footter />
-      </template>
-      <template v-else>
-        <!-- Opcjonalny placeholder dla stopki -->
-        
-      </template>
+      <!-- tu wyświetli się DefaultHeader albo AltHeader -->
+      <component :is="headerComponent" />
+
+      <router-view />
+
+      <Footer v-if="isFooterLoaded" />
     </template>
   </div>
 </template>

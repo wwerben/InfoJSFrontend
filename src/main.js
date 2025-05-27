@@ -12,6 +12,6 @@ const app = createApp(App)
 
 
 
-app.use(router) // <- WAŻNE! Bez tego routing nie będzie działać
+app.use(router) 
 app.directive('typewriter', typewriter);
 app.mount('#app')

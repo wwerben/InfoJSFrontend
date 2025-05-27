@@ -24,10 +24,15 @@
                 ? 'md:col-start-2 md:row-start-auto'
                 : 'md:col-start-3 md:row-start-auto'
           ]">
-          <div class="text-4xl lg:text-5xl font-bold leading-none">
-            {{ displayCounts[index] }}+
+          <div class="text-sm">
+       
+
           </div>
-          <div class="text-sm text-center lg:text-md font-medium">
+          <div class="text-4xl lg:text-5xl font-bold leading-none">
+            <span class="text-sm -ml-4 font-normal">ponad</span>
+            {{ displayCounts[index] }}
+          </div>
+          <div class="text-xs text-center lg:text-lg font-medium">
             {{ item.label }}
           </div>
         </div>

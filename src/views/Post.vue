@@ -1,6 +1,5 @@
 <template>
-    <div class="bg-gray-100 pb-16">
-      <div class="bg-blue2 h-16 md:h-21 flex justify-center "></div>
+    <div class="bg-gradient-to-br from-white to-gray-200 mt-12 pb-16">
       <div class="flex justify-center text-gray-800">
         <div class="max-w-6xl flex justify-center p-3">
           <div v-if="loading" class="p-4 h-screen">
@@ -10,7 +9,7 @@
             <p>{{ errorpage }}</p>
           </div>
           <div v-else>
-            <h2 class="text-2xl md:text-4xl font-semibold md:mt-6 mb-1 md:mb-2">{{ post.Title }}</h2>
+            <h2 class="text-xl md:text-4xl font-semibold md:mt-6 mb-1 md:mb-2">{{ post.Title }}</h2>
             <p class="text-gray-500 text-sm md:text-lg mb-1">
               Opublikowano: {{ new Date(post.publishedAt).toLocaleDateString() }}
             </p>
@@ -21,7 +20,7 @@
             
               <img
                 v-show="imageLoadedMain"
-                :src="'http://localhost:1337' + post.MainImage.url"
+                :src="'http://168.119.240.129:1337' + post.MainImage.url"
                 alt="Główne zdjęcie posta"
                 @load="handleMainImageLoad"
                 class="max-w-full"
@@ -40,7 +39,7 @@
                 <div v-if="!galleryImagesLoaded[index]" class="bg-gray-200 animate-pulse w-full h-64"></div>
                 <img
                   v-show="galleryImagesLoaded[index]"
-                  :src="'http://localhost:1337' + image.url"
+                  :src="'http://168.119.240.129:1337' + image.url"
                   alt="Obraz z posta"
                   class="object-cover w-full h-64 md:h-48 cursor-pointer"
                   @click="openModal(image)"
@@ -69,7 +68,7 @@
             </svg>
           </button>
           <img
-            :src="'http://localhost:1337' + selectedImage.url"
+            :src="'http://168.119.240.129:1337' + selectedImage.url"
             alt="Powiększony obraz"
             class="h-full w-full "
           />
@@ -124,7 +123,7 @@
       const fetchPost = async () => {
         try {
           const data = await request(
-            "http://localhost:1337/graphql",
+            "http://168.119.240.129:1337/graphql",
             GET_POST,
             { documentId: props.documentId }
           );
