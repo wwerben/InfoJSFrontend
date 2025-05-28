@@ -21,7 +21,7 @@
         <router-link
           to="#"
           class="text-white hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
-        >Firma</router-link>
+        >O nas</router-link>
         <router-link
           to="/oferta"
           class="text-gray-50 hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
@@ -83,10 +83,10 @@
           class="flex flex-col p-4 py-4 font-medium text-center text-xl gap-5"
         >
           <router-link
-            to="#"
+            to="/onas"
             class="text-gray-200"
             @click="closeMobileMenu"
-          >Firma</router-link>
+          >O nas</router-link>
           <router-link
             to="/oferta"
             class="text-gray-200"

@@ -58,18 +58,18 @@
           RFID (Radio-Frequency Identification) to zaawansowany system automatycznej identyfikacji, który bezprzewodowo rozpoznaje przedmioty i natychmiast gromadzi dane. System składa się z czterech kluczowych elementów, które współpracują ze sobą w celu zapewnienia wydajnej identyfikacji i śledzenia.
         </p>
         
-        <!-- Komponenty RFID z obrazami -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-          <div v-for="(component, index) in rfidComponents" :key="index" 
-               class="bg-indigo-50 rounded-lg p-5 text-center transition-all duration-300 hover:shadow-md hover:bg-indigo-100">
-            <div class="bg-white rounded-full w-40 h-40 flex items-center justify-center mx-auto mb-4 shadow-sm overflow-hidden">
-              <img :src="component.image" :alt="component.title" class="w-26 h-26 object-contain" />
+          <!-- Komponenty RFID z obrazami -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            <div v-for="(component, index) in rfidComponents" :key="index" 
+                class="bg-indigo-50 rounded-lg p-5 text-center transition-all duration-300 hover:shadow-md hover:bg-indigo-100">
+              <div class="bg-white rounded-full w-40 h-40 flex items-center justify-center mx-auto mb-4 shadow-sm overflow-hidden">
+                <img :src="component.image" :alt="component.title" class="w-26 h-26 object-contain" />
+              </div>
+              <h4 class="text-xl font-semibold text-blue-600 mb-2">{{ component.title }}</h4>
+              <p class="text-gray-600">{{ component.description }}</p>
             </div>
-            <h4 class="text-xl font-semibold text-blue-600 mb-2">{{ component.title }}</h4>
-            <p class="text-gray-600">{{ component.description }}</p>
           </div>
         </div>
-      </div>
 
       <!-- Jak działa RFID -->
       <div class="bg-white rounded-xl shadow-lg p-6 mb-12">
@@ -187,34 +187,38 @@
 </template>
 
 <script>
+import rfidTagImg     from '@/assets/img/rfidtag.jpg'
+import antennaImg     from '@/assets/img/siemensantena.png'
+import readerImg      from '@/assets/img/czytnik.jpg'
+import systemItImg    from '@/assets/img/server.png'
 export default {
   data() {
     return {
       rfidComponents: [
         {
-          title: 'Tagi RFID',
-          description: 'Inteligentne transpondery z mikrochipami zawierające unikalne dane identyfikacyjne produktów lub palet.',
-          image: '@/assets/img/rfidtag.jpg'
+          title:       'Tagi RFID',
+          description: 'Inteligentne transpondery z mikrochipami...', 
+          image:       rfidTagImg
         },
         {
-          title: 'Anteny',
-          description: 'Elementy wysyłające i odbierające sygnały radiowe, umożliwiające komunikację między tagami a czytnikami.',
-          image: '@/assets/img/siemensantena.png'
+          title:       'Anteny',
+          description: 'Elementy wysyłające i odbierające...', 
+          image:       antennaImg
         },
         {
-          title: 'Czytniki',
-          description: 'Urządzenia emitujące fale radiowe do tagów i odbierające zwrotne informacje zawierające żądane dane.',
-          image: '@/assets/img/czytnik.jpg'
+          title:       'Czytniki',
+          description: 'Urządzenia emitujące fale radiowe...', 
+          image:       readerImg
         },
         {
-          title: 'System IT',
-          description: 'Centralne oprogramowanie do gromadzenia, przetwarzania i analizowania danych z systemu RFID.',
-          image: '@/assets/img/server.png'
+          title:       'System IT',
+          description: 'Centralne oprogramowanie...', 
+          image:       systemItImg
         }
       ],
       rfidSteps: [
         {
-          title: 'Znakowanie Produktów',
+          title: 'Znakowanie Produktów',  
           description: 'Na produktach, paletach lub grupach towarów umieszczane są tagi RFID z mikrochipami zawierającymi unikalne dane identyfikacyjne.'
         },
         {

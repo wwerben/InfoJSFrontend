@@ -4,7 +4,7 @@
       <div class="w-full h-[50vh] flex justify-center items-center">
         <img src="@/assets/img/poly.svg" class="object-cover absolute w-full h-[50vh]" />
         <div class="bg-blue2/30 absolute z-10 w-full h-[50vh]"></div>
-        <h2 class="text-5xl sm:text-6xl md:text-8xl font-semibold justify-center text-gray-50 relative z-10">
+        <h2 class="text-3xl sm:text-4xl md:text-6xl font-semibold justify-center text-gray-50 relative z-10">
           Aktualności
         </h2>
       </div>

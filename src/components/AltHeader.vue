@@ -1,37 +1,41 @@
 <template>
   <header
-    class="fixed top-0 left-0 w-full z-50 transition-colors bg-blue2 duration-300">
-    <div class="flex justify-between items-center px-2 md:px-6 py-3">
+    class="fixed top-0 left-0 w-full z-50 bg-blue2 transition-colors duration-300">
+    <div class="flex justify-between items-center pl-3 sm:pl-6 px-6 py-3">
       <!-- Logo -->
       <router-link to="/">
         <img
           :src="isScrolled ? scrollLogoSrc : scrollLogoSrc"
           alt="Logo"
-          class=" ml-0 md:ml-3 transition-all duration-300" 
-          :class="isScrolled ? 'h-8 md:h-9' : 'h-8 md:h-11'"
+          class="  transition-all duration-300" 
+          :class="isScrolled ? ' -ml-2 md:ml-0 h-8 md:h-10 xl:h-8' : 'h-10 md:h-12 xl:h-10 '"
         />
       </router-link>
 
-      <!-- Nawigacja desktopowa -->
+
       <nav 
-        class="hidden md:flex mr-6 font-medium transition-all  duration-300"
-        :class="isScrolled ? 'text-lg gap-8' : 'text-xl gap-10'"
+        class="hidden md:flex font-base transition-all  duration-300"
+        :class="isScrolled ? 'text-normal font-normal xl:gap-8 gap-6' : 'text-md gap-8 xl:gap-10'"
       >
         <router-link
-          to="#"
-          class="text-white hover:text-gray-300 transition-colors duration-200"
-        >Firma</router-link>
+          to="/onas"
+          class="text-white hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
+        >O nas</router-link>
         <router-link
-          to="#"
-          class="text-gray-50 hover:text-gray-300 transition-colors duration-200"
+          to="/oferta"
+          class="text-gray-50 hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
         >Oferta</router-link>
         <router-link
-          to="#"
-          class="text-gray-50 hover:text-gray-300 transition-colors duration-200"
+          to="/rfid"
+          class="text-gray-50 hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
+        >RFID</router-link>
+        <router-link
+          to="/blog"
+          class="text-gray-50 hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
         >Aktualności</router-link>
         <router-link
-          to="#"
-          class="text-gray-50 hover:text-gray-300 transition-colors duration-200"
+          to="/kontakt"
+          class="text-gray-50 hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
         >Kontakt</router-link>
       </nav>
 
@@ -40,7 +44,9 @@
         class="md:hidden text-white focus:outline-none cursor-pointer"
         @click="toggleMobileMenu"
       >
-        ☰
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+      </svg>
       </button>
     </div>
 
@@ -50,8 +56,8 @@
         v-if="isMobileMenuOpen"
         class="md:hidden absolute top-0  left-0 w-full backdrop-blur-md bg-blue1/55"
       >
-        <div class="flex flex-row justify-between bg-blue1/60 py-2 top-0 items-center">
-          <div class="h-10 w-12"> </div>
+        <div class="flex flex-row justify-between bg-blue1/70 py-2 top-0 items-center">
+          <div class="h-11 w-12"> </div>
             <router-link to="/">
           <img
             :src="isScrolled ? scrollLogoSrc : scrollLogoSrc"
@@ -62,7 +68,7 @@
         </router-link>
 
           <button
-              class="md:hidden  text-white mr-4 justify-self-end focus:outline-none cursor-pointer"
+              class="md:hidden  text-white mr-5 justify-self-end focus:outline-none cursor-pointer"
               @click="toggleMobileMenu"
             >
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -81,7 +87,7 @@
             @click="closeMobileMenu"
           >Firma</router-link>
           <router-link
-            to="#"
+            to="/oferta"
             class="text-gray-200"
             @click="closeMobileMenu"
           >Oferta</router-link>
@@ -91,7 +97,7 @@
             @click="closeMobileMenu"
           >Aktualności</router-link>
           <router-link
-            to="#"
+            to="/kontakt"
             class="text-white"
             @click="closeMobileMenu"
           >Kontakt</router-link>
@@ -105,7 +111,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-// Importy logo (dostosuj ścieżki):
+
 import LogoDefault from '@/assets/img/LogoSys_B.svg'
 import LogoScroll from '@/assets/img/Logo_B.png'
 
