@@ -34,7 +34,7 @@ const routes = [
   },
   {
     path: '/onas',
-    name: 'onas',
+    name: 'AboutUs',
     component: () => import('@/views/AboutUs.vue'),
   }
 

@@ -19,7 +19,7 @@
         :class="isScrolled ? 'text-normal font-normal xl:gap-8 gap-6' : 'text-xl gap-8 xl:gap-10'"
       >
         <router-link
-          to="#"
+          to="/onas"
           class="text-white hover:text-gray-300 hover:scale-115 duration-300 ease-in-out transition"
         >O nas</router-link>
         <router-link
