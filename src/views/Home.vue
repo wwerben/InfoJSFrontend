@@ -60,8 +60,8 @@
 
             <!-- Kontener tekstu - DOPASOWUJE SIĘ DO OBRAZU -->
             <div class=" justify-center md:justify-start py-10 md:max-w-sm lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl  flex pl-0 2xl:pl-20 flex-col  h-full">
-              <h1 v-typewriter="{ speed: 70, threshold: 0.7 }" class="font-bold text-4xl xl:text-5xl text-center md:text-left  text-gray-800">
-                System PULSAR
+              <h1 v-typewriter="{ speed: 70, threshold: 0.7 }" class="font-bold text-2xl xl:text-4xl text-center md:text-left  text-gray-800">
+                System Informatyczny PULSAR
               </h1>
               <h2 class="font-medium text-base xl:text-lg text-center  text-balance md:text-left text-gray-600 mt-2 lg:mt-4 mb-3 tracking-wide">
                  Poznaj system <span class="font-bold text-lg lg:text-xl text-blue3">PULSAR</span> – zintegrowany system informatyczny, który obejmuje wszystkie kluczowe obszary przedsiębiorstwa: sprzedaż, produkcję, zaopatrzenie i magazyn. Dzięki automatyzacji procesów z wykorzystaniem technologii RFID oraz wymianie danych EDI, system Pulsar przyspiesza pracę i optymalizuję procesy, eliminuje błędy i podnosi efektywność Twojej firmy.
@@ -81,7 +81,7 @@
 
       <section>
   <div class="flex font-poppins justify-center flex-col  w-full bg-gradient-to-bl from-blue3 to-blue-900 relative">
-    <div class="justify-center mx-3 lg:mx-16 gap-8 md:gap-16 lg:gap-32 xl:gap-28 grid grid-cols-1 md:grid-cols-2 my-15">
+    <div class="justify-center mx-3 lg:mx-16 gap-8 md:gap-16 lg:gap-20 xl:gap-20 grid grid-cols-1 md:grid-cols-2 my-15">
       
   
       
@@ -90,7 +90,7 @@
       </div>
       <!-- Kontener tekstu - DOPASOWUJE SIĘ DO OBRAZU -->
       <div class="max-w-lg max-md:gap-3 lg:max-w-2xl flex flex-col justify-center h-full ">
-        <h1 v-typewriter="{ speed: 40, threshold: 0.7 }" class="font-bold text-4xl  xl:text-5xl/14 text-center md:text-left text-gray-100">
+        <h1 v-typewriter="{ speed: 40, threshold: 0.7 }" class="font-bold text-3xl  xl:text-5xl/14 text-center md:text-left text-gray-100">
         System Pulsar w branży meblarskiej
         </h1>
        
@@ -109,13 +109,19 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
               <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
             </svg>
+            <span>Produkcja mebli skrzyniowych i tapicerowanych</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+              <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+            </svg>
             <span>Automatyzacja produkcji i logistyki</span>
           </li>
           <li class="flex items-center gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
               <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
             </svg>
-            <span>Zwiększenie wydajności i konkurencyjności</span>
+            <span>Zastosowanie technologii RFID w obszarach  <br> produkcji i magazynowania</span>
           </li>
         </ul>
 
@@ -145,11 +151,16 @@
         <h1 v-typewriter="{ speed: 40, threshold: 0.7 }" class="font-bold text-4xl  xl:text-5xl text-center md:text-left text-gray-800">
         Partnerstwo z Technologicznymi Liderami
         </h1>
-        <h2 class="font-medium text-base text-balance xl:text-medium text-center md:text-left text-gray-600 mt-4 md:mt-3 lg:mt-4 mb-1 tracking-wide">
-        Jesteśmy dumni z partnerstwa z Siemens w obszarze technologii <span class="font-semibold text-md lg:text-xl text-gray-900">RFID</span>, co potwierdza kierunek rozwoju naszego systemu PULSAR. Jako druga firma w Polsce z tym statusem, rozwijamy nowoczesne rozwiązania oparte na automatyzacji i identyfikacji danych.
-          <br></br>
-        Status Partner Oracle umacnia naszą pozycję w zakresie zaawansowanych systemów zarządzania danymi. Współpraca z globalnymi liderami motywuje nas do dalszych innowacji i podnoszenia jakości naszych usług. 
-        </h2>
+        <div class="font-medium text-base text-balance xl:text-medium text-center md:text-left text-gray-600 tracking-wide mt-4 md:mt-3 lg:mt-4 mb-1 ">
+          <h1 class="text-xl text-gray-800 font-semibold">Siemens Technology Partner</h1>
+           <h2 class="">
+            Jako druga firma w Polsce z tytułem Siemens Technology Partner rozwijamy PULSAR, który dzięki zaawansowanej automatyce i identyfikacji danych precyzyjnie steruje procesami produkcyjnymi i magazynowymi. Współpraca z ekspertami Siemens pozwala nam wprowadzać innowacje, zwiększające wydajność i minimalizujące przestoje.          </h2>
+          <h1 class="text-xl mt-5 text-gray-800 font-semibold">Oracle Partner</h1>
+           <h2 class="">
+            Posiadanie statusu Oracle Partner zapewnia nam dostęp do najnowszych technologii i umacnia pozycję w tworzeniu zaawansowanych systemów informatycznych opartych o relacyjny serwer bazy danych Oracle. 
+
+          </h2>
+        </div>
         
         <!-- Poprawiona sekcja przycisku -->
         <div class="mt-6 flex justify-center md:justify-start">

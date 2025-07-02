@@ -48,9 +48,10 @@
     { image: o3Image, title: 'Produkcja', button: 'Czytaj więcej' },
     { image: o9Image, title: 'Logistyka Sprzedaży', button: 'Czytaj więcej' },
     { image: o2Image, title: 'Magazyn RFID', button: 'Czytaj więcej' },
+    { image: o12Image, title: 'Informator24', button: 'Czytaj więcej' },
     { image: o7Image, title: 'Logistyka Zaopatrzenia', button: 'Czytaj więcej' },
     { image: o6Image, title: 'EDI', button: 'Czytaj więcej' },
-    { image: o12Image, title: 'Informator24', button: 'Czytaj więcej' },
+    
   ]
   </script>
   

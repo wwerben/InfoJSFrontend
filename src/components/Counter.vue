@@ -5,34 +5,41 @@
 
       <div
         class="grid
-               grid-cols-2 grid-rows-2 gap-x-4 gap-y-2
-               md:grid-cols-3 md:grid-rows-1 md:gap-x-2 md:gap-y-0
+               grid-cols-2 grid-rows-2 gap-x-4 gap-y-4
+               md:grid-cols-4 md:grid-rows-1 md:gap-x-2 md:gap-y-0
                justify-items-center justify-center items-center">
-        <div
-          v-for="(item, index) in items"
-          :key="index"
-          class="flex flex-col justify-center items-center"
-          :class="[
-            index === 1
-              ? 'max-md:col-span-2 max-md:row-start-1'       
-              : index === 0
-                ? 'max-md:col-start-1 max-md:row-start-2'     
-                : 'max-md:col-start-2 max-md:row-start-2',    
-            index === 0
-              ? 'md:col-start-1 md:row-start-auto'
-              : index === 1
-                ? 'md:col-start-2 md:row-start-auto'
-                : 'md:col-start-3 md:row-start-auto'
-          ]">
+               <div
+                v-for="(item, index) in items"
+                :key="index"
+                class="flex flex-col justify-center items-center"
+                :class="[
+                  // Mobile - 2x2 (2 kolumny, 2 rzędy)
+                  index === 0 
+                    ? 'col-start-1 row-start-1'
+                    : index === 1
+                      ? 'col-start-2 row-start-1'
+                      : index === 2
+                        ? 'col-start-1 row-start-2'
+                        : 'col-start-2 row-start-2',
+                  // Desktop - 4x1 (4 kolumny, 1 rząd)
+                  index === 0
+                    ? 'md:col-start-1 md:row-start-1'
+                    : index === 1
+                      ? 'md:col-start-2 md:row-start-1'
+                      : index === 2
+                        ? 'md:col-start-3 md:row-start-1'
+                        : 'md:col-start-4 md:row-start-1'
+                ]"
+              >
           <div class="text-sm">
        
 
           </div>
-          <div class="text-4xl lg:text-5xl font-bold leading-none">
-            <span class="text-sm -ml-4 font-normal">ponad</span>
+          <div class="text-2xl lg:text-6xl font-bold leading-none">
+            <span class="text-sm -ml-2 -mr-1 font-lg font-medium">ponad</span>
             {{ displayCounts[index] }}
           </div>
-          <div class="text-xs text-center lg:text-lg font-medium">
+          <div class="text-[10px] text-center lg:text-base font-base lg:font-base">
             {{ item.label }}
           </div>
         </div>
@@ -45,9 +52,10 @@
 import { ref, onMounted } from 'vue'
 
 const items = [
-  { target: 10000, label: 'dokumentów sprzedaży każdego dnia' },
+  { target: 5800, label: 'dziennie wyprodukowanych mebli' },
   { target: 30,    label: 'lat doświadczenia' },
-  { target: 1000,  label: 'użytkowników systemu dziennie' }
+  { target: 16,    label: 'konektorów integracyjnych EDI' },
+  { target: 1000,  label: 'użytkowników każdego dnia' }
 ]
 
 const displayCounts = ref(items.map(() => 0))
