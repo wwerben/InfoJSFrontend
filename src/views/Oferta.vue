@@ -43,7 +43,7 @@
     
     <!-- Obraz - prawa połowa -->
     <div class="w-full md:w-1/2 flex justify-center">
-        <img src="@/assets/img/Pulsar-first.jpg" alt="System PULSAR Interface" 
+        <img src="@/assets/img/Pulsarfirst.jpg" alt="System PULSAR Interface" 
              class="w-full max-w-[600px] h-auto object-cover "/>
     </div>
 </section>

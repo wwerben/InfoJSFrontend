@@ -80,7 +80,7 @@
 
             <!-- Obrazek -->
             <div class="flex justify-center">
-            <img src="@/assets/img/pulsar-first.jpg" alt="Opis obrazka" class="w-full h-auto max-w-lg">
+            <img src="@/assets/img/Pulsarfirst.jpg" alt="Opis obrazka" class="w-full h-auto max-w-lg">
             </div>
 
         </div>
