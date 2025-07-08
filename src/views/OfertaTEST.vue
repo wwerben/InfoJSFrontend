@@ -27,13 +27,13 @@
 
 
 
-<section class="flex flex-col md:flex-row items-center max-md:py-15 justify-center px-3 py-8 lg:py-12 xl:px-10 gap-8 max-w-7xl mx-auto">
+<section class="flex flex-col md:flex-row items-center justify-center px-4 py-8 lg:py-12 xl:px-10 gap-8 max-w-7xl mx-auto">
     <!-- Tekst - lewa połowa -->
-    <div class="w-full md:w-1/2 space-y-4 lg:space-y-6 text-center md:text-left px-2">
+    <div class="w-full md:w-1/2 space-y-4 lg:space-y-6 text-center md:text-left px-4">
         <h1 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-gray-900" v-typewriter="{ speed: 55, threshold: 1 }">
             System PULSAR
         </h1>
-        <h2 class="text-md md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
+        <h2 class="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
             PULSAR to kompleksowy system informatyczny wspierający wszystkie obszary działalności firmy. 
             Dzięki modułowej budowie pozwala na efektywne zarządzanie logistyką, 
             produkcją i magazynem, zapewniając pełną automatyzację procesów i integrację danych.
@@ -168,12 +168,12 @@
 </div>
   </div>
 </section>
-<section class="flex justify-center items-center py-10 max-md:py-10  px-5 md:px-10 xl:px-10 lg:py-12 bg-blue3">
+<section class="flex justify-center items-center py-10  px-5 md:px-10 xl:px-10 lg:py-12 bg-blue3">
   <div class="max-w-7xl w-full flex flex-col md:flex-row gap-6 xl:gap-10 items-center justify-between">
     <!-- Text content block -->
     <div class="w-full md:w-1/2 flex justify-center flex-col space-y-2 lg:space-y-4 text-center md:text-left">
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-100" v-typewriter="{ speed: 55, threshold: 1 }">Pulsar RFID</h1>
-      <h2 class="text-md md:text-lg lg:text-xl text-gray-100 leading-relaxed lg:pr-6">
+      <h2 class="text-lg md:text-lg lg:text-xl text-gray-100 leading-relaxed lg:pr-6">
         RFID to rewolucyjne rozwiązanie w logistyce, które w połączeniu z systemem PULSAR usprawnia zarządzanie magazynem i produkcją. Umożliwia automatyczne skanowanie bez kontaktu, eliminując błędy i przyspieszając operacje. Rozwiązanie to redukuje koszty, optymalizuje procesy i zwiększa precyzję zarządzania zapasami. System PULSAR RFID podnosi efektywność i automatyzację kluczowych procesów logistycznych.
       </h2>
      
@@ -191,7 +191,7 @@
     <!-- Video block -->
     <div class="w-full md:w-1/2 flex justify-center">
       <div class="w-full grid grid-cols-1 justify-center">
-        <h2 class="text-xs text-center sm:text-md lg:text-xl mb-2 text-gray-100 font-semibold">
+        <h2 class="text-sm text-center sm:text-md lg:text-xl mb-2 text-gray-100 font-semibold">
           Działanie systemu PULSAR RFID w firmie Dolmar Meble
         </h2>
         <iframe class="w-full aspect-video" :src="youtubeUrl" frameborder="0" allowfullscreen></iframe>
@@ -200,7 +200,7 @@
   </div>
 </section>
 
-<section class="flex justify-center flex-col items-center py-10 relative bg-[url('/src/assets/img/warehouse.jpg')] bg-cover bg-fixed bg-center min-h-[50vh] lg:min-h-screen">
+<section class="flex justify-center flex-col items-center py-10 relative bg-[url('/src/assets/img/warehouse.jpg')] bg-cover bg-fixed bg-center lg:min-h-screen">
   <div class="container  xl:px-34 p-2">
     <div class="md:border-[15px] md:border-b-[30px] border-4 border-gray-900 rounded-md max-w-6xl mx-auto overflow-hidden">
       <ImageCarousel 
@@ -317,7 +317,10 @@ import StanyMagazynowe from '@/assets/img/pulsarss/StanyMagazynowe.jpg'
 import Trasy from '@/assets/img/pulsarss/Trasy.jpg'
 import WizualizacjaMagazyn from '@/assets/img/pulsarss/WizualizacjaMagazyn.jpg'
 import Wysylka from '@/assets/img/pulsarss/Wysylka.jpg'
+
 import OfferGrid from '@/components/OfferGrid.vue'
+
+
 
 const slides = ref([
   { src: Cenniki, caption: 'Cenniki' },

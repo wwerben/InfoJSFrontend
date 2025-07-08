@@ -50,7 +50,7 @@
     
        
         <section>
-        <div class="flex  font-poppins justify-center mt-6 w-full bg-gray-100">
+        <div class="flex  font-poppins justify-center mt-6 py-20 w-full bg-gray-100">
           <div class="justify-center mx-3 lg:mx-16 gap-8 md:gap-12 lg:gap-20 xl:gap-40 grid grid-cols-1 md:grid-cols-2 my-8 md:flex md:flex-row-reverse">
             
             <!-- Kontener obrazu - PRIORYTET WYSOKOŚCI + WYŚRODKOWANIE -->
@@ -80,7 +80,7 @@
       </section>
 
       <section>
-  <div class="flex font-poppins justify-center flex-col  w-full bg-gradient-to-bl from-blue3 to-blue-900 relative">
+  <div class="flex font-poppins justify-center flex-col  py-20 w-full bg-gradient-to-bl from-blue3 to-blue-900 relative">
     <div class="justify-center mx-3 lg:mx-16 gap-8 md:gap-16 lg:gap-20 xl:gap-20 grid grid-cols-1 md:grid-cols-2 my-15">
       
   
@@ -141,16 +141,19 @@
 </section>
       
       <section>
-  <div class="flex font-poppins justify-center md:my-5 mt-2 w-full bg-white">
-    <div class="justify-center mx-3 lg:mx-16 gap-4 md:gap-16 lg:gap-32 xl:gap-28 grid grid-cols-1 md:grid-cols-2 my-8">
+  <div class="flex font-poppins  justify-center md:my-5 mt-2 lg:py-20 w-full bg-white">
+    <div class="justify-center  mx-3 lg:mx-16 gap-4 md:gap-16 lg:gap-32 xl:gap-28 grid grid-cols-1 md:grid-cols-2 my-8">
       
      
 
       <!-- Kontener tekstu - DOPASOWUJE SIĘ DO OBRAZU -->
       <div class="max-w-lg lg:max-w-2xl flex flex-col justify-center h-full">
-        <h1 v-typewriter="{ speed: 40, threshold: 0.7 }" class="font-bold text-4xl  xl:text-5xl text-center md:text-left text-gray-800">
+        <h1 v-typewriter="{ speed: 40, threshold: 0.7 }" class="font-bold text-4xl max-md:mb-3 xl:text-5xl text-center md:text-left text-gray-800">
         Partnerstwo z Technologicznymi Liderami
         </h1>
+        <div class="flex items-center md:hidden  justify-self-center  max-w-xl overflow-hidden h-auto">
+        <img src="@/assets/img/SiemensOracle.png" alt="O nas zdjęcie" class="object-cover w-full h-auto">
+      </div>
         <div class="font-medium text-base text-balance xl:text-medium text-center md:text-left text-gray-600 tracking-wide mt-4 md:mt-3 lg:mt-4 mb-1 ">
           <h1 class="text-xl text-gray-800 font-semibold">Siemens Technology Partner</h1>
            <h2 class="">
@@ -169,23 +172,33 @@
           </a>
         </div>
       </div>
-      <div class="flex items-center max-md:order-first justify-self-center  max-w-xl overflow-hidden h-auto">
+      <div class="flex items-center max-md:hidden max-md:order-first justify-self-center  max-w-xl overflow-hidden h-auto">
         <img src="@/assets/img/SiemensOracle.png" alt="O nas zdjęcie" class="object-cover w-full h-auto">
       </div>
 
     </div>
   </div>
 </section>
+<section>
+  <div class="relative mb-0">
+    <img src="@/assets/img/ksef.jpg" alt="Przygotuj firme na ksef" class="w-full h-[70vh] object-cover" />
+    <div class="absolute inset-0 flex flex-col items-center text-gray-100 justify-center  text-center p-3 z-10">
+    <p class="font-semibold text-4xl md:text-7xl mb-2 md:mb-4">Przygotuj firmę na KSeF</p>
+    <p class="font-medium text-xl md:text-3xl">Zyskaj przewagę nad konkurencją</p>
+  </div>
+  </div>
+  
+</section>
  
-      <section>
-        <Card />
-      </section>
-      <div>
+      <div class="py-10">
   
         <PostMain />
       </div>
        
-  
+      
+      <section>
+        <Card />
+      </section>
       </main>
   
      
