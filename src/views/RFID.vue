@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-blue-950 to-blue3">
+  <div class="min-h-screen bg-gradient-to-b  from-blue-950 to-blue3">
     <!-- Hero Section -->
     <section class="relative text-white bg-[url('/src/assets/img/bramka.webp')]">
       
@@ -24,12 +24,13 @@
     </section>
 
   
-
+<div class="max-w-7xl mx-auto "> 
     <section class="py-4  lg:px-14">
       <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2  max-md:-mt-8 gap-4 md:gap-12 items-center">
           <div class="order-2 lg:order-1">
             <h2 class="text-5xl font-bold text-gray-50 mb-4">Pulsar RFID</h2>
+            <img src="@/assets/img/rfidtrzy.png" alt="Antena rfid podczas inwentaryzacji w magazynie" class="rounded-lg block py-4 lg:hidden shadow-xl" />
             <p class="text-gray-200 text-xl font-normal mb-6 leading-relaxed">
               Ważnym aspektem w budowaniu przewagi konkurencyjnej firmy jest wprowadzanie innowacyjnych rozwiązań i nowych technologii. W ostatnich latach można zaobserwować wzrost zainteresowania przedsiębiorstw wdrażaniem RFID- systemu automatycznej identyfikacji za pomocą fal radiowych.            </p>
            
@@ -37,7 +38,7 @@
             </div>
           <div class="relative order-1 lg:order-2 flex p-5 justify-center">
             
-            <img src="@/assets/img/rfidtrzy.png" alt="RFID Warehouse Implementation" class="rounded-lg shadow-xl" />
+            <img src="@/assets/img/rfidtrzy.png" alt="Antena rfid podczas inwentaryzacji w magazynie" class="rounded-lg lg:block hidden shadow-xl" />
             
           </div>
         </div>
@@ -54,7 +55,7 @@
       <!-- Wprowadzenie do RFID -->
       <div class="bg-white rounded-xl shadow-lg p-6 mb-12">
         <h3 class="text-3xl font-bold text-blue-900 max-lg:text-center mb-4">Czym jest RFID?</h3>
-        <p class="text-gray-700 text-lg font-medium mb-6">
+        <p class="text-gray-700 text-base lg:text-lg font-normal lg:font-medium mb-6">
           RFID (Radio-Frequency Identification) to zaawansowany system automatycznej identyfikacji, który bezprzewodowo rozpoznaje przedmioty i natychmiast gromadzi dane. System składa się z czterech kluczowych elementów, które współpracują ze sobą w celu zapewnienia wydajnej identyfikacji i śledzenia.
         </p>
         
@@ -140,7 +141,7 @@
       </div>
 
       <div class="bg-white rounded-xl shadow-lg p-6 mb-12">
-          <h2 class="md:text-3xl text-lg font-bold text-center md:py-3 max-md:pb-3 text-blue-900">Działanie systemu Pulsar RFID w firmie Dolmar </h2>
+          <h2 class="md:text-3xl text-lg font-bold text-center mb-4 md:py-3 max-md:pb-3 text-blue-900">Działanie systemu Pulsar RFID w firmie Dolmar </h2>
           <div class="aspect-w-16 aspect-h-9 ">
             
             <iframe class="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/OutFYTNpC6Y" frameborder="0" allowfullscreen></iframe>
@@ -150,14 +151,28 @@
             </div>
         </div>
       </div>
+      <div class="bg-white rounded-xl shadow-lg p-2 md:p-8 mb-12">
+        <div class="grid grid-cols-2 max-lg:grid-cols-1 justify-center items-center gap-6">
+          
+          <div class="max-lg:mx-8 mx-6  max-lg:mt-4">
+            <h3 class="text-2xl lg:text-3xl font-bold text-center xl:text-left text-blue-900 mb-3">Nowy wymiar inwentaryzacji</h3>
+            <h3 class="text-gray-800 font-base text-md xl:text-lg leading-relaxed ">Na przykładzie firmy Dolmar czas inwentaryzacji magazynu skrócił się z 2 dni do zaledwie 2 godzin dzięki technologii RFID. Automatyzacja procesu nie tylko przyspiesza pracę, ale także znacząco zwiększa dokładność i kontrolę nad stanami magazynowymi.</h3>
+          </div>
+          <div class="p-4">
+            <img src="@/assets/img/rfidtrzy.png" alt="Inwentaryzacja RFID" class="w-full  h-auto rounded-lg shadow-md"/>
+          </div>
 
-     <div class="bg-white rounded-xl shadow-lg p-6">
-        <h3 class="text-2xl font-bold text-blue-600 mb-6">Korzyści z Technologii RFID</h3>
+          
+        </div>
+      
+      </div>
+     <div class="bg-white rounded-xl shadow-lg p-8">
+        <h3 class=" text-2xl lg:text-3xl font-bold text-center text-blue-900 mb-6">Korzyści z Technologii RFID</h3>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div v-for="(benefit, index) in rfidBenefits" :key="index"
                class="border border-indigo-100 rounded-lg p-5 transition-all duration-300 hover:shadow-md hover:border-indigo-300">
-            <h4 class="text-lg font-semibold text-blue-600 mb-2">{{ benefit.title }}</h4>
+            <h4 class="text-lg font-semibold text-blue-900 mb-2">{{ benefit.title }}</h4>
             <p class="text-gray-700">{{ benefit.description }}</p>
           </div>
         </div>
@@ -167,7 +182,7 @@
 
 
 
-  <section class="bg-blue3 text-white py-24 lg:px-14">
+  <section class="bg-transparent text-white py-24 px-4 lg:px-14">
        <div class="container mx-auto  text-center">
            <h2 class="md:text-4xl text-2xl font-bold mb-6">Zwiększ konkurencyjność swojej firmy z PULSAR RFID</h2>
            <p class="md:text-xl  text-sm mb-12 max-w-4xl mx-auto"> Technologia RFID przyczynia się w znacznym stopniu do poprawy organizacji w firmie, pozwala zachować porządek i zwiększa kontrolę. Powoduje to polepszenie funkcjonowania firmy, a co za tym idzie budowanie przewagi konkurencyjnej.</p>
@@ -182,7 +197,7 @@
        </div>
 
    </section>
-   
+  </div>
   </div>
 </template>
 

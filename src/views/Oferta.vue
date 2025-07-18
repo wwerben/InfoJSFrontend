@@ -97,7 +97,9 @@
   
   <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-1000 group-hover:max-h-96 group-hover:opacity-100">
     <p class="text-sm leading-relaxed">
-        System Pulsar usprawnia zarządzanie procesami logistycznymi, zapewniając optymalizację dostaw, redukcję kosztów oraz terminową realizację zamówień. Pozwala na pełną kontrolę nad zaopatrzeniem i sprzedażą – od rejestracji kontraktów z dostawcami, przez harmonogramowanie dostaw, po monitorowanie realizacji umów. Dzięki automatycznemu bilansowaniu zasobów i śledzeniu zamówień na każdym etapie, logistyka staje się bardziej efektywna i dostosowana do dynamicznych potrzeb rynku.
+        System Pulsar usprawnia zarządzanie procesami logistycznymi, zapewniając optymalizację dostaw, redukcję kosztów oraz terminową realizację zamówień. Pozwala na pełną kontrolę nad zaopatrzeniem i sprzedażą – od rejestracji zamówień od klientów, przez tworzenie tras oraz automatyczne generowanie dokumentów sprzedażowych i wysyłkowych.
+Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka staje się bardziej efektywna i dostosowana do potrzeb.
+
     </p>
    
   </div>
@@ -115,8 +117,7 @@
   
   <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-700 group-hover:max-h-96 group-hover:opacity-100">
     <p class="text-sm leading-relaxed">
-        Efektywne zarządzanie magazynem to klucz do sprawnej organizacji łańcucha dostaw. Pulsar umożliwia bieżącą kontrolę stanów magazynowych, śledzenie partii i numerów seryjnych oraz optymalizację rozmieszczenia towarów. Automatyzacja procesów przyjęć, wydań i inwentaryzacji pozwala na minimalizację strat i zwiększenie wydajności operacyjnej. Integracja z innymi modułami sprawia, że gospodarka magazynowa jest jeszcze bardziej przejrzysta i efektywna.
-    </p>
+      Efektywne zarządzanie magazynem to klucz do sprawnej organizacji firmy. Pulsar umożliwia bieżącą kontrolę stanów magazynowych, śledzenie paczek magazynowych oraz optymalizację rozmieszczenia towarów. Wykorzystanie technologii RFID oraz automatyzacja procesów przyjęć, wydań i inwentaryzacji pozwala na minimalizację strat i zwiększenie wydajności operacyjnej.     </p>
   
   </div>
   <a href="#" class="mt-2    inline-flex items-center gap-1 hover:underline">
@@ -134,8 +135,7 @@
   
   <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-700 group-hover:max-h-96 group-hover:opacity-100">
     <p class="text-sm leading-relaxed">
-        Precyzyjne planowanie i realizacja produkcji to fundament sprawnego funkcjonowania przedsiębiorstwa. System Pulsar wspiera zarządzanie procesami produkcyjnymi, umożliwiając tworzenie harmonogramów, monitorowanie etapów realizacji oraz optymalizację zużycia zasobów. Automatyzacja generowania zleceń oraz kalkulacji kosztów pozwala na zwiększenie efektywności i redukcję błędów. Dzięki integracji z magazynem i logistyką, produkcja może być elastycznie dostosowywana do aktualnych potrzeb rynku.
-    </p>
+      Planowanie i realizacja produkcji to fundament sprawnego funkcjonowania przedsiębiorstwa. System Pulsar wspiera zarządzanie procesami produkcyjnymi, umożliwiając tworzenie planów produkcyjnych, monitorowanie etapów realizacji oraz optymalizację zużycia surowców. System PULSAR pozwala na zwiększenie efektywności i redukcję błędów.     </p>
    
   </div>
   <a href="#" class="mt-2    inline-flex items-center gap-1 hover:underline">
@@ -155,8 +155,7 @@
   
   <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-700 group-hover:max-h-96 group-hover:opacity-100">
     <p class="text-sm leading-relaxed">
-        Spójna wymiana danych pomiędzy systemami to podstawa efektywnego zarządzania przedsiębiorstwem. Pulsar zapewnia pełną integrację z systemami ERP, CRM oraz platformami e-commerce, eliminując błędy wynikające z ręcznego wprowadzania danych. Automatyczna synchronizacja informacji gwarantuje aktualność i spójność procesów, co pozwala na lepszą kontrolę i optymalizację działania firmy.
-    </p>
+      Spójna wymiana danych pomiędzy systemami to podstawa efektywnego zarządzania przedsiębiorstwem. Pulsar zapewnia pełną integrację innymi systemami eliminując błędy wynikające z ręcznego wprowadzania danych. Automatyczna synchronizacja informacji gwarantuje aktualność i spójność procesów, co pozwala na lepszą kontrolę i optymalizację działania firmy.    </p>
     
   </div>
   <a href="#" class="mt-2    inline-flex items-center gap-1 hover:underline">
