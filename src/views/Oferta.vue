@@ -48,6 +48,10 @@
     </div>
 </section>
 
+<section class="">
+  <CardsOffer></CardsOffer>
+</section>
+
 <section class=" relative w-full md:hidden h-[600px] bg-[url('/src/assets/img/Oferta-magazyn.jpg')] bg-cover bg-center bg-no-repeat"
 >
 <div class="absolute inset-0 bg-blue2/40"></div>
@@ -81,6 +85,7 @@
 
     
 </section>
+
 
 <section
   class="relative w-full hidden md:flex  h-[600px] bg-[url('/src/assets/img/Oferta-magazyn.jpg')] bg-cover bg-center bg-no-repeat"
@@ -317,6 +322,7 @@ import Trasy from '@/assets/img/pulsarss/Trasy.jpg'
 import WizualizacjaMagazyn from '@/assets/img/pulsarss/WizualizacjaMagazyn.jpg'
 import Wysylka from '@/assets/img/pulsarss/Wysylka.jpg'
 import OfferGrid from '@/components/OfferGrid.vue'
+import CardsOffer from "@/components/CardsOffer.vue";
 
 const slides = ref([
   { src: Cenniki, caption: 'Cenniki' },
