@@ -1,177 +1,115 @@
 <template>
-    <section class="relative w-full flex h-auto min-h-[400px] bg-[url('/src/assets/img/Oferta-magazyn.jpg')] bg-cover bg-center bg-no-repeat">
-      <!-- Overlay przyciemniający -->
-      <div class="absolute inset-0 bg-blue2/30"></div>
-  
-      <!-- Kontener na treść - jedna kolumna na mobile -->
-      <div class="relative z-10 flex flex-col w-full">
-        
-        <!-- Sekcja 1: Logistyka -->
-        <div 
-          class="flex flex-col justify-end p-4 text-white transition-all duration-500 min-h-[200px] cursor-pointer border-b border-white/20"
-          @click="toggleActive(1)"
+  <section class="relative w-full overflow-hidden accordion-root">
+    <!-- Tło (bez bg-fixed; stabilne na mobile) -->
+    <div class="absolute inset-0 pointer-events-none">
+      <img src="/src/assets/img/magazyn-waski.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gray-900/70"></div>
+    </div>
+
+    <!-- Treść -->
+    <div class="relative z-10 mx-auto max-w-5xl px-4 py-10 sm:py-16">
+      <div
+        v-for="(item, idx) in items"
+        :key="item.id"
+        class="border-b border-white/20"
+      >
+        <!-- Nagłówek -->
+        <button
+          type="button"
+          class="w-full text-left flex items-center justify-between gap-4 py-4 text-white"
+          :aria-expanded="openIndex === idx"
+          :aria-controls="`panel-${item.id}`"
+          @click="toggle(idx)"
         >
-          <div class="transition-transform duration-1000" :class="{ 'transform translate-y-[-10px]': isActive1 }">
-            <h2 class="text-xl font-bold transition-all duration-1000 mb-3 flex items-center justify-between">
-              Logistyka
-              <span class="text-lg transition-transform duration-300" :class="{ 'rotate-180': isActive1 }">↓</span>
-            </h2>
-            
-            <!-- Dynamicznie kontrolowana widoczność -->
-            <div 
-              class="transition-all duration-700 overflow-hidden"
-              :class="{
-                'max-h-64 opacity-100': isActive1,
-                'max-h-0 opacity-0': !isActive1
-              }"
+          <span class="text-xl font-bold">{{ item.title }}</span>
+          <svg
+            class="w-5 h-5 shrink-0 transition-transform duration-300"
+            :class="{ 'rotate-180': openIndex === idx }"
+            viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+          >
+            <path d="M12 15.5a1 1 0 0 1-.7-.3l-6-6a1 1 0 1 1 1.4-1.4L12 13.1l5.3-5.3a1 1 0 1 1 1.4 1.4l-6 6a1 1 0 0 1-.7.3z"/>
+          </svg>
+        </button>
+
+        <!-- Panel (animacja 0fr -> 1fr) -->
+        <div
+          :id="`panel-${item.id}`"
+          class="grid transition-all duration-500 ease-in-out"
+          :class="openIndex === idx ? 'rows-1fr' : 'rows-0fr'"
+        >
+          <!-- Uwaga: overflow-hidden na dziecku siatki -->
+          <div class="overflow-hidden">
+            <div
+              class="pb-5 text-white/95 transition-opacity duration-300"
+              :class="openIndex === idx ? 'opacity-100' : 'opacity-0'"
             >
               <p class="text-sm leading-relaxed mb-4">
-                System Pulsar usprawnia zarządzanie procesami logistycznymi, zapewniając optymalizację dostaw, redukcję kosztów oraz terminową realizację zamówień. Pozwala na pełną kontrolę nad zaopatrzeniem i sprzedażą – od rejestracji zamówień od klientów, przez tworzenie tras oraz automatyczne generowanie dokumentów sprzedażowych i wysyłkowych.
-                Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka staje się bardziej efektywna i dostosowana do potrzeb.
+                {{ item.body }}
               </p>
-              <a href="#" class="inline-flex items-center gap-1 hover:underline">
+              <a :href="item.href" class="inline-flex items-center gap-1 hover:underline">
                 <span>Dowiedz się więcej</span>
                 <span class="font-bold">&rarr;</span>
               </a>
             </div>
           </div>
         </div>
-  
-        <!-- Sekcja 2: Magazyn -->
-        <div 
-          class="flex flex-col justify-end p-4 text-white transition-all duration-500 min-h-[200px] cursor-pointer border-b border-white/20"
-          @click="toggleActive(2)"
-        >
-          <div class="transition-transform duration-1000" :class="{ 'transform translate-y-[-10px]': isActive2 }">
-            <h2 class="text-xl font-bold transition-all duration-1000 mb-3 flex items-center justify-between">
-              Magazyn
-              <span class="text-lg transition-transform duration-300" :class="{ 'rotate-180': isActive2 }">↓</span>
-            </h2>
-            
-            <div 
-              class="transition-all duration-700 overflow-hidden"
-              :class="{
-                'max-h-64 opacity-100': isActive2,
-                'max-h-0 opacity-0': !isActive2
-              }"
-            >
-              <p class="text-sm leading-relaxed mb-4">
-                Efektywne zarządzanie magazynem to klucz do sprawnej organizacji firmy. Pulsar umożliwia bieżącą kontrolę stanów magazynowych, śledzenie paczek magazynowych oraz optymalizację rozmieszczenia towarów. Wykorzystanie technologii RFID oraz automatyzacja procesów przyjęć, wydań i inwentaryzacji pozwala na minimalizację strat i zwiększenie wydajności operacyjnej.
-              </p>
-              <a href="#" class="inline-flex items-center gap-1 hover:underline">
-                <span>Dowiedz się więcej</span>
-                <span class="font-bold">&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Sekcja 3: Produkcja -->
-        <div 
-          class="flex flex-col justify-end p-4 text-white transition-all duration-500 min-h-[200px] cursor-pointer border-b border-white/20"
-          @click="toggleActive(3)"
-        >
-          <div class="transition-transform duration-1000" :class="{ 'transform translate-y-[-10px]': isActive3 }">
-            <h2 class="text-xl font-bold transition-all duration-1000 mb-3 flex items-center justify-between">
-              Produkcja
-              <span class="text-lg transition-transform duration-300" :class="{ 'rotate-180': isActive3 }">↓</span>
-            </h2>
-            
-            <div 
-              class="transition-all duration-700 overflow-hidden"
-              :class="{
-                'max-h-64 opacity-100': isActive3,
-                'max-h-0 opacity-0': !isActive3
-              }"
-            >
-              <p class="text-sm leading-relaxed mb-4">
-                Planowanie i realizacja produkcji to fundament sprawnego funkcjonowania przedsiębiorstwa. System Pulsar wspiera zarządzanie procesami produkcyjnymi, umożliwiając tworzenie planów produkcyjnych, monitorowanie etapów realizacji oraz optymalizację zużycia surowców. System PULSAR pozwala na zwiększenie efektywności i redukcję błędów.
-              </p>
-              <a href="#" class="inline-flex items-center gap-1 hover:underline">
-                <span>Dowiedz się więcej</span>
-                <span class="font-bold">&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Sekcja 4: Integracja -->
-        <div 
-          class="flex flex-col justify-end p-4 text-white transition-all duration-500 min-h-[200px] cursor-pointer"
-          @click="toggleActive(4)"
-        >
-          <div class="transition-transform duration-1000" :class="{ 'transform translate-y-[-10px]': isActive4 }">
-            <h2 class="text-xl font-bold transition-all duration-1000 mb-3 flex items-center justify-between">
-              Integracja
-              <span class="text-lg transition-transform duration-300" :class="{ 'rotate-180': isActive4 }">↓</span>
-            </h2>
-            
-            <div 
-              class="transition-all duration-700 overflow-hidden"
-              :class="{
-                'max-h-64 opacity-100': isActive4,
-                'max-h-0 opacity-0': !isActive4
-              }"
-            >
-              <p class="text-sm leading-relaxed mb-4">
-                Spójna wymiana danych pomiędzy systemami to podstawa efektywnego zarządzania przedsiębiorstwem. Pulsar zapewnia pełną integrację z innymi systemami eliminując błędy wynikające z ręcznego wprowadzania danych. Automatyczna synchronizacja informacji gwarantuje aktualność i spójność procesów, co pozwala na lepszą kontrolę i optymalizację działania firmy.
-              </p>
-              <a href="#" class="inline-flex items-center gap-1 hover:underline">
-                <span>Dowiedz się więcej</span>
-                <span class="font-bold">&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        
+        <!-- /Panel -->
       </div>
-    </section>
-  </template>
-  
-  <script>
-  export default {
-    name: 'MobileOfferSection',
-    data() {
-      return {
-        isActive1: false,
-        isActive2: false,
-        isActive3: false,
-        isActive4: false
-      };
-    },
-    methods: {
-      toggleActive(number) {
-        switch(number) {
-          case 1: {
-            this.isActive1 = !this.isActive1;
-            this.isActive2 = false;
-            this.isActive3 = false;
-            this.isActive4 = false;
-            break;
-          }
-          case 2: {
-            this.isActive2 = !this.isActive2;
-            this.isActive1 = false;
-            this.isActive3 = false;
-            this.isActive4 = false;
-            break;
-          }
-          case 3: {
-            this.isActive3 = !this.isActive3;
-            this.isActive1 = false;
-            this.isActive2 = false;
-            this.isActive4 = false;
-            break;
-          }
-          case 4: {
-            this.isActive4 = !this.isActive4;
-            this.isActive1 = false;
-            this.isActive2 = false;
-            this.isActive3 = false;
-            break;
-          }
-        }
-      }
-    }
-  };
-  </script>
+    </div>
+  </section>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+const items = [
+  {
+    id: 'logistyka',
+    title: 'Logistyka',
+    href: '#',
+    body:
+      'System Pulsar usprawnia zarządzanie procesami logistycznymi, zapewniając optymalizację dostaw, redukcję kosztów oraz terminową realizację zamówień. Pozwala na pełną kontrolę nad zaopatrzeniem i sprzedażą – od rejestracji zamówień od klientów, przez tworzenie tras oraz automatyczne generowanie dokumentów sprzedażowych i wysyłkowych. Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka staje się bardziej efektywna i dostosowana do potrzeb.'
+  },
+  {
+    id: 'magazyn',
+    title: 'Magazyn',
+    href: '#',
+    body:
+      'Efektywne zarządzanie magazynem to klucz do sprawnej organizacji firmy. Pulsar umożliwia bieżącą kontrolę stanów magazynowych, śledzenie paczek magazynowych oraz optymalizację rozmieszczenia towarów. Wykorzystanie technologii RFID oraz automatyzacja procesów przyjęć, wydań i inwentaryzacji pozwala na minimalizację strat i zwiększenie wydajności operacyjnej.'
+  },
+  {
+    id: 'produkcja',
+    title: 'Produkcja',
+    href: '#',
+    body:
+      'Planowanie i realizacja produkcji to fundament sprawnego funkcjonowania przedsiębiorstwa. System Pulsar wspiera zarządzanie procesami produkcyjnymi, umożliwiając tworzenie planów produkcyjnych, monitorowanie etapów realizacji oraz optymalizację zużycia surowców. System PULSAR pozwala na zwiększenie efektywności i redukcję błędów.'
+  },
+  {
+    id: 'integracja',
+    title: 'Integracja',
+    href: '#',
+    body:
+      'Spójna wymiana danych pomiędzy systemami to podstawa efektywnego zarządzania przedsiębiorstwem. Pulsar zapewnia pełną integrację z innymi systemami eliminując błędy wynikające z ręcznego wprowadzania danych. Automatyczna synchronizacja informacji gwarantuje aktualność i spójność procesów, co pozwala na lepszą kontrolę i optymalizację działania firmy.'
+  }
+]
+
+const openIndex = ref(null)
+openIndex.value = 0
+const toggle = (i) => {
+  openIndex.value = openIndex.value === i ? null : i
+}
+</script>
+
+<style scoped>
+/* Anti-jump: wyłączamy scroll anchoring w obrębie sekcji */
+.accordion-root { overflow-anchor: none; }
+
+/* Fallback dla Tailwinda — stabilna animacja bez arbitralnych klas */
+.rows-0fr { grid-template-rows: 0fr; }
+.rows-1fr { grid-template-rows: 1fr; }
+
+/* Szacunek dla prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .transition-all { transition: none !important; }
+}
+</style>

@@ -48,53 +48,22 @@
     </div>
 </section>
 
-<section class="">
+<section class="lg:hidden">
   <CardsOffer></CardsOffer>
+
 </section>
 
-<section class=" relative w-full md:hidden h-[600px] bg-[url('/src/assets/img/Oferta-magazyn.jpg')] bg-cover bg-center bg-no-repeat"
->
-<div class="absolute inset-0 bg-blue2/40"></div>
-<div class="relative w-full  flex text-gray-100 flex-col h-[600px]">
-   
-    <div class="transition-all duration-700 " :class="{'backdrop-blur-xs': isActive1, '': !isActive1}">
-        <button  @click="toggleActive(1)" class="flex justify-start">
-            <h2 class="font-bold text-2xl mx-4 px-2 py-4">Produkcja</h2>
-        </button>
-        <div class=" overflow-hidden transition-all mx-4 px-2 duration-500"
-        :class="{'mb-4 opacity-100': isActive1, 'max-h-0 opacity-0': !isActive1}">
-            <p class="text-sm leading-relaxed transition-all duration-500">
-                System Pulsar usprawnia zarządzanie procesami logistycznymi, zapewniając optymalizację dostaw, redukcję kosztów oraz terminową realizację zamówień. Pozwala na pełną kontrolę nad zaopatrzeniem i sprzedażą – od rejestracji kontraktów z dostawcami, przez harmonogramowanie dostaw, po monitorowanie realizacji umów. Dzięki automatycznemu bilansowaniu zasobów i śledzeniu zamówień na każdym etapie, logistyka staje się bardziej efektywna i dostosowana do dynamicznych potrzeb rynku.
-             </p>
-        </div>
-    </div>
 
-    <div class="flex flex-col transition-all duration-700">
-        <button  @click="toggleActive(2)" class="flex justify-start">
-            <h2 class="font-bold text-2xl">Produkcja</h2>
-        </button>
-        <div class=" overflow-hidden"
-        :class="{'max-h-64': isActive2, 'max-h-0': !isActive2}">
-            <p class="text-sm leading-relaxed ">
-                System Pulsar usprawnia zarządzanie procesami logistycznymi, zapewniając optymalizację dostaw, redukcję kosztów oraz terminową realizację zamówień. Pozwala na pełną kontrolę nad zaopatrzeniem i sprzedażą – od rejestracji kontraktów z dostawcami, przez harmonogramowanie dostaw, po monitorowanie realizacji umów. Dzięki automatycznemu bilansowaniu zasobów i śledzeniu zamówień na każdym etapie, logistyka staje się bardziej efektywna i dostosowana do dynamicznych potrzeb rynku.
-             </p>
-        </div>
-    </div>
-    
-</div>
-
-    
-</section>
 
 
 <section
-  class="relative w-full hidden md:flex  h-[600px] bg-[url('/src/assets/img/Oferta-magazyn.jpg')] bg-cover bg-center bg-no-repeat"
+  class="relative w-full hidden  lg:flex  h-[600px] bg-[url('/src/assets/img/Oferta-magazyn.jpg')] bg-cover bg-center bg-no-repeat"
 >
   <!-- Overlay przyciemniający (opcjonalny) -->
   <div class="absolute inset-0 bg-blue2/30 "></div>
 
   <!-- Kontener na treść (grid) -->
-  <div class="relative z-10 grid grid-cols-1 md:grid-cols-4 h-full">
+  <div class="relative z-10 grid grid-cols-4 md:grid-cols-4 h-full">
     <!-- Kolumna 1: Logistyka -->
     <div class="flex flex-col hover:backdrop-blur-xs group justify-end  p-6 text-white transition-all duration-500">
   <div class=" xl:group-hover:translate-y-[-40%] duration-1000">
@@ -172,19 +141,19 @@ Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka
 </div>
   </div>
 </section>
-<section class="flex justify-center items-center py-10 max-md:py-10  px-5 md:px-10 xl:px-10 lg:py-12 bg-blue3">
-  <div class="max-w-7xl w-full flex flex-col md:flex-row gap-6 xl:gap-10 items-center justify-between">
+<section class="flex justify-center items-center py-20  max-md:py-10  px-5 md:px-10 xl:px-10 lg:py-12 bg-blue3">
+  <div class="max-w-7xl w-full flex flex-col md:flex-row my-12 gap-6 xl:gap-10 items-center justify-between">
     <!-- Text content block -->
     <div class="w-full md:w-1/2 flex justify-center flex-col space-y-2 lg:space-y-4 text-center md:text-left">
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-100" v-typewriter="{ speed: 55, threshold: 1 }">Pulsar RFID</h1>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl pb-3 font-bold text-gray-100" v-typewriter="{ speed: 55, threshold: 1 }">Pulsar RFID</h1>
       <h2 class="text-md md:text-lg lg:text-xl text-gray-100 leading-relaxed lg:pr-6">
         RFID to rewolucyjne rozwiązanie w logistyce, które w połączeniu z systemem PULSAR usprawnia zarządzanie magazynem i produkcją. Umożliwia automatyczne skanowanie bez kontaktu, eliminując błędy i przyspieszając operacje. Rozwiązanie to redukuje koszty, optymalizuje procesy i zwiększa precyzję zarządzania zapasami. System PULSAR RFID podnosi efektywność i automatyzację kluczowych procesów logistycznych.
       </h2>
      
-       <div class="md:flex justify-center  lg:justify-start my-5  md:m-0">
+       <div class="md:flex justify-center  lg:justify-start my-5   md:m-0">
         <router-link 
         to="/rfid" 
-        class="px-4 py-3 bg-gray-200 text-blue2 font-bold text-center rounded-lg hover:bg-blue1 hover:text-white w-full md:max-w-3/5 transition-all duration-300" 
+        class="px-4 py-3 mt-6 bg-gray-200 text-blue2 font-bold text-center rounded-lg hover:bg-blue1 hover:text-white w-full md:max-w-3/5 transition-all duration-300" 
         role="button"
         >
         Więcj o technologii PULSAR RFID
@@ -229,9 +198,9 @@ Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka
 
    <!-- Benefits Section -->
    <section class="container mx-auto px-4 py-8 pb-12">
-       <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Korzyści z wdrożenia systemu PULSAR</h2>
+       <h2 class="text-3xl font-bold text-center text-gray-800 mt-12 mb-12">Korzyści z wdrożenia systemu PULSAR</h2>
        
-       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 px-16">
+       <div class="grid grid-cols-1 md:grid-cols-2 mb-12 gap-12 px-16">
            <div class="flex items-start">
                <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-4">
                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

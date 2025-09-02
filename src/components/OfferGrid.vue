@@ -3,36 +3,43 @@
     <div class="container mx-auto max-md:px-2 px-4">
       <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Moduły systemu PULSAR</h2>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 mb-16 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div 
           v-for="module in modules" 
           :key="module.id"
           :class="[
             'ofertacard bg-white rounded-lg shadow-lg p-6 cursor-pointer',
-            expandedModule === module.id ? 'expanded col-span-full md:col-span-2 lg:row-span-2 lg:col-span-2' : '',
+            expandedModule === module.id && !module.longDescription ? 'expanded col-span-full md:col-span-2 lg:row-span-2 lg:col-span-2' : '',
+            expandedModule === module.id && module.longDescription ? 'expanded col-span-full md:col-span-full lg:row-span-6 lg:col-span-3' : '',
             expandedModule !== module.id && previousExpanded === module.id ? 'collapsing-card' : ''
           ]"
           @click="toggleModule(module.id)"
         >
           <div class="card-content" :class="{ 'expanded-content': expandedModule === module.id }">
-            <h3 class="text-xl font-semibold text-blue-700 mb-3">{{ module.title }}</h3>
+            <h3 class="text-xl font-semibold text-blue3 mb-3">{{ module.title }}</h3>
             
-            <div v-if="expandedModule !== module.id">
-              <p class="text-gray-700">{{ module.shortDescription }}</p>
-              
+            <div v-if="expandedModule !== module.id ">
+              <p class="text-gray-700 line-clamp-3" v-if="!module.alternativeShortDescription">{{ module.shortDescription }}</p>
+            
             
             </div>
 
+              
+            
+           
+
             <div 
-              class="flex justify-center mt-auto"
+              class="flex justify-center mt-14"
               v-if="expandedModule !== module.id"
             >
-              <p class="w-fit px-5 rounded-lg hover:scale-110 transition-all duration-500 py-2 text-gray-100 bg-blue3 mt-4 text-center">
-                Rozwiń
+              <p class="w-fit px-5 bottom-5 fixed rounded-lg hover:scale-110 transition-all duration-500 py-2 text-gray-700 border-2 border-blue3  hover:text-white hover:bg-blue3 mt-4 text-center">
+                Więcej
               </p>
             </div>
 
             <div v-else class="space-y-4 content-fade-in ">
+              
+
               <p class="text-gray-700">{{ module.shortDescription }}</p>
               
               <div class="scrollable-content">
@@ -249,6 +256,7 @@ const modules = [
   },
   {
     id: 8,
+    longDescription: true,  
     title: 'PULSAR PRODUKCJA - TAPICERNIA',
     shortDescription: 'Moduł dedykowany dla zakładów produkujących meble tapicerowane, który umożliwia pełną kontrolę nad planowaniem, realizacją i rozliczaniem procesów produkcyjnych. Dzięki niemu możliwe jest precyzyjne przypisanie zadań do konkretnych osób lub zespołów, optymalne wykorzystanie zasobów oraz automatyczna rejestracja operacji.',
     fullDescription: 'Pełna przejrzystość procesów na wszystkich działach, szybsza realizacja zamówień, lepsze wykorzystanie zasobów i łatwe rozliczanie pracy własnej oraz podwykonawców.',
@@ -274,7 +282,8 @@ const modules = [
     ]
   },
   {
-    id: 10,  
+    id: 10,
+    longDescription: true,  
     title: 'PULSAR SŁOWNIKI I TECHNOLOGIA (PTP)',
     shortDescription: 'Moduł Słowniki i Technologia to fundament systemu PULSAR, który pozwala na szczegółowe definiowanie, opisywanie i zarządzanie produktami, półproduktami oraz ich wariantami technologicznymi. Dzięki elastycznej strukturze umożliwia tworzenie wielowymiarowych katalogów produktów, wykończeń, atrybutów i parametrów, które odzwierciedlają rzeczywiste procesy produkcyjne w firmie. Dodatkowo w module słowniki znajduję się również słownik kontrahentów. Jest to centralna baza danych o wszystkich kontrahentach z którymi współpracuje firma.',
     keyPointsDesc: 'Słownik Produktów',
