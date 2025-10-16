@@ -1,50 +1,30 @@
-name: Deploy to Azure Ubuntu
+name: Deploy Strapi → api.infobase.tojest.dev
 
 on:
   push:
-    branches: [production]
+    branches: [ "production" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Deploy Strapi via SSH
+        uses: appleboy/ssh-action@v1
         with:
-          node-version: '23'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build
-
-      - name: Archive build folder
-        run: tar -czf dist.tar.gz dist
-
-      - name: Upload archive via SCP
-        uses: appleboy/scp-action@v0.1.6
-        with:
-          host: ${{ secrets.AZURE_HOST }}
-          username: ${{ secrets.AZURE_USER }}
-          key: ${{ secrets.AZURE_SSH_KEY }}
-          port: 22
-          source: "dist.tar.gz"
-          target: "/home/${{ secrets.AZURE_USER }}/"
-
-      - name: Extract archive on remote server and deploy files
-        uses: appleboy/ssh-action@v1.2.2
-        with:
-          host: ${{ secrets.AZURE_HOST }}
-          username: ${{ secrets.AZURE_USER }}
-          key: ${{ secrets.AZURE_SSH_KEY }}
-          port: 22
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          fingerprint: ${{ secrets.SSH_FINGERPRINT }}
+          port: ${{ secrets.SSH_PORT }}
           script: |
-            # Opcjonalnie można usunąć wcześniejszą zawartość folderu docelowego
-            sudo rm -rf /var/www/dist/*
-            # Rozpakowujemy archiwum z pominięciem pierwszego poziomu katalogów
-            sudo tar -xzf /home/${{ secrets.AZURE_USER }}/dist.tar.gz --strip-components=1 -C /var/www/dist/
-            sudo systemctl restart nginx
+            set -e
+            cd /var/www/strapi
+            git fetch --all
+            git reset --hard origin/main     # zmień, jeśli inny branch
+            npm ci || npm install
+            npm run build
+            pm2 restart strapi
