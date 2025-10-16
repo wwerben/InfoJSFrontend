@@ -18,7 +18,6 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          fingerprint: ${{ secrets.SSH_FINGERPRINT }} # weryfikacja serwera
           port: ${{ secrets.SSH_PORT }}
           # Jeśli masz "forced command" w authorized_keys, poniższy script może być no-op:
           script: |
