@@ -28,7 +28,7 @@
             
            
 
-            <div 
+            <div :id="module.idLink"
               class="flex justify-center mt-14"
               v-if="expandedModule !== module.id"
             >

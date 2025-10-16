@@ -77,7 +77,7 @@ Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka
     </p>
    
   </div>
-  <a href="#" class="mt-2    inline-flex items-center gap-1 hover:underline">
+  <a href="#logistyka" class="mt-2    inline-flex items-center gap-1 hover:underline">
       <span>Dowiedz się więcej</span>
       <span class="font-bold">&rarr;</span>
     </a>
@@ -94,7 +94,7 @@ Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka
       Efektywne zarządzanie magazynem to klucz do sprawnej organizacji firmy. Pulsar umożliwia bieżącą kontrolę stanów magazynowych, śledzenie paczek magazynowych oraz optymalizację rozmieszczenia towarów. Wykorzystanie technologii RFID oraz automatyzacja procesów przyjęć, wydań i inwentaryzacji pozwala na minimalizację strat i zwiększenie wydajności operacyjnej.     </p>
   
   </div>
-  <a href="#" class="mt-2    inline-flex items-center gap-1 hover:underline">
+  <a href="#magazyn" class="mt-2    inline-flex items-center gap-1 hover:underline">
       <span>Dowiedz się więcej</span>
       <span class="font-bold">&rarr;</span>
     </a>
@@ -112,7 +112,7 @@ Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka
       Planowanie i realizacja produkcji to fundament sprawnego funkcjonowania przedsiębiorstwa. System Pulsar wspiera zarządzanie procesami produkcyjnymi, umożliwiając tworzenie planów produkcyjnych, monitorowanie etapów realizacji oraz optymalizację zużycia surowców. System PULSAR pozwala na zwiększenie efektywności i redukcję błędów.     </p>
    
   </div>
-  <a href="#" class="mt-2    inline-flex items-center gap-1 hover:underline">
+  <a href="#produkcja" class="mt-2    inline-flex items-center gap-1 hover:underline">
       <span>Dowiedz się więcej</span>
       <span class="font-bold">&rarr;</span>
     </a>
@@ -132,7 +132,7 @@ Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka
       Spójna wymiana danych pomiędzy systemami to podstawa efektywnego zarządzania przedsiębiorstwem. Pulsar zapewnia pełną integrację innymi systemami eliminując błędy wynikające z ręcznego wprowadzania danych. Automatyczna synchronizacja informacji gwarantuje aktualność i spójność procesów, co pozwala na lepszą kontrolę i optymalizację działania firmy.    </p>
     
   </div>
-  <a href="#" class="mt-2    inline-flex items-center gap-1 hover:underline">
+  <a href="#integracja" class="mt-2    inline-flex items-center gap-1 hover:underline">
       <span>Dowiedz się więcej</span>
       <span class="font-bold">&rarr;</span>
     </a>

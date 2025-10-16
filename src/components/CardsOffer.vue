@@ -66,28 +66,28 @@ const items = [
   {
     id: 'logistyka',
     title: 'Logistyka',
-    href: '#',
+    href: '#logistyka',
     body:
       'System Pulsar usprawnia zarządzanie procesami logistycznymi, zapewniając optymalizację dostaw, redukcję kosztów oraz terminową realizację zamówień. Pozwala na pełną kontrolę nad zaopatrzeniem i sprzedażą – od rejestracji zamówień od klientów, przez tworzenie tras oraz automatyczne generowanie dokumentów sprzedażowych i wysyłkowych. Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka staje się bardziej efektywna i dostosowana do potrzeb.'
   },
   {
     id: 'magazyn',
     title: 'Magazyn',
-    href: '#',
+    href: '#magazyn',
     body:
       'Efektywne zarządzanie magazynem to klucz do sprawnej organizacji firmy. Pulsar umożliwia bieżącą kontrolę stanów magazynowych, śledzenie paczek magazynowych oraz optymalizację rozmieszczenia towarów. Wykorzystanie technologii RFID oraz automatyzacja procesów przyjęć, wydań i inwentaryzacji pozwala na minimalizację strat i zwiększenie wydajności operacyjnej.'
   },
   {
     id: 'produkcja',
     title: 'Produkcja',
-    href: '#',
+    href: '#produkcja',
     body:
       'Planowanie i realizacja produkcji to fundament sprawnego funkcjonowania przedsiębiorstwa. System Pulsar wspiera zarządzanie procesami produkcyjnymi, umożliwiając tworzenie planów produkcyjnych, monitorowanie etapów realizacji oraz optymalizację zużycia surowców. System PULSAR pozwala na zwiększenie efektywności i redukcję błędów.'
   },
   {
     id: 'integracja',
     title: 'Integracja',
-    href: '#',
+    href: '#integracja',
     body:
       'Spójna wymiana danych pomiędzy systemami to podstawa efektywnego zarządzania przedsiębiorstwem. Pulsar zapewnia pełną integrację z innymi systemami eliminując błędy wynikające z ręcznego wprowadzania danych. Automatyczna synchronizacja informacji gwarantuje aktualność i spójność procesów, co pozwala na lepszą kontrolę i optymalizację działania firmy.'
   }
