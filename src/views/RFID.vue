@@ -1,0 +1,286 @@
+<template>
+  <div class="min-h-screen bg-gradient-to-b  from-blue-950 to-blue3">
+    <!-- Hero Section -->
+    <section class="relative text-white bg-[url('/src/assets/img/bramka.webp')]">
+      
+      <div class="absolute inset-0 bg-blue1/88"></div>
+      <div class="container mx-auto  px-6 py-32 z-5 md:py-24 relative ">
+        <div class="grid grid-cols-1  pt-10  md:pl-10 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-4xl  md:text-5xl font-bold leading-tight mb-4">
+              PULSAR RFID - Technologia RFID w Przemyśle
+            </h1>
+            <p class="text-lg text-blue-100 mb-8">
+              Innowacyjne rozwiązanie dla nowoczesnej logistyki i efektywnego zarządzania
+            </p>
+           
+          </div>
+          <div class=" justify-center hidden md:flex">
+            <img src="@/assets/img/siemensantena.png" alt="RFID Technology" class="h-auto max-w-54" />
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+  
+<div class="max-w-7xl mx-auto "> 
+    <section class="py-4  lg:px-14">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2  max-md:-mt-8 gap-4 md:gap-12 items-center">
+          <div class="order-2 lg:order-1">
+            <h2 class="text-5xl font-bold text-gray-50 mb-4">Pulsar RFID</h2>
+            <img src="@/assets/img/rfidtrzy.png" alt="Antena rfid podczas inwentaryzacji w magazynie" class="rounded-lg block py-4 lg:hidden shadow-xl" />
+            <p class="text-gray-200 text-xl font-normal mb-6 leading-relaxed">
+              Ważnym aspektem w budowaniu przewagi konkurencyjnej firmy jest wprowadzanie innowacyjnych rozwiązań i nowych technologii. W ostatnich latach można zaobserwować wzrost zainteresowania przedsiębiorstw wdrażaniem RFID- systemu automatycznej identyfikacji za pomocą fal radiowych.            </p>
+           
+           
+            </div>
+          <div class="relative order-1 lg:order-2 flex p-5 justify-center">
+            
+            <img src="@/assets/img/rfidtrzy.png" alt="Antena rfid podczas inwentaryzacji w magazynie" class="rounded-lg lg:block hidden shadow-xl" />
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Video Section -->
+   
+    <section class="py-16 lg:px-16  ">
+    <div class=" mx-auto px-4">
+     
+
+      <!-- Wprowadzenie do RFID -->
+      <div class="bg-white rounded-xl shadow-lg p-6 mb-12">
+        <h3 class="text-3xl font-bold text-blue-900 max-lg:text-center mb-4">Czym jest RFID?</h3>
+        <p class="text-gray-700 text-base lg:text-lg font-normal lg:font-medium mb-6">
+          RFID (Radio-Frequency Identification) to zaawansowany system automatycznej identyfikacji, który bezprzewodowo rozpoznaje przedmioty i natychmiast gromadzi dane. System składa się z czterech kluczowych elementów, które współpracują ze sobą w celu zapewnienia wydajnej identyfikacji i śledzenia.
+        </p>
+        
+          <!-- Komponenty RFID z obrazami -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            <div v-for="(component, index) in rfidComponents" :key="index" 
+                class="bg-indigo-50 rounded-lg p-5 text-center transition-all duration-300 hover:shadow-md hover:bg-indigo-100">
+              <div class="bg-white rounded-full w-40 h-40 flex items-center justify-center mx-auto mb-4 shadow-sm overflow-hidden">
+                <img :src="component.image" :alt="component.title" class="w-26 h-26 object-contain" />
+              </div>
+              <h4 class="text-xl font-semibold text-blue-600 mb-2">{{ component.title }}</h4>
+              <p class="text-gray-600">{{ component.description }}</p>
+            </div>
+          </div>
+        </div>
+
+      <!-- Jak działa RFID -->
+      <div class="bg-white rounded-xl shadow-lg p-6 mb-12">
+        <h3 class="text-3xl font-bold max-md:text-center text-blue-900 mb-6">Jak Działa RFID?</h3>
+        
+
+        <div class="relative h-120 md:h-36 bg-indigo-50 rounded-lg mb-8 overflow-hidden p-4">
+          <div class="flex flex-col md:flex-row justify-around items-center h-full">
+            <div class="flex flex-col items-center mb-4 md:mb-0">
+              <div class="bg-yellow-100 border-2 border-yellow-400 p-3 rounded-md md:w-24 w-[60vw] text-center">
+                <span class="md:text-sm text-lg font-semibold">Tag RFID</span>
+              </div>
+              <div class="md:text-xs text-md text-gray-500 mt-2">Przechowuje dane</div>
+            </div>
+            
+            <div class="flex items-center">
+              <div class="hidden md:block lg:w-16 w-9 h-0.5 bg-blue-400 mx-2"></div>
+              <div class="flex md:flex-col  max-md:justify-center max-md:gap-3 items-center max-md:-translate-y-1/3">
+                <span class="md:text-xs text-md text-blue-600 mb-1">Fala radiowa</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="md:h-6 md:w-6  h-8 w-8 max-md:rotate-90 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+              </div>
+              <div class="hidden md:block lg:w-16 w-9 h-0.5 bg-blue-400 mx-2"></div>
+            </div>
+            
+            <div class="flex flex-col items-center mb-4 md:mb-0">
+              <div class="bg-blue-100 border-2 border-blue-400 p-2 rounded-md md:w-24 w-[60vw] text-center">
+                <span class="md:text-sm text-lg font-semibold">Czytnik RFID</span>
+              </div>
+              <div class="md:text-xs text-md text-gray-500 mt-2">Skanuje i przetwarza</div>
+            </div>
+            
+            <div class="flex items-center">
+              <div class="hidden md:block lg:w-16 w-9 h-0.5 bg-green-400 mx-2"></div>
+              <div class="flex md:flex-col  max-md:justify-center max-md:gap-3 mb-1 items-center max-md:-translate-y-1/3">
+                <span class="md:text-xs text-md text-green-600 ">Dane cyfrowe</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="md:h-6 md:w-6  h-8 w-8  max-md:rotate-90 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+              </div>
+              <div class="hidden md:block lg:w-16 w-9 h-0.5 bg-green-400 mx-2"></div>
+            </div>
+            
+            <div class="flex flex-col items-center">
+              <div class="bg-green-100 border-2 border-green-400 p-3  rounded-md md:w-24 w-[60vw] text-center">
+                <span class="md:text-sm text-lg font-semibold">System IT</span>
+              </div>
+              <div class="md:text-xs text-md text-gray-500 mt-2">Analizuje dane</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Proces krok po kroku -->
+        <div class="space-y-6">
+          <div v-for="(step, index) in rfidSteps" :key="index"
+               class="flex flex-col sm:flex-row sm:items-start max-sm:text-center items-center gap-4 p-4 rounded-lg"
+               :class="{'bg-indigo-50': index % 2 === 0}">
+            <div class="bg-blue-600 text-white rounded-full sm:w-8 sm:h-8  w-10 h-10 flex items-center justify-center flex-shrink-0">
+              <span class="max-sm:text-lg font-bold">{{ index + 1 }}</span>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold text-blue-600 mb-1">{{ step.title }}</h4>
+              <p class="text-gray-700">{{ step.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-6 mb-12">
+          <h2 class="md:text-3xl text-lg font-bold text-center mb-4 md:py-3 max-md:pb-3 text-blue-900">Działanie systemu Pulsar RFID w firmie Dolmar </h2>
+          <div class="aspect-w-16 aspect-h-9 ">
+            
+            <iframe class="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/OutFYTNpC6Y" frameborder="0" allowfullscreen></iframe>
+            <div class="absolute inset-0 flex items-center justify-center">
+      
+            
+            </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-2 md:p-8 mb-12">
+        <div class="grid grid-cols-2 max-lg:grid-cols-1 justify-center items-center gap-6">
+          
+          <div class="max-lg:mx-8 mx-6  max-lg:mt-4">
+            <h3 class="text-2xl lg:text-3xl font-bold text-center xl:text-left text-blue-900 mb-3">Nowy wymiar inwentaryzacji</h3>
+            <h3 class="text-gray-800 font-base text-md xl:text-lg leading-relaxed ">Na przykładzie firmy Dolmar czas inwentaryzacji magazynu skrócił się z 2 dni do zaledwie 2 godzin dzięki technologii RFID. Automatyzacja procesu nie tylko przyspiesza pracę, ale także znacząco zwiększa dokładność i kontrolę nad stanami magazynowymi.</h3>
+          </div>
+          <div class="p-4">
+            <img src="@/assets/img/rfidtrzy.png" alt="Inwentaryzacja RFID" class="w-full  h-auto rounded-lg shadow-md"/>
+          </div>
+
+          
+        </div>
+      
+      </div>
+     <div class="bg-white rounded-xl shadow-lg p-8">
+        <h3 class=" text-2xl lg:text-3xl font-bold text-center text-blue-900 mb-6">Korzyści z Technologii RFID</h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div v-for="(benefit, index) in rfidBenefits" :key="index"
+               class="border border-indigo-100 rounded-lg p-5 transition-all duration-300 hover:shadow-md hover:border-indigo-300">
+            <h4 class="text-lg font-semibold text-blue-900 mb-2">{{ benefit.title }}</h4>
+            <p class="text-gray-700">{{ benefit.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="bg-transparent text-white py-24 px-4 lg:px-14">
+       <div class="container mx-auto  text-center">
+           <h2 class="md:text-4xl text-2xl font-bold mb-6">Zwiększ konkurencyjność swojej firmy z PULSAR RFID</h2>
+           <p class="md:text-xl  text-sm mb-12 max-w-4xl mx-auto"> Technologia RFID przyczynia się w znacznym stopniu do poprawy organizacji w firmie, pozwala zachować porządek i zwiększa kontrolę. Powoduje to polepszenie funkcjonowania firmy, a co za tym idzie budowanie przewagi konkurencyjnej.</p>
+           <div class="flex flex-col sm:flex-row justify-center mt-15 gap-4">
+             <div class="bg-gray-100 px-3 py-3 rounded-lg hover:animate-pulse">
+                <a href="#" class=" text-blue3 hover:bg-gray-100 text-xl hover:animate-pulse font-semibold py-3 px-8 rounded-lg transition duration-300">
+                  Skontaktuj się z nami
+               </a>
+             </div>
+              
+           </div>
+       </div>
+
+   </section>
+  </div>
+  </div>
+</template>
+
+<script>
+import rfidTagImg     from '@/assets/img/rfidtag.jpg'
+import antennaImg     from '@/assets/img/siemensantena.png'
+import readerImg      from '@/assets/img/czytnik.jpg'
+import systemItImg    from '@/assets/img/server.png'
+export default {
+  data() {
+    return {
+      rfidComponents: [
+        {
+          title:       'Tagi RFID',
+          description: 'Inteligentne transpondery z mikrochipami...', 
+          image:       rfidTagImg
+        },
+        {
+          title:       'Anteny',
+          description: 'Elementy wysyłające i odbierające...', 
+          image:       antennaImg
+        },
+        {
+          title:       'Czytniki',
+          description: 'Urządzenia emitujące fale radiowe...', 
+          image:       readerImg
+        },
+        {
+          title:       'System IT',
+          description: 'Centralne oprogramowanie...', 
+          image:       systemItImg
+        }
+      ],
+      rfidSteps: [
+        {
+          title: 'Znakowanie Produktów',  
+          description: 'Na produktach, paletach lub grupach towarów umieszczane są tagi RFID z mikrochipami zawierającymi unikalne dane identyfikacyjne.'
+        },
+        {
+          title: 'Emisja Sygnału Radiowego',
+          description: 'Czytnik RFID wysyła falę radiową o określonej częstotliwości, która dociera do tagów znajdujących się w zasięgu skanowania.'
+        },
+        {
+          title: 'Odpowiedź Tagu',
+          description: 'Mikrochip w tagu zostaje aktywowany przez falę radiową i automatycznie odpowiada, wysyłając zapisane dane z powrotem do czytnika.'
+        },
+        {
+          title: 'Konwersja na Dane Cyfrowe',
+          description: 'Czytnik odbiera sygnał radiowy z tagu i przetwarza go na dane cyfrowe, które mogą być rozpoznane przez system komputerowy.'
+        },
+        {
+          title: 'Przetwarzanie w Systemie',
+          description: 'Dane cyfrowe trafiają do systemu IT, gdzie są analizowane, katalogowane i wykorzystywane do optymalizacji procesów produkcyjnych.'
+        }
+      ],
+      rfidBenefits: [
+        {
+          title: 'Automatyzacja Procesów',
+          description: 'Eliminacja ręcznej identyfikacji produktów przyspiesza operacje i redukuje koszty pracy.'
+        },
+        {
+          title: 'Precyzyjna Kontrola',
+          description: 'Dokładne i aktualne informacje o stanie magazynowym i lokalizacji każdego produktu w czasie rzeczywistym.'
+        },
+        {
+          title: 'Redukcja Błędów',
+          description: 'Zminimalizowanie pomyłek ludzkich dzięki automatycznemu gromadzeniu i przetwarzaniu danych.'
+        },
+        {
+          title: 'Szybsza Identyfikacja',
+          description: 'Możliwość jednoczesnego skanowania wielu tagów bez konieczności bezpośredniej widoczności produktów.'
+        },
+        {
+          title: 'Optymalizacja Łańcucha Dostaw',
+          description: 'Lepsze zarządzanie przepływem materiałów i informacji w całym procesie produkcyjnym.'
+        },
+        {
+          title: 'Zwiększona Wydajność',
+          description: 'Przyspieszenie procesów inwentaryzacji, śledzenia produktów i planowania produkcji.'
+        }
+      ]
+    }
+  }
+}
+
+</script>
