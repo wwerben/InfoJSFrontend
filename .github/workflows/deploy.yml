@@ -1,9 +1,9 @@
-name: Deploy Strapi → api.infobase.tojest.dev
+name: Deploy Vue → infobase.tojest.dev
 
 on:
   push:
-    branches: [ "production" ]
-  workflow_dispatch:
+    branches: [ "main" ]     # zmień, jeśli inny branch
+  workflow_dispatch:         # pozwala odpalić ręcznie z UI
 
 permissions:
   contents: read
@@ -12,19 +12,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy Strapi via SSH
+      - name: Run remote deploy via SSH
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          fingerprint: ${{ secrets.SSH_FINGERPRINT }}
+          fingerprint: ${{ secrets.SSH_FINGERPRINT }} # weryfikacja serwera
           port: ${{ secrets.SSH_PORT }}
+          # Jeśli masz "forced command" w authorized_keys, poniższy script może być no-op:
           script: |
-            set -e
-            cd /var/www/strapi
-            git fetch --all
-            git reset --hard origin/main     # zmień, jeśli inny branch
-            npm ci || npm install
-            npm run build
-            pm2 restart strapi
+            bash /var/www/vue-app/deploy.sh
