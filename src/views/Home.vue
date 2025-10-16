@@ -32,7 +32,7 @@
            <div class="flex justify-center">
             <div class="max-w-lg lg:max-w-xl flex flex-col justify-center h-full">
               <h1  v-typewriter="{ speed: 25, threshold: 0.7 }" class="max-md:mb-4 font-bold text-5xl xl:text-6xl text-center md:text-left font-poppins text-gray-800">
-                Nowoczesne rozwiązania IT dla przemysłu
+                Nowoczesne rozwiązania IT dla przemysłuu
               </h1>
               <h2 class="font-medium text-base xl:text-xl text-center md:text-left text-gray-600 mt-1 lg:mt-8 mb-3 tracking-wide">
                 Od ponad <span class="font-extrabold text-lg lg:text-2xl text-blue3">30 lat</span> koncentrujemy się na projektowaniu nowoczesnych systemów informatycznych dedykowanych dla firm produkcyjnych. Nasze rozwiązania powstają z myślą o usprawnieniu oraz automatyzacji i optymalizacji procesów we wszystkich obszarach przedsiębiorstwa, poprawie wydajności oraz wspieraniu dynamicznego rozwoju biznesu naszych klientów.
