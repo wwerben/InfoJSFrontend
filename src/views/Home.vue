@@ -32,7 +32,7 @@
            <div class="flex justify-center">
             <div class="max-w-lg lg:max-w-xl flex flex-col justify-center h-full">
               <h1  v-typewriter="{ speed: 25, threshold: 0.7 }" class="max-md:mb-4 font-bold text-5xl xl:text-6xl text-center md:text-left font-poppins text-gray-800">
-                Nowoczesne rozwiązania IT dla przemysłuu
+                Nowoczesne rozwiązania IT dla przemysłu
               </h1>
               <h2 class="font-medium text-base xl:text-xl text-center md:text-left text-gray-600 mt-1 lg:mt-8 mb-3 tracking-wide">
                 Od ponad <span class="font-extrabold text-lg lg:text-2xl text-blue3">30 lat</span> koncentrujemy się na projektowaniu nowoczesnych systemów informatycznych dedykowanych dla firm produkcyjnych. Nasze rozwiązania powstają z myślą o usprawnieniu oraz automatyzacji i optymalizacji procesów we wszystkich obszarach przedsiębiorstwa, poprawie wydajności oraz wspieraniu dynamicznego rozwoju biznesu naszych klientów.
@@ -91,7 +91,7 @@
       <!-- Kontener tekstu - DOPASOWUJE SIĘ DO OBRAZU -->
       <div class="max-w-lg max-md:gap-3 lg:max-w-2xl flex flex-col justify-center h-full ">
         <h1 v-typewriter="{ speed: 40, threshold: 0.7 }" class="font-bold text-3xl  xl:text-5xl/14 text-center md:text-left text-gray-100">
-        System Pulsar w branży meblarskiej
+        System Pulsar w branży meblowej
         </h1>
        
         <h2 class="font-base text-base xl:text-medium text-pretty text-center md:text-left text-gray-100 mt-3 lg:mt-4 mb-1 tracking-wide">
@@ -157,7 +157,7 @@
         <div class="font-medium text-base text-balance xl:text-medium text-center md:text-left text-gray-600 tracking-wide mt-4 md:mt-3 lg:mt-4 mb-1 ">
           <h1 class="text-xl text-gray-800 font-semibold">Siemens Technology Partner</h1>
            <h2 class="">
-            Jako druga firma w Polsce z tytułem Siemens Technology Partner rozwijamy PULSAR, który dzięki zaawansowanej automatyce i identyfikacji danych precyzyjnie steruje procesami produkcyjnymi i magazynowymi. Współpraca z ekspertami Siemens pozwala nam wprowadzać innowacje, zwiększające wydajność i minimalizujące przestoje.          </h2>
+            Jako druga firma w Polsce z tytułem Siemens Technology Partner w zakresie RFID rozwijamy system PULSAR, który dzięki zaawansowanej automatyce i identyfikacji danych precyzyjnie steruje procesami produkcyjnymi i magazynowymi. Współpraca z ekspertami Siemens pozwala nam wprowadzać innowacje, zwiększające wydajność i minimalizujące przestoje.          </h2>
           <h1 class="text-xl mt-5 text-gray-800 font-semibold">Oracle Partner</h1>
            <h2 class="">
             Posiadanie statusu Oracle Partner zapewnia nam dostęp do najnowszych technologii i umacnia pozycję w tworzeniu zaawansowanych systemów informatycznych opartych o relacyjny serwer bazy danych Oracle. 

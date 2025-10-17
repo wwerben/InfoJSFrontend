@@ -36,8 +36,9 @@
 
           </div>
           <div class="text-2xl lg:text-6xl font-bold leading-none">
-            <span class="text-sm -ml-2 -mr-1 font-lg font-medium">ponad</span>
-            {{ displayCounts[index] }}
+            <span class="text-sm -ml-2 -mr-1 font-lg font-medium " v-if="item.target < 9999">ponad</span>
+            {{ displayCounts[index] }}<span v-if="item.target >= 9999">+</span>
+            
           </div>
           <div class="text-[10px] text-center lg:text-base font-base lg:font-base">
             {{ item.label }}
@@ -52,7 +53,7 @@
 import { ref, onMounted } from 'vue'
 
 const items = [
-  { target: 5800, label: 'dziennie wyprodukowanych mebli' },
+  { target: 9999, label: 'dziennie produkowanych mebli' },
   { target: 30,    label: 'lat doświadczenia' },
   { target: 16,    label: 'konektorów integracyjnych EDI' },
   { target: 1000,  label: 'użytkowników każdego dnia' }
