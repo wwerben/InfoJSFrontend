@@ -71,9 +71,7 @@
   
   <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-1000 group-hover:max-h-96 group-hover:opacity-100">
     <p class="text-sm leading-relaxed">
-        System Pulsar usprawnia zarządzanie procesami logistycznymi, zapewniając optymalizację dostaw, redukcję kosztów oraz terminową realizację zamówień. Pozwala na pełną kontrolę nad zaopatrzeniem i sprzedażą – od rejestracji zamówień od klientów, przez tworzenie tras oraz automatyczne generowanie dokumentów sprzedażowych i wysyłkowych.
-Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka staje się bardziej efektywna i dostosowana do potrzeb.
-
+      System Pulsar usprawnia zarządzanie procesami logistycznymi, zapewniając optymalizację dostaw, redukcję kosztów oraz terminową realizację zamówień. Pozwala na pełną kontrolę nad zaopatrzeniem i sprzedażą – od rejestracji zamówień od klientów, przez tworzenie tras oraz automatyczne generowanie dokumentów sprzedażowych i wysyłkowych. System Pulsar pozwala również na planowanie zaopatrzenia, zarządzanie łańcuchami dostaw oraz monitorowanie stanów minimalnych. Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka staje się bardziej efektywna i dostosowana do potrzeb.
     </p>
    
   </div>
@@ -91,8 +89,7 @@ Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka
   
   <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-700 group-hover:max-h-96 group-hover:opacity-100">
     <p class="text-sm leading-relaxed">
-      Efektywne zarządzanie magazynem to klucz do sprawnej organizacji firmy. Pulsar umożliwia bieżącą kontrolę stanów magazynowych, śledzenie paczek magazynowych oraz optymalizację rozmieszczenia towarów. Wykorzystanie technologii RFID oraz automatyzacja procesów przyjęć, wydań i inwentaryzacji pozwala na minimalizację strat i zwiększenie wydajności operacyjnej.     </p>
-  
+      Efektywne zarządzanie magazynem to klucz do sprawnej organizacji firmy. Pulsar umożliwia bieżącą kontrolę stanów magazynowych, śledzenie paczek magazynowych oraz optymalizację rozmieszczenia towarów. Wykorzystanie technologii RFID oraz automatyzacja procesów przyjęć, wydań i inwentaryzacji pozwala na minimalizację błędów i pomyłek oraz na zwiększenie wydajności operacyjnej. </p>
   </div>
   <a href="#magazyn" class="mt-2    inline-flex items-center gap-1 hover:underline">
       <span>Dowiedz się więcej</span>

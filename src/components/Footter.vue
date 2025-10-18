@@ -60,7 +60,7 @@
 
       <!-- Partner -->
       <div class="p-5 md:col-span-1 col-span-2">
-        <img v-lazy="imageSrc" src="@/assets/img/TreflGdansk_Logo.png" alt="Partner Logo" class="max-h-40 w-auto">
+        <img v-lazy="imageSrc" src="@/assets/img/TreflGdansk_Log.png" alt="Partner Logo" class="max-h-40 w-auto">
         <p class="text-center text-gray-400">Oficjalny partner</p>
       </div>
     </div>
