@@ -76,7 +76,7 @@ export default {
     const posts   = ref([])
     const loading = ref(true)
     const error   = ref(null)
-    const API_URL = '/api/graphql' 
+    const API_URL = 'infobase.tojest.dev/api/graphql' 
 
    const fetchPosts = async () => {
   loading.value = true
