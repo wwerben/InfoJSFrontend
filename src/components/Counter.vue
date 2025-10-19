@@ -2,46 +2,69 @@
 <template>
   <div class="relative text-gray-50 w-full h-[85vh] bg-transparent">
     <div class="absolute bottom-0 inset-x-0 px-4 pb-8">
-
-      <div
-        class="grid
-               grid-cols-2 grid-rows-2 gap-x-4 gap-y-4
-               md:grid-cols-4 md:grid-rows-1 md:gap-x-2 md:gap-y-0
-               justify-items-center justify-center items-center">
-               <div
-                v-for="(item, index) in items"
-                :key="index"
+      
+      <!-- Mobile Carousel (visible only on mobile) -->
+      <div class="relative overflow-hidden md:hidden">
+        <!-- Slides Container - Horizontal -->
+        <div 
+          class="flex transition-transform duration-500 ease-in-out"
+          :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
+        >
+          <!-- Slide 1: Items 0-1 -->
+          <div class="w-full flex-shrink-0">
+            <div class="grid grid-cols-2 gap-x-4 gap-y-4 justify-items-center items-center">
+              <div
+                v-for="index in [0, 1]"
+                :key="`slide1-${index}`"
                 class="flex flex-col justify-center items-center"
-                :class="[
-                  // Mobile - 2x2 (2 kolumny, 2 rzędy)
-                  index === 0 
-                    ? 'col-start-1 row-start-1'
-                    : index === 1
-                      ? 'col-start-2 row-start-1'
-                      : index === 2
-                        ? 'col-start-1 row-start-2'
-                        : 'col-start-2 row-start-2',
-                  // Desktop - 4x1 (4 kolumny, 1 rząd)
-                  index === 0
-                    ? 'md:col-start-1 md:row-start-1'
-                    : index === 1
-                      ? 'md:col-start-2 md:row-start-1'
-                      : index === 2
-                        ? 'md:col-start-3 md:row-start-1'
-                        : 'md:col-start-4 md:row-start-1'
-                ]"
               >
-          <div class="text-sm">
-       
+                <div class="text-2xl font-bold leading-none">
+                  <span class="text-sm -ml-2 -mr-1 font-lg font-medium" v-if="items[index].target < 9999">ponad</span>
+                  {{ displayCounts[index] }}<span v-if="items[index].target >= 9999">+</span>
+                </div>
+                <div class="text-[10px] text-center font-base">
+                  {{ items[index].label }}
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- Slide 2: Items 2-3 -->
+          <div class="w-full flex-shrink-0">
+            <div class="grid grid-cols-2 gap-x-4 gap-y-4 justify-items-center items-center">
+              <div
+                v-for="index in [2, 3]"
+                :key="`slide2-${index}`"
+                class="flex flex-col justify-center items-center"
+              >
+                <div class="text-2xl font-bold leading-none">
+                  <span class="text-xs -ml-2 -mr-1 md:text-sm lg:text-base font-medium" v-if="items[index].target < 9999">ponad</span>
+                  {{ displayCounts[index] }}<span v-if="items[index].target >= 9999">+</span>
+                </div>
+                <div class="text-[10px] text-center font-base">
+                  {{ items[index].label }}
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="text-2xl lg:text-6xl font-bold leading-none">
-            <span class="text-sm -ml-2 -mr-1 font-lg font-medium " v-if="item.target < 9999">ponad</span>
-            {{ displayCounts[index] }}<span v-if="item.target >= 9999">+</span>
-            
-          </div>
-          <div class="text-[10px] text-center lg:text-base font-base lg:font-base">
-            {{ item.label }}
+        </div>
+      </div>
+
+      <!-- Desktop Grid (visible only on desktop) -->
+      <div class="hidden md:block">
+        <div class="grid grid-cols-4 gap-x-2 justify-items-center items-center">
+          <div
+            v-for="(item, index) in items"
+            :key="index"
+            class="flex flex-col justify-center items-center"
+          >
+            <div class="text-2xl lg:text-6xl font-bold leading-none">
+              <span class="text-sm -ml-2 -mr-1 font-lg font-medium" v-if="item.target < 9999">ponad</span>
+              {{ displayCounts[index] }}<span v-if="item.target >= 9999">+</span>
+            </div>
+            <div class="text-[10px] text-center lg:text-base font-base lg:font-base">
+              {{ item.label }}
+            </div>
           </div>
         </div>
       </div>
@@ -50,7 +73,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 
 const items = [
   { target: 9999, label: 'dziennie produkowanych mebli' },
@@ -60,6 +83,55 @@ const items = [
 ]
 
 const displayCounts = ref(items.map(() => 0))
+const currentSlide = ref(0)
+
+// Carousel logic
+const totalSlides = computed(() => Math.ceil(items.length / 2)) // 2 items per slide
+const maxSlide = computed(() => totalSlides.value - 1)
+
+function nextSlide() {
+  if (currentSlide.value < maxSlide.value) {
+    currentSlide.value++
+  } else {
+    currentSlide.value = 0 // Reset to first slide
+  }
+  // Restart animations for current slide
+  restartSlideAnimations()
+}
+
+// Navigation functions removed - carousel is now auto-only
+
+function restartSlideAnimations() {
+  // Get indices for current slide (2 items per slide)
+  const startIndex = currentSlide.value * 2
+  const endIndex = Math.min(startIndex + 1, items.length - 1)
+  
+  // Reset display counts for current slide
+  for (let i = startIndex; i <= endIndex; i++) {
+    displayCounts.value[i] = 0
+  }
+  
+  // Restart animations for current slide
+  for (let i = startIndex; i <= endIndex; i++) {
+    animateCount(i, items[i].target)
+  }
+}
+
+// Auto-play functionality (optional)
+let autoPlayInterval = null
+
+function startAutoPlay() {
+  autoPlayInterval = setInterval(() => {
+    nextSlide() // This will handle the slide change and animation restart
+  }, 4000) // Change slide every 4 seconds
+}
+
+function stopAutoPlay() {
+  if (autoPlayInterval) {
+    clearInterval(autoPlayInterval)
+    autoPlayInterval = null
+  }
+}
 
 function animateCount(index, target, duration = 2000) {
   const step = target >= 10000
@@ -86,8 +158,19 @@ function animateCount(index, target, duration = 2000) {
 }
 
 onMounted(() => {
+  // Start counter animations
   items.forEach((item, i) => {
     animateCount(i, item.target)
   })
+  
+  // Start auto-play only on mobile devices
+  if (window.innerWidth < 768) { // md breakpoint
+    startAutoPlay()
+  }
+})
+
+// Cleanup on unmount
+onUnmounted(() => {
+  stopAutoPlay()
 })
 </script>

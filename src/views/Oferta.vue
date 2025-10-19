@@ -121,13 +121,15 @@
 
     <!-- Kolumna 4: Integracja -->
     <div class="flex flex-col hover:backdrop-blur-xs group justify-end  p-6 text-white transition-all duration-500">
-  <div class=" xl:group-hover:translate-y-[-50%] duration-1000">
+  <div class=" xl:group-hover:translate-y-[-10%] duration-1000">
     <h2 class="text-2xl font-bold  transition-all duration-1000">Integracja</h2>
   
   <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-700 group-hover:max-h-96 group-hover:opacity-100">
     <p class="text-sm leading-relaxed">
-      Spójna wymiana danych pomiędzy systemami to podstawa efektywnego zarządzania przedsiębiorstwem. Pulsar zapewnia pełną integrację innymi systemami eliminując błędy wynikające z ręcznego wprowadzania danych. Automatyczna synchronizacja informacji gwarantuje aktualność i spójność procesów, co pozwala na lepszą kontrolę i optymalizację działania firmy.    </p>
-    
+      Automatyczna wymiana danych pomiędzy systemami to podstawa efektywnego zarządzania przedsiębiorstwem. Pulsar zapewnia pełną integrację z innymi systemami eliminując błędy wynikające z ręcznego wprowadzania danych. Automatyczna synchronizacja informacji gwarantuje aktualność i spójność procesów, co pozwala na lepszą kontrolę i optymalizację działania firmy.
+<br></br><br></br>Pulsar RFID
+<br></br>RFID to rewolucyjne rozwiązanie w logistyce, które w połączeniu z systemem PULSAR usprawnia zarządzanie magazynem i produkcją. Umożliwia automatyczne skanowanie bez kontaktu, eliminując błędy i przyspieszając operacje. Rozwiązanie to redukuje koszty, optymalizuje procesy i zwiększa precyzję zarządzania zapasami. System PULSAR RFID podnosi efektywność i automatyzację kluczowych procesów logistycznych.    
+</p>
   </div>
   <a href="#integracja" class="mt-2    inline-flex items-center gap-1 hover:underline">
       <span>Dowiedz się więcej</span>

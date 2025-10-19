@@ -63,7 +63,7 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <p>kontakt@infobase.com.pl</p>
+                    <p>ibsi@infobase.com.pl</p>
                   </div>
                 </div>
                 
@@ -74,7 +74,7 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <p>+48 123 456 789</p>
+                    <p>+48 632 788 888</p>
                   </div>
                 </div>
                 

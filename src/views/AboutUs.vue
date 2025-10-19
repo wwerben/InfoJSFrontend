@@ -54,7 +54,7 @@
             <div class="text-left space-y-4 lg:px-20">
             <h1 class="text-3xl md:text-4xl font-semibold text-gray-800">30 lat doświadczenia</h1>
             <p class="text-gray-700 text-lg leading-relaxed">
-            Z czasem system PULSAR  ewoluował, aby sprostać jeszcze większym wyzwaniom – dziś wspiera przedsiębiorstwa z sektora meblowego, a także firmy z sektora kosmetycznego czy przemysłowego, którym zależy na precyzyjnym zarządzaniu zasobami i szybkim obiegu informacji.            </p>
+            Z czasem system PULSAR  ewoluował, aby sprostać jeszcze większym wyzwaniom – dziś wspiera przedsiębiorstwa z sektora meblowego, a także firmy z sektora chemicznego, czy przemysłowego, którym zależy na precyzyjnym zarządzaniu zasobami i szybkim obiegu informacji.            </p>
           
            
             </div>
@@ -105,7 +105,7 @@
 
 
             <p class="text-gray-700 text-md leading-relaxed mt-4 max-md:mb-10">
-            Dzięki temu każdy moduł systemu PULSAR od pierwszego dnia działa zgodnie z oczekiwaniami użytkowników, przyspieszając realizację zleceń średnio o 30 % i obniżając koszty operacyjne. -> zamienić na: Dzięki temu każdy moduł systemu PULSAR od pierwszego dnia działa zgodnie z oczekiwaniami użytkowników, przyspieszając realizację zleceń i obniżając koszty operacyjne,            
+              Dzięki temu każdy moduł systemu PULSAR od pierwszego dnia działa zgodnie z oczekiwaniami użytkowników, przyspieszając realizację zleceń i obniżając koszty operacyjne.        
             </p>
           </div>
 
