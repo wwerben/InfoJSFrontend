@@ -20,7 +20,7 @@
             
               <img
                 v-show="imageLoadedMain"
-                :src="'http://168.119.240.129:1337' + post.MainImage.url"
+                :src="post.MainImage.url"
                 alt="Główne zdjęcie posta"
                 @load="handleMainImageLoad"
                 class="max-w-full"
@@ -39,7 +39,7 @@
                 <div v-if="!galleryImagesLoaded[index]" class="bg-gray-200 animate-pulse w-full h-64"></div>
                 <img
                   v-show="galleryImagesLoaded[index]"
-                  :src="'http://168.119.240.129:1337' + image.url"
+                  :src="image.url"
                   alt="Obraz z posta"
                   class="object-cover w-full h-64 md:h-48 cursor-pointer"
                   @click="openModal(image)"
@@ -68,7 +68,7 @@
             </svg>
           </button>
           <img
-            :src="'http://168.119.240.129:1337' + selectedImage.url"
+            :src="selectedImage.url"
             alt="Powiększony obraz"
             class="h-full w-full "
           />
@@ -103,6 +103,7 @@
       // Stany ładowania obrazów
       const imageLoadedMain = ref(false);
       const galleryImagesLoaded = ref({});
+      const API_URL = 'https://infobase.tojest.dev/api/graphql';
   
       const GET_POST = gql`
         query Post($documentId: ID!) {
@@ -121,9 +122,10 @@
       `;
   
       const fetchPost = async () => {
+        loading.value = true;
         try {
           const data = await request(
-            "http://168.119.240.129:1337/graphql",
+            API_URL,
             GET_POST,
             { documentId: props.documentId }
           );
@@ -139,8 +141,11 @@
           setTimeout(() => {
             showImages.value = true;
           }, 200);
+          error.value = null;
         } catch (err) {
-          error.value = err.message;
+          // graphql-request zwraca .response.errors przy błędach GraphQL
+          error.value = err?.response?.errors?.[0]?.message ?? err.message;
+          console.error(err);
         } finally {
           loading.value = false;
         }

@@ -40,7 +40,7 @@
                     <img
                       v-if="post.MainImage?.url"
                       class="object-cover w-full h-full"
-                      :src="`http://168.119.240.129:1337${post.MainImage.url}`"
+                      :src="post.MainImage.url"
                       alt="Post Image"
                     />
                   </div>
@@ -80,6 +80,7 @@ export default {
     const posts = ref([]);
     const loading = ref(true);
     const error = ref(null);
+    const API_URL = 'https://infobase.tojest.dev/api/graphql';
 
     const GET_POSTS = gql`
       query Post($sort: [String]) {
@@ -96,15 +97,19 @@ export default {
     `;
 
     const fetchPosts = async () => {
+      loading.value = true;
       try {
         const data = await request(
-          "http://168.119.240.129:1337/graphql",
+          API_URL,
           GET_POSTS,
           { sort: ["publishedAt:desc"] }
         );
         posts.value = data.posts;
+        error.value = null;
       } catch (err) {
-        error.value = err.message;
+        // graphql-request zwraca .response.errors przy błędach GraphQL
+        error.value = err?.response?.errors?.[0]?.message ?? err.message;
+        console.error(err);
       } finally {
         loading.value = false;
       }
