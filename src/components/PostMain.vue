@@ -17,7 +17,7 @@
           <div class="h-48 overflow-hidden">
             <img
               v-if="post.MainImage && post.MainImage.url"
-              :src="`http://168.119.240.129:1337${post.MainImage.url}`"
+              :src="`/api/graphql${post.MainImage.url}`"
               alt="Post image"
               class="object-cover w-full h-full"
             />
@@ -76,20 +76,23 @@ export default {
     const posts   = ref([])
     const loading = ref(true)
     const error   = ref(null)
+    const API_URL = '/api/graphql' 
 
-    const fetchPosts = async () => {
-      try {
-        const { posts: data } = await request(
-          'http://168.119.240.129:1337/graphql',
-          GET_LATEST_POSTS
-        )
-        posts.value = data
-      } catch (err) {
-        error.value = err.message
-      } finally {
-        loading.value = false
-      }
-    }
+   const fetchPosts = async () => {
+  loading.value = true
+  try {
+    const res = await request(API_URL, GET_LATEST_POSTS)
+    // res => { posts: [...] }
+    posts.value = res?.posts ?? []
+    error.value = null
+  } catch (e) {
+    // graphql-request zwraca .response.errors przy błędach GraphQL
+    error.value = e?.response?.errors?.[0]?.message ?? e.message
+    console.error(e)
+  } finally {
+    loading.value = false
+  }
+}
 
     // Zwraca czysty tekst z markdown i obcina do limitu znaków
     const excerpt = (text, limit = 150) => {
