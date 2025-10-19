@@ -17,7 +17,7 @@
           <div class="h-48 overflow-hidden">
             <img
               v-if="post.MainImage && post.MainImage.url"
-              :src="post.MainImage.url"
+              :src="'http://168.119.240.129:1337/uploads/' + post.MainImage"
               alt="Post image"
               class="object-cover w-full h-full"
             />
