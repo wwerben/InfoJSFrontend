@@ -1,7 +1,7 @@
 <template>
     <div class="w-full ">
       <!-- siatka: 2 kolumny na sm/md, 3 kolumny od lg -->
-      <div class="grid grid-cols-2 lg:grid-cols-3 ">
+      <div class="grid grid-cols-1 lg:grid-cols-3 ">
         <div
           v-for="(tile, i) in tiles"
           :key="i"
