@@ -17,7 +17,7 @@
           <div class="h-48 overflow-hidden">
             <img
               v-if="post.MainImage && post.MainImage.url"
-              :src="`${API_URL}${post.MainImage.url}`"
+              :src="post.MainImage.url"
               alt="Post image"
               class="object-cover w-full h-full"
             />
