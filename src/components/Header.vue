@@ -93,10 +93,15 @@
             @click="closeMobileMenu"
           >Oferta</router-link>
           <router-link
-            to="#"
+            to="/blog"
             class="text-gray-200"
             @click="closeMobileMenu"
           >Aktualności</router-link>
+          <router-link
+            to="/rfid"
+            class="text-gray-200"
+            @click="closeMobileMenu"
+          >RFID</router-link>
           <router-link
             to="/kontakt"
             class="text-white"
