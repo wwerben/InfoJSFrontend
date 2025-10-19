@@ -7,6 +7,8 @@ import AltHeader     from '@/components/AltHeader.vue'
 import Footer        from '@/components/Footter.vue'
 import Loading       from '@/components/Loading.vue'
 
+
+
 const isLoaded       = ref(false)
 const isFooterLoaded = ref(false)
 
@@ -27,7 +29,38 @@ const headerComponent = computed(() => {
 onMounted(() => {
   isLoaded.value = true
   setTimeout(() => { isFooterLoaded.value = true }, 3000)
+  document.title = 'InfoBase Systemy Informatyczne'
+  
+  const favicon = document.querySelector('link[rel="icon"]')
+  if (favicon) {
+    favicon.href = '/favicon.ico'
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+  // --- Meta Description ---
+  let metaDescription = document.querySelector('meta[name="description"]');
+  if (!metaDescription) {
+    metaDescription = document.createElement('meta');
+    metaDescription.setAttribute('name', 'description');
+    document.head.appendChild(metaDescription);
+  }
+  metaDescription.setAttribute('content', 'Serwis firmy INFOBASE zajmującej się produkcją oprogramowania. Podstawowy produkt naszej firmy ZSI PULSAR jest kompleksowym systemem wspomagającym zarządzanie w firmie.');
+
+  // --- Meta Keywords ---
+  let metaKeywords = document.querySelector('meta[name="keywords"]');
+  if (!metaKeywords) {
+    metaKeywords = document.createElement('meta');
+    metaKeywords.setAttribute('name', 'keywords');
+    document.head.appendChild(metaKeywords);
+  }
+  metaKeywords.setAttribute('content', 'oracle, transport, produkcja, CRM, koszty, RFID, TAG, magazyn wysokiego składowania, automatyczna identyfikacja, antena, czytnik, automatyczny magazyn, kody kreskowe, zarządzanie produkcją, logistyka sprzedaży, B2B, finanse, wielowalutowość, spedycja, warsztat, stacja obsługi, kalkulacje, technologia, systemy informatyczne, komputeryzacja, programy komputerowe, zintegrowane systemy informatyczne, PULSAR, Turek, optymalizacja dystrybucji, odys, pakowanie, algorytm pakowania, najkrótsza droga, tir, optymalizacja trasy');
+});
+
 })
+
+
+
+
 </script>
 
 
