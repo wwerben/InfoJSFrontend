@@ -82,20 +82,25 @@
           class="flex flex-col p-4 py-4 font-medium text-center text-xl gap-5"
         >
           <router-link
-            to="#"
+            to="/onas"
             class="text-gray-200"
             @click="closeMobileMenu"
-          >Firma</router-link>
+          >O nas</router-link>
           <router-link
             to="/oferta"
             class="text-gray-200"
             @click="closeMobileMenu"
           >Oferta</router-link>
           <router-link
-            to="#"
+            to="/blog"
             class="text-gray-200"
             @click="closeMobileMenu"
           >Aktualności</router-link>
+          <router-link
+            to="/rfid"
+            class="text-gray-200"
+            @click="closeMobileMenu"
+          >RFID</router-link>
           <router-link
             to="/kontakt"
             class="text-white"

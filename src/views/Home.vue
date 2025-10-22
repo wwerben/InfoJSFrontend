@@ -38,7 +38,7 @@
                 Od ponad <span class="font-extrabold text-lg lg:text-2xl text-blue3">30 lat</span> koncentrujemy się na projektowaniu nowoczesnych systemów informatycznych dedykowanych dla firm produkcyjnych. Nasze rozwiązania powstają z myślą o usprawnieniu oraz automatyzacji i optymalizacji procesów we wszystkich obszarach przedsiębiorstwa, poprawie wydajności oraz wspieraniu dynamicznego rozwoju biznesu naszych klientów.
               </h2>
               <div class="mt-6 flex justify-center md:justify-start">
-                <a href="#" class="bg-blue3 text-center text-white text-lg font-semibold py-3 px-6 rounded-sm shadow-md hover:bg-blue2 transition">
+                <a href="/oferta" class="bg-blue3 text-center text-white text-lg font-semibold py-3 px-6 rounded-sm shadow-md hover:bg-blue2 transition">
                   Dowiedz się więcej
                 </a>
               </div>
@@ -69,7 +69,7 @@
               
               <!-- Poprawiona sekcja przycisku -->
               <div class="mt-6 flex justify-center md:justify-start">
-                <a href="#" class="bg-blue3 text-center text-white text-lg font-semibold py-3 px-6 rounded-sm shadow-md hover:bg-blue2 transition">
+                <a href="/oferta" class="bg-blue3 text-center text-white text-lg font-semibold py-3 px-6 rounded-sm shadow-md hover:bg-blue2 transition">
                   Dowiedz się więcej
                 </a>
               </div>
@@ -127,7 +127,7 @@
 
         <!-- Poprawiona sekcja przycisku -->
         <div class="mt-6 flex justify-center md:justify-start">
-          <a href="#" class="bg-gray-100 text-center text-blue3 w-full text-lg hover:ring-2 ring-gray-100 font-semibold py-4 px-6 rounded-sm shadow-md hover:bg-blue-900 hover:text-gray-100 duration-300 transition">
+          <a href="/oferta" class="bg-gray-100 text-center text-blue3 w-full text-lg hover:ring-2 ring-gray-100 font-semibold py-4 px-6 rounded-sm shadow-md hover:bg-blue-900 hover:text-gray-100 duration-300 transition">
             Więcej o systemie Pulsar dla branży meblarskiej
           </a>
         </div>
@@ -166,11 +166,7 @@
         </div>
         
         <!-- Poprawiona sekcja przycisku -->
-        <div class="mt-6 flex justify-center md:justify-start">
-          <a href="#" class="bg-blue3 text-center text-white text-lg font-semibold py-3 px-6 rounded-sm shadow-md hover:bg-blue2 transition">
-            Dowiedz się więcej
-          </a>
-        </div>
+        
       </div>
       <div class="flex items-center max-md:hidden max-md:order-first justify-self-center  max-w-xl overflow-hidden h-auto">
         <img src="@/assets/img/SiemensOracle.png" alt="O nas zdjęcie" class="object-cover w-full h-auto">

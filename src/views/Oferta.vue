@@ -71,9 +71,7 @@
   
   <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-1000 group-hover:max-h-96 group-hover:opacity-100">
     <p class="text-sm leading-relaxed">
-        System Pulsar usprawnia zarządzanie procesami logistycznymi, zapewniając optymalizację dostaw, redukcję kosztów oraz terminową realizację zamówień. Pozwala na pełną kontrolę nad zaopatrzeniem i sprzedażą – od rejestracji zamówień od klientów, przez tworzenie tras oraz automatyczne generowanie dokumentów sprzedażowych i wysyłkowych.
-Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka staje się bardziej efektywna i dostosowana do potrzeb.
-
+      System Pulsar usprawnia zarządzanie procesami logistycznymi, zapewniając optymalizację dostaw, redukcję kosztów oraz terminową realizację zamówień. Pozwala na pełną kontrolę nad zaopatrzeniem i sprzedażą – od rejestracji zamówień od klientów, przez tworzenie tras oraz automatyczne generowanie dokumentów sprzedażowych i wysyłkowych. System Pulsar pozwala również na planowanie zaopatrzenia, zarządzanie łańcuchami dostaw oraz monitorowanie stanów minimalnych. Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka staje się bardziej efektywna i dostosowana do potrzeb.
     </p>
    
   </div>
@@ -91,8 +89,7 @@ Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka
   
   <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-700 group-hover:max-h-96 group-hover:opacity-100">
     <p class="text-sm leading-relaxed">
-      Efektywne zarządzanie magazynem to klucz do sprawnej organizacji firmy. Pulsar umożliwia bieżącą kontrolę stanów magazynowych, śledzenie paczek magazynowych oraz optymalizację rozmieszczenia towarów. Wykorzystanie technologii RFID oraz automatyzacja procesów przyjęć, wydań i inwentaryzacji pozwala na minimalizację strat i zwiększenie wydajności operacyjnej.     </p>
-  
+      Efektywne zarządzanie magazynem to klucz do sprawnej organizacji firmy. Pulsar umożliwia bieżącą kontrolę stanów magazynowych, śledzenie paczek magazynowych oraz optymalizację rozmieszczenia towarów. Wykorzystanie technologii RFID oraz automatyzacja procesów przyjęć, wydań i inwentaryzacji pozwala na minimalizację błędów i pomyłek oraz na zwiększenie wydajności operacyjnej. </p>
   </div>
   <a href="#magazyn" class="mt-2    inline-flex items-center gap-1 hover:underline">
       <span>Dowiedz się więcej</span>
@@ -124,13 +121,15 @@ Dzięki śledzeniu zamówień na każdym etapie w czasie rzeczywistym, logistyka
 
     <!-- Kolumna 4: Integracja -->
     <div class="flex flex-col hover:backdrop-blur-xs group justify-end  p-6 text-white transition-all duration-500">
-  <div class=" xl:group-hover:translate-y-[-50%] duration-1000">
+  <div class=" xl:group-hover:translate-y-[-10%] duration-1000">
     <h2 class="text-2xl font-bold  transition-all duration-1000">Integracja</h2>
   
   <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-700 group-hover:max-h-96 group-hover:opacity-100">
     <p class="text-sm leading-relaxed">
-      Spójna wymiana danych pomiędzy systemami to podstawa efektywnego zarządzania przedsiębiorstwem. Pulsar zapewnia pełną integrację innymi systemami eliminując błędy wynikające z ręcznego wprowadzania danych. Automatyczna synchronizacja informacji gwarantuje aktualność i spójność procesów, co pozwala na lepszą kontrolę i optymalizację działania firmy.    </p>
-    
+      Automatyczna wymiana danych pomiędzy systemami to podstawa efektywnego zarządzania przedsiębiorstwem. Pulsar zapewnia pełną integrację z innymi systemami eliminując błędy wynikające z ręcznego wprowadzania danych. Automatyczna synchronizacja informacji gwarantuje aktualność i spójność procesów, co pozwala na lepszą kontrolę i optymalizację działania firmy.
+<br></br><br></br>Pulsar RFID
+<br></br>RFID to rewolucyjne rozwiązanie w logistyce, które w połączeniu z systemem PULSAR usprawnia zarządzanie magazynem i produkcją. Umożliwia automatyczne skanowanie bez kontaktu, eliminując błędy i przyspieszając operacje. Rozwiązanie to redukuje koszty, optymalizuje procesy i zwiększa precyzję zarządzania zapasami. System PULSAR RFID podnosi efektywność i automatyzację kluczowych procesów logistycznych.    
+</p>
   </div>
   <a href="#integracja" class="mt-2    inline-flex items-center gap-1 hover:underline">
       <span>Dowiedz się więcej</span>

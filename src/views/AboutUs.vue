@@ -25,8 +25,7 @@
             <div class="text-left space-y-4 lg:px-20">
             <h1 class="text-4xl max-md:text-center font-semibold text-gray-800">O nas</h1>
             <p class="text-gray-700 text-lg leading-relaxed">
-              InfoBase Systemy Informatyczne to polska firma programistyczna z ponad 30-letnią tradycją, która od 1994 roku projektuje, rozwija i wdraża autorskie oprogramowanie klasy ERP. Nasza pasja do tworzenia rozwiązań IT zaczęła się od kompleksowej obsługi przemysłu włókienniczego, gdzie zdobywaliśmy doświadczenie w automatyzacji produkcji, logistyki i magazynowania.
-            </p>
+              InfoBase Systemy Informatyczne to polska firma programistyczna z ponad 30-letnią tradycją, która od 1994 roku projektuje, rozwija i wdraża autorskie oprogramowanie PULSAR klasy ERP. Nasza pasja do tworzenia rozwiązań IT zaczęła się od kompleksowej obsługi przemysłu włókienniczego, gdzie zdobywaliśmy doświadczenie w automatyzacji procesów produkcyjnych, logistyki i magazynowania.            </p>
            
             </div>
 
@@ -55,7 +54,7 @@
             <div class="text-left space-y-4 lg:px-20">
             <h1 class="text-3xl md:text-4xl font-semibold text-gray-800">30 lat doświadczenia</h1>
             <p class="text-gray-700 text-lg leading-relaxed">
-            Z czasem system PULSAR  ewoluował, aby sprostać jeszcze większym wyzwaniom – dziś wspiera przedsiębiorstwa z sektora meblowego, a także firmy z sektora kosmetycznego czy przemysłowego, którym zależy na precyzyjnym zarządzaniu zasobami i szybkim obiegu informacji.            </p>
+            Z czasem system PULSAR  ewoluował, aby sprostać jeszcze większym wyzwaniom – dziś wspiera przedsiębiorstwa z sektora meblowego, a także firmy z sektora chemicznego, czy przemysłowego, którym zależy na precyzyjnym zarządzaniu zasobami i szybkim obiegu informacji.            </p>
           
            
             </div>
@@ -106,9 +105,9 @@
 
 
             <p class="text-gray-700 text-md leading-relaxed mt-4 max-md:mb-10">
-              Dzięki temu każdy moduł systemu PULSAR od pierwszego dnia działa zgodnie z oczekiwaniami użytkowników, przyspieszając realizację zleceń średnio o 30 % i obniżając koszty operacyjne.</p>
-            
-            </div>
+              Dzięki temu każdy moduł systemu PULSAR od pierwszego dnia działa zgodnie z oczekiwaniami użytkowników, przyspieszając realizację zleceń i obniżając koszty operacyjne.        
+            </p>
+          </div>
 
             <!-- Obrazek -->
             <div class="flex justify-center">
@@ -124,7 +123,7 @@
             
             <!-- Tekst -->
             <div class="space-y-4 lg:px-20 text-center">
-            <h1 class=" text-3xl md:text-4xl font-semibold text-gray-900">Zaufały nam największe polskie marki.</h1>      
+            <h1 class=" text-3xl md:text-4xl font-semibold text-gray-900">Z naszych rozwiązań korzystają znane i cenione marki</h1>      
             <h2  class="text-md font-semibold text-gray-600">Dołącz do grona firm, które dzięki naszym rozwiązaniom zyskały realną przewagę nad konkurencją.</h2>
            
             </div>
@@ -140,9 +139,14 @@
             
             <!-- Tekst -->
 
-            <div class="grid grid-cols-2 gap-4">
+            <!-- <div class="grid grid-cols-2 gap-4">
             <img src="@/assets/img/partnerstwo1.jpg" alt="Opis obrazka" class="w-full h-auto max-w-lg">
             <img src="@/assets/img/partnerstwo1.jpg" alt="Opis obrazka" class="w-full h-auto max-w-lg">
+            </div> -->
+
+            
+            <div class="grid grid-cols-1 gap-4">
+            <img src="@/assets/img/SiemensOracle.png" alt="Opis obrazka" class="w-full h-auto max-w-lg">
             </div>
 
             <div class="text-left space-y-4 lg:px-20 ">

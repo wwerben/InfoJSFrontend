@@ -4,7 +4,8 @@
         <div class="relative">
           <div class="absolute left-1/2 transform -translate-x-1/2 h-full top-5 w-0.5 bg-gray-300"></div>
           
-          <div v-for="(item, index) in timelineData" :key="index" class="relative -mb-16">
+          <div v-for="(item, index) in timelineData" :key="index" class="relative mb-16"> 
+            <!-- -mb-16 -->
             <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 mt-5   bg-white border-3 border-blue3 rounded-full z-20 shadow-md"></div>
             
             <div class="flex items-start">
@@ -13,13 +14,13 @@
                   <div class="text-3xl lg:text-5xl font-semibold text-gray-800 mb-4">{{ item.year }}</div>
                   <h3 class="text-md lg:text-2xl font-medium text-gray-700 mb-4 leading-tight">{{ item.title }}</h3>
                   <div class="flex justify-end gap-3 flex-wrap">
-                    <img 
+                    <!-- <img 
                       v-for="(img, imgIndex) in item.images" 
                       :key="imgIndex"
                       :src="img" 
                       :alt="'Zdjęcie ' + (imgIndex + 1)"
                       class=" object-cover w-[85%] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                    />
+                    /> -->
                   </div>
                 </div>
               </div>
@@ -29,13 +30,13 @@
                   <div class="text-3xl lg:text-5xl font-semibold text-gray-800 mb-4">{{ item.year }}</div>
                   <h3 class="text-md lg:text-xl font-medium text-gray-700 mb-4 leading-tight">{{ item.title }}</h3>
                   <div class="flex gap-3 flex-wrap">
-                    <img 
+                    <!-- <img 
                       v-for="(img, imgIndex) in item.images" 
                       :key="imgIndex"
                       :src="img" 
                       :alt="'Zdjęcie ' + (imgIndex + 1)"
                       class=" object-cover w-[85%]  rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                    />
+                    /> -->
                   </div>
                 </div>
               </div>
@@ -55,13 +56,13 @@
               <div class="text-3xl font-semibold text-gray-800 mb-3">{{ item.year }}</div>
               <h3 class="text-md lg:text-2xl font-medium text-gray-700 mb-4 leading-tight">{{ item.title }}</h3>
               <div class="space-y-3">
-                <img 
+                <!-- <img 
                   v-for="(img, imgIndex) in item.images" 
                   :key="imgIndex"
                   :src="img" 
                   :alt="'Zdjęcie ' + (imgIndex + 1)"
                   class="w-full h-40 object-cover rounded-lg shadow-lg"
-                />
+                /> -->
               </div>
             </div>
           </div>
@@ -71,61 +72,54 @@
 <script setup>
     const timelineData = [
         {
-          year: '2000',
+          year: '1994',
           title: 'Rozpoczęcie działaności',
           images: [
             'https://placehold.co/450x300'
           ]
         },
         {
-          year: '2000',
-          title: 'Partnerstwo z Oracle',
+          year: '1995',
+          title: 'Partnerstwo z Oracle',
           images: [
             'https://placehold.co/450x300'
           ]
         },
         {
-          year: '2000',
-          title: 'Pulsar dla branży meblarskiej',
+          year: '1996',
+          title: 'Pulsar w branzy włókienniczej',
           images: [
             'https://placehold.co/450x300'
           ]
         },
         {
-          year: '2000',
+          year: '2008',
+          title: 'Pulsar dla branzy meblarskiej ',
+          images: [
+            'https://placehold.co/450x300'
+          ]
+        },
+        {
+          year: '2015',
           title: 'Pierwsze uruchomienie magazynu RFID',
           images: [
             'https://placehold.co/450x300'
           ]
         },
         {
-          year: '2000',
-          title: 'Parterstwo z siemens w obszarze RFID',
+          year: '2018',
+          title: 'Parterstwo z Siemens',
           images: [
             'https://placehold.co/450x300'
           ]
         },
         {
-          year: '2000',
-          title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          year: '2019',
+          title: 'Przeniesienie się do nowej siedziby.',
           images: [
             'https://placehold.co/450x300'
           ]
         },
-        {
-          year: '2000',
-          title: 'Przeniesienie się do nowej siedziby',
-          images: [
-            'https://placehold.co/450x300'
-          ]
-        },
-        {
-          year: '2000',
-          title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          images: [
-            'https://placehold.co/450x300'
-          ]
-        }
       ]
       
 </script>
