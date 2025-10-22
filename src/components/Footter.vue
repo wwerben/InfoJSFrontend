@@ -4,7 +4,7 @@
     <div class="grid md:grid-cols-5 grid-cols-2 gap-8 place-content-center justify-items-center">
       <!-- Logo -->
       <div class="md:col-span-1 col-span-2 text-center lg:text-left justify-center items-center">
-        <img src="@/assets/img/Logo_B.png" alt="Pulsar RFID Logo" class="max-h-20 w-auto mb-4">
+        <img src="@/assets/img/Logo_B.png" alt="Pulsar RFID Logo" class="max-h-20 w-auto mb-2">
         <p class="text-gray-400">
           Innowacyjne rozwiązania dla Przemysłu.
         </p>
@@ -12,11 +12,16 @@
 
       <!-- Usługi -->
       <div class="md:col-span-1 col-span-2 text-center lg:text-left justify-center items-center">
-        <h4 class="text-lg font-semibold text-center lg:text-left mb-4">Firma</h4>
+        <h4 class="text-lg font-semibold text-center lg:text-left mb-2">
+          <a href="/oferta" class="hover:text-blue-400 transition duration-300">Oferta</a>
+        </h4>
         <ul class="space-y-2 text-gray-400 text-center lg:text-left justify-center items-center">
-          <li><a href="#" class="hover:text-white transition duration-300 text-center lg:text-left justify-center items-center  ">Lorem Ipsum</a></li>
-          <li><a href="#" class="hover:text-white transition duration-300 text-center lg:text-left justify-center items-center">Lorem Ipsum</a></li>
-          <li><a href="#" class="hover:text-white transition duration-300 text-center lg:text-left justify-center items-center">Lorem Ipsum</a></li>
+          <li><a href="/onas" class="hover:text-white transition duration-300 text-center lg:text-left justify-center items-center  ">O nas</a></li>
+          <li><a href="/rfid" class="hover:text-white transition duration-300 text-center lg:text-left justify-center items-center">RFID</a></li>
+          <li><a href="/blog" class="hover:text-white transition duration-300 text-center lg:text-left justify-center items-center">Aktualności</a></li>
+          <li><a href="/kontakt" class="hover:text-white transition duration-300 text-center lg:text-left justify-center items-center">Kontakt</a></li>
+
+
         </ul>
       </div>
 
@@ -25,7 +30,7 @@
 
       <!-- Kontakt -->
       <div class="md:col-span-1 col-span-2 text-center lg:text-left justify-center items-center">
-        <h4 class="text-lg font-semibold text-center lg:text-left mb-4">Kontakt</h4>
+        <h4 class="text-lg font-semibold text-center lg:text-left mb-2">Kontakt</h4>
         <ul class="space-y-2 text-gray-400 text-center lg:text-left justify-center items-center">
           <li class="flex items-center justify-center lg:justify-start">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -38,6 +43,12 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
             ibsi@infobase.com.pl
+          </li>
+          <li class="flex items-center justify-center lg:justify-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            pulsar@infobase.com.pl
           </li>
           <li class="flex items-center justify-center lg:justify-start">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
