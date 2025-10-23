@@ -188,7 +188,7 @@
            <p class="md:text-xl  text-sm mb-12 max-w-4xl mx-auto"> Technologia RFID przyczynia się w znacznym stopniu do poprawy organizacji w firmie, pozwala zachować porządek i zwiększa kontrolę. Powoduje to polepszenie funkcjonowania firmy, a co za tym idzie budowanie przewagi konkurencyjnej.</p>
            <div class="flex flex-col sm:flex-row justify-center mt-15 gap-4">
              <div class="bg-gray-100 px-3 py-3 rounded-lg hover:animate-pulse">
-                <a href="#" class=" text-blue3 hover:bg-gray-100 text-xl hover:animate-pulse font-semibold py-3 px-8 rounded-lg transition duration-300">
+                <a href="/kontakt" class=" text-blue3 hover:bg-gray-100 text-xl hover:animate-pulse font-semibold py-3 px-8 rounded-lg transition duration-300">
                   Skontaktuj się z nami
                </a>
              </div>

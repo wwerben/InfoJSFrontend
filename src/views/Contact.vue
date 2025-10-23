@@ -64,6 +64,7 @@
                   </div>
                   <div class="ml-4">
                     <p>ibsi@infobase.com.pl</p>
+                    <p>pulsar@infobase.com.pl</p>
                   </div>
                 </div>
                 
@@ -120,6 +121,7 @@
                   </div>
                   <div class="ml-4">
                     <p>kontakt@infobase.com.pl</p>
+                    <p>pulsar@infobase.com.pl</p>
                   </div>
                 </div>
                 
