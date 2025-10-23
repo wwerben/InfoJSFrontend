@@ -1,7 +1,7 @@
 <!-- src/components/LatestPosts.vue -->
 <template>
   <section class="py-8">
-    <h2 class="text-2xl font-medium text-gray-800 mb-6 text-center">Aktualności</h2>
+    <h2 class="text-3xl font-medium text-gray-800 mb-12 text-center">Aktualności</h2>
 
     <div v-if="loading" class="text-center text-gray-500">Ładowanie…</div>
     <div v-else-if="error" class="text-center text-red-500">{{ error }}</div>
@@ -12,12 +12,12 @@
         :key="post.documentId" 
         class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
       >
-        <router-link :to="`/post/${post.documentId}`" class="flex-1 flex flex-col">
+        <router-link :to="`post/${post.documentId}`" class="flex-1 flex flex-col">
           <!-- Obrazek -->
           <div class="h-48 overflow-hidden">
             <img
               v-if="post.MainImage && post.MainImage.url"
-              :src="post.MainImage.url"
+              :src="'https://infobase.com.pl/strapi/' + post.MainImage.url"
               alt="Post image"
               class="object-cover w-full h-full"
             />
@@ -25,15 +25,13 @@
 
   
           <div class="p-4 flex-1 flex flex-col">
-            <h3 class="text-xl font-semibold mb-2 hover:text-blue-700 transition">
+            <h3 class="text-xl font-medium mb-2 hover:text-blue-700 transition">
               {{ post.Title }}
             </h3>
             <span class="text-sm text-gray-500 mb-3">
               {{ formatDate(post.publishedAt) }}
             </span>
-            <p class="text-gray-700 flex-1">
-              {{ excerpt(post.Des, 100) }}…
-            </p>
+            
           </div>
         </router-link>
 
@@ -65,7 +63,6 @@ const GET_LATEST_POSTS = gql`
       documentId
       publishedAt
       MainImage { url }
-      Des
     }
   }
 `

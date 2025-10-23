@@ -32,7 +32,7 @@
             <h2 class="text-5xl font-bold text-gray-50 mb-4">Pulsar RFID</h2>
             <img src="@/assets/img/rfidtrzy.png" alt="Antena rfid podczas inwentaryzacji w magazynie" class="rounded-lg block py-4 lg:hidden shadow-xl" />
             <p class="text-gray-200 text-xl font-normal mb-6 leading-relaxed">
-              Ważnym aspektem w budowaniu przewagi konkurencyjnej firmy jest wprowadzanie innowacyjnych rozwiązań i nowych technologii. W ostatnich latach można zaobserwować wzrost zainteresowania przedsiębiorstw wdrażaniem RFID- systemu automatycznej identyfikacji za pomocą fal radiowych.            </p>
+              Ważnym aspektem w budowaniu przewagi konkurencyjnej firmy jest wprowadzanie innowacyjnych rozwiązań i nowych technologii. W ostatnich latach można zaobserwować wzrost zainteresowania przedsiębiorstw wdrażaniem RFID - systemu automatycznej identyfikacji za pomocą fal radiowych.            </p>
            
            
             </div>

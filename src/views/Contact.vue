@@ -1,4 +1,5 @@
 <template>
+  
   <div class="min-h-screen bg-gradient-to-b from-gray-50 to-gray-200">
     <!-- Hero Section -->
     <section class="relative text-white bg-[url('/src/assets/img/contact.jpg')] bg-cover bg-center">
@@ -23,7 +24,7 @@
             </p>
             
             <!-- Form -->
-            <form class="space-y-5 md:space-y-6">
+            <form class="space-y-5 md:space-y-6" @submit.prevent="onSubmit">
               <div>
                 <label for="name" class="block text-sm text-gray-600 mb-2">Imię</label>
                 <input type="text" id="name" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-gray-800 bg-transparent" placeholder="Twoje imię">
@@ -120,7 +121,7 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <p>kontakt@infobase.com.pl</p>
+                    <p>ibsi@infobase.com.pl</p>
                     <p>pulsar@infobase.com.pl</p>
                   </div>
                 </div>
@@ -132,7 +133,7 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <p>+48 123 456 789</p>
+                    <p>+48 632 788 888</p>
                   </div>
                 </div>
                 
@@ -168,5 +169,12 @@
 </template>
 
 <script>
-
+export default {
+  methods: {
+    // Prevent submit and show temporary popup
+    onSubmit() {
+      alert('jeszcze nie działa :)');
+    }
+  }
+}
 </script>

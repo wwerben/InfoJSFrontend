@@ -567,5 +567,11 @@ const closeModule = () => {
     animation: none;
     transition: none;
   }
+  
+  .content-fade-in,
+  .staggered-item {
+    opacity: 1;
+    transform: none;
+  }
 }
 </style>

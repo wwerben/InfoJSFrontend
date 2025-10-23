@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100">
+  <div class="">
     <div class="flex justify-center items-center">
       <div class="w-full h-[50vh] flex justify-center items-center">
         <img src="@/assets/img/poly.svg" class="object-cover absolute w-full h-[50vh]" />
@@ -11,9 +11,9 @@
     </div>
 
     <section>
-      <div class="max-w-7xl my-6 md:my-8 justify-center mx-auto">
+      <div class="max-w-7xl py-10 md:my-8 justify-center mx-auto">
         <!-- stan ładowania -->
-        <div v-if="loading" class="flex justify-center items-center h-64">
+        <div v-if="loading" class="flex justify-center items-center h-screen">
           <img
             src="@/assets/img/loading.gif"
             alt="Ładowanie..."
@@ -28,38 +28,39 @@
 
         <!-- właściwa lista postów -->
         <div v-else>
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <ul class="grid grid-cols-1   md:grid-cols-2 gap-8 items-stretch">
             <li
               v-for="post in posts"
               :key="post.documentId"
-              class="flex justify-center"
+              class="h-full"
             >
-              <router-link :to="`/post/${post.documentId}`">
-                <div class="max-w-4xl mb-3 md:mb-10 text-gray-700 mx-3 md:mx-5 overflow-hidden">
-                  <div class="w-full aspect-[16/9] overflow-hidden">
+              <router-link :to="`/post/${post.documentId}`" class="block h-full">
+                <div class="max-w-4xl hover:scale-102 transition-all duration-300 bg-gray-100 rounded-lg w-full h-full flex flex-col mb-3 md:mb-10 text-gray-800 mx-3 md:mx-5 overflow-hidden group">
+                  <div class="w-full aspect-[16/9] overflow-hidden relative">
                     <img
                       v-if="post.MainImage?.url"
                       class="object-cover w-full h-full"
-                      :src="post.MainImage.url"
+                      :src="'https://infobase.com.pl/strapi/' + post.MainImage.url"
                       alt="Post Image"
                     />
+                    <div class="hidden lg:block absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out bg-black/60 text-gray-50 p-4">
+                      <p class="text-sm md:text-lg font-normal">
+                        {{ plainTextZajawka(post.Des) }}...
+                      </p>
+                    </div>
                   </div>
-                  <div class="pt-3 px-1 md:min-h-54">
-                    <h2 class="text-xl md:text-3xl hover:text-blue-900 transform transition hover:scale-101 mb-1 font-semibold">
+                  <div class=" p-5">
+                    <h2 class="text-xl lg:text-2xl hover:text-blue-900 transform transition hover:scale-101 mb-1 font-semibold">
                       {{ post.Title }}
                     </h2>
                     <span class="text-md text-gray-500">
                       {{ new Date(post.publishedAt).toLocaleDateString() }}
                     </span>
-                    <p class="text-sm md:text-lg font-normal text-gray-600">
+                    <p class="text-sm md:text-lg font-normal text-gray-600 md:hidden">
                       {{ plainTextZajawka(post.Des) }}...
                     </p>
                   </div>
-                  <div class="bottom-2">
-                    <button class="mt-4 px-4 py-2 bg-blue1 text-white rounded hover:bg-blue3">
-                      Czytaj dalej
-                    </button>
-                  </div>
+                
                 </div>
               </router-link>
             </li>
@@ -80,7 +81,7 @@ export default {
     const posts = ref([]);
     const loading = ref(true);
     const error = ref(null);
-    const API_URL = 'https://infobase.tojest.dev/api/graphql';
+    const API_URL = 'https://infobase.com.pl/strapi/graphql';
 
     const GET_POSTS = gql`
       query Post($sort: [String]) {
@@ -115,7 +116,7 @@ export default {
       }
     };
 
-    const plainTextZajawka = (text, limit = 150) => {
+    const plainTextZajawka = (text, limit = 200) => {
       const html = marked(text);
       return html.replace(/<[^>]*>/g, "").slice(0, limit);
     };

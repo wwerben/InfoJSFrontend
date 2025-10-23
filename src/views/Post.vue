@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-gradient-to-br from-white to-gray-200 mt-12 pb-16">
+    <div class="bg-gradient-to-br min-h-screen from-white to-gray-200 mt-12 pb-16">
       <div class="flex justify-center text-gray-800">
-        <div class="max-w-6xl flex justify-center p-3">
+        <div class="max-w-7xl bg-gray-100 p-5 flex justify-center ">
           <div v-if="loading" class="p-4 h-screen">
             <img src="@/assets/img/loader.gif" alt="Ładowanie">
           </div>
@@ -9,25 +9,25 @@
             <p>{{ errorpage }}</p>
           </div>
           <div v-else>
-            <h2 class="text-xl md:text-4xl font-semibold md:mt-6 mb-1 md:mb-2">{{ post.Title }}</h2>
+            <h2 class="text-xl  md:text-4xl font-semibold md:mt-12 mb-1 md:mb-2">{{ post.Title }}</h2>
             <p class="text-gray-500 text-sm md:text-lg mb-1">
               Opublikowano: {{ new Date(post.publishedAt).toLocaleDateString() }}
             </p>
             <!-- Główny obraz z placeholderem -->
             <div v-if="!imageLoadedMain" class="bg-gray-200 animate-pulse w-full h-full"></div>
-            <div v-if="post.MainImage && post.MainImage.url && showImages">
+            <div v-if="post.MainImage && showImages">
               
             
               <img
                 v-show="imageLoadedMain"
-                :src="post.MainImage.url"
+                :src="'https://infobase.com.pl/strapi/' + post.MainImage.url"
                 alt="Główne zdjęcie posta"
                 @load="handleMainImageLoad"
-                class="max-w-full"
+                class="w-full my-5 aspect-[16/9] object-cover"
               />
             </div>
             <!-- Treść posta renderowana jako markdown -->
-            <div class="mb-4 mt-3 prose-sm md:prose-lg" v-html="markdownHtml"></div>
+            <div class="mb-4 mt-10 px-4 prose-sm md:prose-lg" v-html="markdownHtml"></div>
             <!-- Galeria obrazów z placeholderem -->
             <hr class="w-full border-t h-3 border-gray-800 mb-4 mt-10">
             <div v-if="post.Images && post.Images.length && showImages" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -39,7 +39,7 @@
                 <div v-if="!galleryImagesLoaded[index]" class="bg-gray-200 animate-pulse w-full h-64"></div>
                 <img
                   v-show="galleryImagesLoaded[index]"
-                  :src="image.url"
+                  :src="'https://infobase.com.pl/strapi/' + image.url"
                   alt="Obraz z posta"
                   class="object-cover w-full h-64 md:h-48 cursor-pointer"
                   @click="openModal(image)"
@@ -68,7 +68,7 @@
             </svg>
           </button>
           <img
-            :src="selectedImage.url"
+            :src="'https://infobase.com.pl/strapi/' + selectedImage.url"
             alt="Powiększony obraz"
             class="h-full w-full "
           />
@@ -103,7 +103,7 @@
       // Stany ładowania obrazów
       const imageLoadedMain = ref(false);
       const galleryImagesLoaded = ref({});
-      const API_URL = 'https://infobase.tojest.dev/api/graphql';
+      const API_URL = 'https://infobase.com.pl/strapi/graphql';
   
       const GET_POST = gql`
         query Post($documentId: ID!) {
