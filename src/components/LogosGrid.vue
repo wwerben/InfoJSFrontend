@@ -17,7 +17,7 @@
             <img
               :src="logo.src"
               :alt="logo.alt"
-              class="w-auto h-9 lg:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+              class="w-auto h-9 lg:h-12 object-contain lg:grayscale hover:grayscale-0 transition-all duration-300"
             />
           </a>
         </div>

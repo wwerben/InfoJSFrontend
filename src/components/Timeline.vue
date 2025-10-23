@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden sm:block mx-4 lg:mx-auto md:mx-10 max-w-6xl mb-48 pb-10 mt-20">
+  <div class="hidden sm:block mx-4 lg:mx-auto md:mx-10 max-w-6xl  pb-24 mt-20">
         <h2 class="text-4xl font-semibold text-gray-800 mb-10 text-center ">Nasza historia</h2>
         <div class="relative">
           <div class="absolute left-1/2 transform -translate-x-1/2 h-full top-5 w-0.5 bg-gray-300"></div>
@@ -94,7 +94,7 @@
         },
         {
           year: '2008',
-          title: 'Pulsar dla branzy meblarskiej ',
+          title: 'Pulsar dla branży meblarskiej ',
           images: [
             'https://placehold.co/450x300'
           ]
@@ -115,7 +115,7 @@
         },
         {
           year: '2019',
-          title: 'Przeniesienie się do nowej siedziby.',
+          title: 'Przeniesienie się do nowej siedziby',
           images: [
             'https://placehold.co/450x300'
           ]

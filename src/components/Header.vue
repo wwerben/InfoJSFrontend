@@ -1,6 +1,6 @@
 <template>
-  <header
-    class="fixed top-0 left-0 w-full z-50 transition-colors duration-300" 
+  <header 
+    class="fixed top-0 left-0 px-10 w-full z-50 transition-colors duration-300" 
     :class="isScrolled ? 'bg-blue2 shadow-md ' : 'bg-transparent pt-1'">
     <div class="flex justify-between items-center pl-3 sm:pl-6 px-6 py-3">
       <!-- Logo -->
@@ -15,8 +15,8 @@
 
 
       <nav 
-        class="hidden md:flex font-base transition-all  duration-300"
-        :class="isScrolled ? 'text-normal font-normal xl:gap-8 gap-6' : 'text-xl gap-8 xl:gap-10'"
+        class="hidden md:flex font-medium transition-all  duration-300"
+        :class="isScrolled ? 'text-normal font-normal xl:gap-10 gap-6' : 'text-xl gap-8 xl:gap-14'"
       >
         <router-link
           to="/onas"

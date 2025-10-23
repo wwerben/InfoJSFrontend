@@ -76,7 +76,7 @@ export default {
     const posts   = ref([])
     const loading = ref(true)
     const error   = ref(null)
-    const API_URL = 'https://infobase.tojest.dev/api/graphql'
+    const API_URL = 'https://infobase.com.pl/strapi/graphql'
 
 
    const fetchPosts = async () => {

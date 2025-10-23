@@ -30,9 +30,11 @@
 <section class="flex flex-col md:flex-row items-center max-md:py-15 justify-center px-3 py-8 lg:py-12 xl:px-10 gap-8 max-w-7xl mx-auto">
     <!-- Tekst - lewa połowa -->
     <div class="w-full md:w-1/2 space-y-4 lg:space-y-6 text-center md:text-left px-2">
-        <h1 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-gray-900" v-typewriter="{ speed: 55, threshold: 1 }">
-            System PULSAR
-        </h1>
+        <!-- Reserve height to prevent layout shift during typewriter -->
+        <div class="relative">
+          <h1 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-gray-900 invisible pointer-events-none select-none" aria-hidden="true">System PULSAR</h1>
+          <h1 v-typewriter="{ speed: 55, threshold: 1 }" class="absolute top-0 left-0 right-0 text-4xl sm:text-4xl lg:text-5xl font-bold text-gray-900">System PULSAR</h1>
+        </div>
         <h2 class="text-md md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
             PULSAR to kompleksowy system informatyczny wspierający wszystkie obszary działalności firmy. 
             Dzięki modułowej budowie pozwala na efektywne zarządzanie logistyką, 
@@ -144,7 +146,11 @@
   <div class="max-w-7xl w-full flex flex-col md:flex-row my-12 gap-6 xl:gap-10 items-center justify-between">
     <!-- Text content block -->
     <div class="w-full md:w-1/2 flex justify-center flex-col space-y-2 lg:space-y-4 text-center md:text-left">
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl pb-3 font-bold text-gray-100" v-typewriter="{ speed: 55, threshold: 1 }">Pulsar RFID</h1>
+      <!-- Reserve height to prevent layout shift during typewriter -->
+      <div class="relative">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl pb-3 font-bold text-gray-100 invisible pointer-events-none select-none" aria-hidden="true">Pulsar RFID</h1>
+        <h1 v-typewriter="{ speed: 55, threshold: 1 }" class="absolute top-0 left-0 right-0 text-3xl sm:text-4xl lg:text-5xl pb-3 font-bold text-gray-100">Pulsar RFID</h1>
+      </div>
       <h2 class="text-md md:text-lg lg:text-xl text-gray-100 leading-relaxed lg:pr-6">
         RFID to rewolucyjne rozwiązanie w logistyce, które w połączeniu z systemem PULSAR usprawnia zarządzanie magazynem i produkcją. Umożliwia automatyczne skanowanie bez kontaktu, eliminując błędy i przyspieszając operacje. Rozwiązanie to redukuje koszty, optymalizuje procesy i zwiększa precyzję zarządzania zapasami. System PULSAR RFID podnosi efektywność i automatyzację kluczowych procesów logistycznych.
       </h2>
@@ -172,34 +178,40 @@
   </div>
 </section>
 
-<section class="flex justify-center flex-col items-center py-10 relative bg-[url('/src/assets/img/warehouse.jpg')] bg-cover bg-fixed bg-center min-h-[50vh] lg:min-h-screen">
+<section id="monitor" class="flex justify-center flex-col items-center py- relative bg-[url('/src/assets/img/warehouse.jpg')] bg-cover bg-fixed bg-center py-20">
   <div class="container  xl:px-34 p-2">
-    <div class="md:border-[15px] md:border-b-[30px] border-4 border-gray-900 rounded-md max-w-6xl mx-auto overflow-hidden">
-      <ImageCarousel 
-        :images="slides" 
-        ref="carousel"
-        class="w-full"
-      />
+    <div class="relative max-w-6xl mx-auto flex flex-col items-center">
+      <div class="md:border-[15px] md:border-b-[30px] border-4 border-gray-900 rounded-md w-full overflow-hidden">
+        <div class="relative w-full pt-[57.25%]">
+          <div class="absolute inset-0">
+            <ImageCarousel 
+              :images="slides" 
+              ref="carousel"
+              class="w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 h-[200px] absolute bottom-0 bg-gray-900 w-32"></div>
     </div>
   </div>
-  <div class="bg-gray-900 lg:w-[200px] h-64 absolute bottom-0"></div>
 </section>
 
 
 
-   <!-- Modules Section -->
-   <section id="modules" class="bg-gray-100 py-8">
-       <div class="container mx-auto px-4">
+  <!-- Modules Section -->
+  <section id="modules" class="bg-gray-100 py-8">
+      <div class="container mx-auto px-4">
            <OfferGrid></OfferGrid>
          
        </div>
    </section>
 
-   <!-- Benefits Section -->
-   <section class="container mx-auto px-4 py-8 pb-12">
+  <!-- Benefits Section -->
+  <section class="container mx-auto px-4 py-8 pb-12">
        <h2 class="text-3xl font-bold text-center text-gray-800 mt-12 mb-12">Korzyści z wdrożenia systemu PULSAR</h2>
        
-       <div class="grid grid-cols-1 md:grid-cols-2 mb-12 gap-12 px-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 mb-12 gap-12 px-16">
            <div class="flex items-start">
                <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-4">
                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -252,13 +264,13 @@
    </section>
 
    <!-- CTA Section -->
-   <section class="bg-blue3 text-white py-12 md:py-24">
-       <div class="container mx-auto px-4 text-center">
+  <section class="bg-blue3 text-white py-12 md:py-24">
+      <div class="container mx-auto px-8 text-center">
            <h2 class="md:text-5xl text-4xl font-bold mb-6">Zainteresowany wdrożeniem systemu PULSAR?</h2>
            <p class="text-xl mb-8 md:mb-16 max-w-3xl mx-auto">Skontaktuj się z nami, aby omówić indywidualne rozwiązanie dla Twojej firmy.</p>
            <div class="flex flex-col sm:flex-row justify-center  gap-4">
-             <div class="bg-gray-100 px-3 md:px-8 py-3 rounded-lg hover:animate-pulse">
-                <a href="/kontakt" class=" text-blue3 text-xl  hover:animate-pulse font-semibold py-3 px-8 rounded-lg transition duration-300">
+             <div class="bg-gray-100 px-3 md:px-8 py-3  rounded-lg hover:animate-pulse">
+                <a href="/kontakt" class=" text-blue3 text-xl  hover:animate-pulse font-semibold py-3 px-3 rounded-lg transition duration-300">
                    Kontakt
                </a>
              </div>
