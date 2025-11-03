@@ -41,6 +41,11 @@ const routes = [
     path: '/ofertat',
     name: 'OfertaTEST',
     component: () => import('@/views/OfertaTEST.vue'),
+  },
+  {
+    path: '/polityka-prywatnosci',
+    name: 'PrivacyPolicy',
+    component: () => import('@/views/PrivacyPolicy.vue'),
   }
 
 

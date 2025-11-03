@@ -6,7 +6,7 @@ import DefaultHeader from '@/components/Header.vue'
 import AltHeader     from '@/components/AltHeader.vue'
 import Footer        from '@/components/Footter.vue'
 import Loading       from '@/components/Loading.vue'
-
+import CookieBanner from '@/components/CookieBanner.vue';
 
 
 const isLoaded       = ref(false)
@@ -75,6 +75,7 @@ onMounted(() => {
       <component :is="headerComponent" />
 
       <router-view />
+      <CookieBanner />
 
       <Footer v-if="isFooterLoaded" />
     </template>

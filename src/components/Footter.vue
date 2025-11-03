@@ -87,11 +87,42 @@
           </div>
         </div>
 
+        
 
     </div>
-    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+    <div class="border-t border-gray-700 mt-0 pt-8 text-center text-gray-400">
+      <div class="mt-0 my-8 flex justify-center gap-4 text-sm">
+        <router-link to="/polityka-prywatnosci" class="hover:text-gray-200 transition duration-300">
+          Polityka Prywatności
+        </router-link>
+        <span class="text-gray-600">•</span>
+        <button @click="handleCookieSettings" class="hover:text-gray-200 transition duration-300 cursor-pointer">
+          Ustawienia Cookies
+        </button>
+      </div>
       <p>&copy; {{ new Date().getFullYear() }} InfoBase</p>
       <p class="text-xs">Wszelkie prawa zastrzeżone.</p>
+     
     </div>
 </footer>
 </template>
+
+<script setup>
+import { useCookieBanner } from '@/composables/useCookieBanner';
+
+const { openBanner } = useCookieBanner();
+
+const handleCookieSettings = () => {
+  openBanner();
+};
+</script>
+
+<style scoped>
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+}
+</style>

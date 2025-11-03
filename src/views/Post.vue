@@ -114,7 +114,7 @@
             MainImage {
               url
             }
-            Images {
+            Images(pagination: { limit: -1 }) {
               url
             }
           }
@@ -129,6 +129,9 @@
             GET_POST,
             { documentId: props.documentId }
           );
+          
+          
+          
           post.value = data.post;
           // Przygotuj stan ładowania dla galerii (dla każdego obrazu)
           if (data.post.Images && data.post.Images.length) {

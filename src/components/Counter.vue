@@ -73,7 +73,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { ref, onMounted, onUnmounted, computed, watch } from 'vue'
+import { useCookieBanner } from '@/composables/useCookieBanner'
 
 const items = [
   { target: 9999, label: 'dziennie produkowanych mebli' },
@@ -84,6 +85,8 @@ const items = [
 
 const displayCounts = ref(items.map(() => 0))
 const currentSlide = ref(0)
+const { showBanner } = useCookieBanner()
+const animationsStarted = ref(false)
 
 // Carousel logic
 const totalSlides = computed(() => Math.ceil(items.length / 2)) // 2 items per slide
@@ -157,7 +160,10 @@ function animateCount(index, target, duration = 2000) {
   requestAnimationFrame(tick)
 }
 
-onMounted(() => {
+// Function to start all animations
+function startAllAnimations() {
+  if (animationsStarted.value) return // Prevent multiple starts
+  
   // Start counter animations
   items.forEach((item, i) => {
     animateCount(i, item.target)
@@ -166,6 +172,23 @@ onMounted(() => {
   // Start auto-play only on mobile devices
   if (window.innerWidth < 768) { // md breakpoint
     startAutoPlay()
+  }
+  
+  animationsStarted.value = true
+}
+
+onMounted(() => {
+  // Start animations only if cookie banner is not shown
+  if (!showBanner.value) {
+    startAllAnimations()
+  }
+})
+
+// Watch for cookie banner close - start animations when it closes
+watch(showBanner, (newValue) => {
+  if (!newValue && !animationsStarted.value) {
+    // Banner closed and animations not yet started
+    startAllAnimations()
   }
 })
 
