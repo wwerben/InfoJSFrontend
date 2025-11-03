@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gradient-to-br min-h-screen from-white to-gray-200 mt-16 pb-16">
+    <div class="bg-gradient-to-br min-h-screen from-white to-gray-200 md:mt-5 mt-16 pb-16">
       <div class="flex justify-center text-gray-800">
         <div class="max-w-7xl bg-gray-100 p-5 flex justify-center ">
           <div v-if="loading" class="p-4 h-screen">
