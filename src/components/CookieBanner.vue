@@ -73,12 +73,10 @@
         send_page_view: true,
         anonymize_ip: true 
       });
-      console.log('Google Analytics loaded after cookie consent');
     };
     
     // Handle script load errors (e.g., blocked by adblocker)
     script.onerror = () => {
-      console.log('Google Analytics blocked (probably by ad blocker - this is OK)');
     };
     
     isGALoaded = true;

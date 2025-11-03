@@ -1,14 +1,14 @@
 <template>
   <header
-    class="fixed top-0 left-0 px-10 w-full z-50 bg-blue2 transition-colors duration-300">
-    <div class="flex justify-between items-center pl-3 sm:pl-6 px-6 py-3">
+    class="fixed top-0 left-0 w-full z-50 bg-blue2 transition-colors duration-300 overflow-visible">
+    <div class="relative flex md:justify-between items-center px-6 md:px-16 py-3 overflow-visible">
       <!-- Logo -->
-      <router-link to="/">
+      <router-link to="/" class="mx-auto md:mx-0 md:mr-auto">
         <img
           :src="isScrolled ? scrollLogoSrc : scrollLogoSrc"
           alt="Logo"
-          class="  transition-all duration-300" 
-          :class="isScrolled ? ' -ml-2 md:ml-0 h-8 md:h-10 xl:h-8' : 'h-10 md:h-12 xl:h-10 '"
+          class="transition-all duration-300" 
+          :class="isScrolled ? 'md:-ml-2 md:ml-0 h-8 md:h-10 xl:h-8' : 'h-10 md:h-12 xl:h-10'"
         />
       </router-link>
 
@@ -41,7 +41,7 @@
 
       <!-- Przycisk menu mobilnego -->
       <button
-        class="md:hidden text-white focus:outline-none cursor-pointer"
+        class="md:hidden absolute right-2 text-white focus:outline-none cursor-pointer"
         @click="toggleMobileMenu"
       >
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">

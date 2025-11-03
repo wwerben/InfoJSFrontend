@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="overflow-x-hidden">
     <div class="flex justify-center items-center">
       <div class="w-full h-[50vh] flex justify-center items-center">
         <img src="@/assets/img/poly.svg" class="object-cover absolute w-full h-[50vh]" />
@@ -28,14 +28,14 @@
 
         <!-- właściwa lista postów -->
         <div v-else>
-          <ul class="grid grid-cols-1   md:grid-cols-2 gap-8 items-stretch">
+          <ul class="grid grid-cols-1   md:grid-cols-2 gap-8 items-stretch mx-3 md:mx-5">
             <li
               v-for="post in posts"
               :key="post.documentId"
               class="h-full"
             >
-              <router-link :to="`/post/${post.documentId}`" class="block h-full">
-                <div class="max-w-4xl hover:scale-102 transition-all duration-300 bg-gray-100 rounded-lg w-full h-full flex flex-col mb-3 md:mb-10 text-gray-800 mx-3 md:mx-5 overflow-hidden group">
+              <router-link :to="`/post/${post.documentId}`" class="flex justify-center items-center h-full">
+                <div class="max-w-4xl hover:scale-102 transition-all duration-300 bg-gray-100 rounded-lg w-full h-full flex flex-col mb-3 md:mb-10 text-gray-800 overflow-hidden group">
                   <div class="w-full aspect-[16/9] overflow-hidden relative">
                     <img
                       v-if="post.MainImage?.url"
