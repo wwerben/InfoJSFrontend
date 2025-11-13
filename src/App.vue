@@ -65,6 +65,7 @@ onMounted(() => {
 
 
 <template>
+  <meta name="google-site-verification" content="CJoBQZ6b8p2t-Ifz3Mo8vKnjmSlnld59v1WCuilD-wQ" />
   <div id="app">
     <!-- loader na start -->
     <Loading v-if="!isLoaded" />
